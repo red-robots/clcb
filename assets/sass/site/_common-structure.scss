@@ -1,21 +1,4 @@
-* { -webkit-hyphens: none; }
-div {
-	/* These are technically the same, but use both */
-	overflow-wrap: break-word;
-	word-wrap: break-word;
-
-	-ms-word-break: break-all;
-	/* This is the dangerous one in WebKit, as it breaks things wherever */
-	word-break: break-all;
-	/* Instead use this non-standard one: */
-	word-break: break-word;
-
-	/* Adds a hyphen where the word breaks, if supported (No Blink) */
-	-ms-hyphens: auto;
-	-moz-hyphens: auto;
-	-webkit-hyphens: auto;
-	hyphens: auto;
-}
+a{text-decoration: none;}
 .clear {clear: both;}
 .wrapper {
 	width: 100%;
@@ -26,11 +9,25 @@ div {
 		width: 100%;
 	}
 	@media screen and (min-width: $deskwidth) {
-		width: 1200px;
+		width: 83.3333333%;
 		padding: 0px;
 	}
 }
-
+#masthead {
+	padding: 10px 0;
+	@media screen and (min-width: $midwidth) {
+		padding: 20px 0;
+	}
+}
+.flexwrap {
+	width: 100%;
+	@media screen and (min-width: $tabwidth) {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
 .content-area {
 	width: 100%;
 	margin: 0px auto;
@@ -61,12 +58,11 @@ div {
 
 /* Logo */
 .logo , h1.logo {
-	width: 300px;
-	background-image: url(images/logo.png);	
+	width: 250px;
 	margin: 10px auto;
 
 	@media screen and (min-width: $tabwidth) {
-		width: 300px;
+		// width: 300px;
 		float: left;
 		margin: 0;
 	}
@@ -75,17 +71,156 @@ div {
 	}
 }
 .logo a, h1.logo a {
-	width: 300px;
+	width: 100%;
 	display: block;
 
 	@media screen and (min-width: $tabwidth) {
-		width: 300px;
+		
 	}
 	@media screen and (min-width: $deskwidth) {
 		/*width: 1200px;*/
 	}
 }
+.banner {
+	width: 100%;
+	position: relative;
+	img {
+		width: 100%;
+	}
+}
+.row {
+	width: 100%;
+	float: left;
+
+}
+.tile {
+	width: 100%;
+	@media screen and (min-width: $tabwidth) {
+		width: 50%;
+		
+	}
+	img {width: 100%;}
+	h2 {
+		color: $color-red;
+		text-align: left;
+		margin: 0 0 10px 0;
+		width: 100%;
+	}
+	.copy {
+		font-weight: 300;
+		width: 100%;
+		float: left;
+	}
+	.flexwrap {
+		@media screen and (min-width: $tabwidth) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 0  16.333333% ;
+			height: 100%;
+		}
+		.button {
+			float: left;
+		}
+	}
+	&.lineheight {line-height: 0;}
+	&.left {float: left;}
+	&.right {float: right;}
+}
+.button a::before,
+.button a::after {
+  background: #fff;
+  content: '';
+  position: absolute;
+  z-index: 10;
+}
+.forceleft {
+	width: 100%;
+	float: left;
+}
+.button {
+	width: auto;
+	display: inline-block;
+	a {
+		background: $color-red;
+		border: 3px solid $color-red;
+		border-radius: 0px;
+		color: #fff;
+		display: block;
+		font-size: 1.2em;
+		font-weight: bold;
+		margin: 1em 0;
+		padding: 10px 25px;
+		position: relative;
+		text-transform: uppercase;
+		overflow: hidden;
+		&:hover {
+			color: $color-red;
+			z-index: 11;
+			&:after {
+				height: 100%;
+				width: 135%;
+			}
+		}
+		&:after {
+			height: 100%;
+			left: -35%;
+			top: 0;
+			@include transition(all ease .3s);
+			transform: skew(50deg);
+			transform-origin: top left;
+			width: 0;
+
+		}
+		span {
+			width: auto;
+			position: relative;
+			z-index: 12;
+		}
+	}
+	
+}
 .site-footer {
 	width: 100%;
 	clear: both;
+	background-color: $color-grey;
+	padding: 40px 0;
+	color: #fff;
+	font-weight: 300;
+	overflow: hidden;
+	.site-info {
+		width: 100%;
+		text-align: center;
+		overflow: hidden;
+		font-size: 13px;
+		@media screen and (min-width: $midwidth) {
+			width: 16.66666%;
+
+		}
+		&.left {
+			@media screen and (min-width: $midwidth) {
+				text-align: left;
+				float: left;
+			}
+		}
+		&.right {
+			@media screen and (min-width: $midwidth) {
+				text-align: right;
+				float: right;
+			}
+		}
+		.item {
+			width: 100%;
+			float: left;
+		}
+		h3 {
+			margin: 0 0 0 0;
+		}
+		.social {
+			font-size: 30px;
+			a {
+				color: #fff;
+			}
+		}
+	}
 }

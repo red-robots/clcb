@@ -100,7 +100,6 @@
 		font-weight: 300;
 		width: 100%;
 		@media screen and (min-width: $tabwidth) {
-			border-left: 1px solid #000;
 			line-height: 3;
 			width: auto;
 			// padding: 0 20px;
@@ -127,7 +126,7 @@
 			padding: 0% 20px;
 		}
 		@media screen and (min-width: $deskwidth) {
-			padding: 0% 30px;
+			padding: 0% 20px;
 		}
 		&:hover {
 			background-color: rgba(#fff, 1);
