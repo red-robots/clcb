@@ -14,9 +14,9 @@ if(is_front_page()) {
 		<?php endif;
 } else {
 	$tagline=get_field('tagline');
-	if(has_featured_image()) { ?>
+	if(has_post_thumbnail()) { ?>
 		<div class="banner">
-			<?php the_featured_image(); ?>
+			<?php the_post_thumbnail(); ?>
 			<div class="quote">
 				<?php echo $tagline; ?>
 			</div>
