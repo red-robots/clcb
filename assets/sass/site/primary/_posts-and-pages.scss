@@ -29,13 +29,71 @@
 .home-opener {
 	width: 100%;
 	padding: 40px 0;
-	background-color: $color-grey;
+	background-color: $color__background-grey;
+	border-top:1px solid #4e4e4e;
 	color: #fff;
 	.quote-desc {
-		width: 50%;
+		width: 60%;
 		margin: 30px auto;
 		font-weight: 300;
-		font-size: 16px;
+		font-size: 20px;
+	}
+	@media screen and (max-width: $tabwidth) {
+		.quote-desc {
+			width: 80%;
+			font-size: 16px;
+		}
+	}
+}
+.home-content-1 {
+	@include background-image-full(scroll,top left);
+	background-color:$color-white;
+	position:relative;
+	.tile {
+		width:70%;
+		.flexwrap {
+			padding:10% 10%;
+			background-color:rgba(255,255,255,.8);
+		}
+		@media screen and (max-width: $tabwidth) {
+			width:80%;
+		}
+	}
+}
+.home-content-2 {
+	padding:6% 10% 4%;
+	.tile {
+		width:70%;
+		margin: 0 auto;
+
+		h2.h2-title {
+			text-align:center;
+			color:$color-grey;
+			position:relative;
+			margin-bottom:50px;
+			span {
+				position:absolute;
+				display:block;
+				width:100%;
+				text-align:center;
+				height:1px;
+				margin-top: 10px;
+				i {
+					content:"";
+					display:block;
+					width:20%;
+					height:100%;
+					background-color:$color-red;
+					margin:0 auto;
+				}
+			}
+		}
+		@media screen and (max-width: $tabwidth) {
+			width:100%;
+		}
+	}
+	.forceleft {
+		margin-top:20px;
 	}
 }
 section.home-thirds	{
@@ -50,10 +108,23 @@ section.home-thirds	{
 		@media screen and (min-width: $tabwidth) {
 			width: 33.33333%;
 		}
+		@media screen and (max-width: $tabwidth) {
+			height:300px;
+		}
+		.inner {
+			overflow:hidden;
+			position:relative;
+			height:100%;
+			@include background-image-full(scroll,top center);
+			@include transition(all ease .3s);
+		}
 		img {
 			width: 100%;
 			transform: scale(1);
 			@include transition(all ease .3s);
+			@media screen and (max-width: $tabwidth) {
+				display:none;
+			}
 		}
 		.overlay {
 			width: 100%;
@@ -62,7 +133,7 @@ section.home-thirds	{
 			top: 0;
 			left: 0;
 			z-index: 5;
-			background-color: rgba(#000, .5);
+			background: transparent;
 			a {
 				display: block;
 				width: 100%;
@@ -80,15 +151,28 @@ section.home-thirds	{
 			}
 			h2 {
 				color: #fff;
-				font-weight: 400;
+				font-size:35px;
+				font-weight:600;
 				z-index: 7;
 				text-align: center;
 				line-height: 1;
+				@include transition(all ease-out 0.3s);
+				@media screen and (max-width: $midwidth) {
+					font-size:25px;
+				}
 			}
 		}
 		&:hover {
 			img {
 				transform: scale(1.1);
+			}
+			h2 {
+				@include transform( scale(1.1) );
+			}
+			.inner {
+				@media screen and (max-width: $tabwidth) {
+					transform: scale(1.1);
+				}
 			}
 		}
 	}

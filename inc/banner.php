@@ -4,25 +4,40 @@ if(is_front_page()) {
 		if ( have_posts() ) : the_post(); 
 			$banner=get_field('main_banner');
 			$tagline=get_field('tagline');
-		?>
-			<div class="banner">
-				<img src="<?php echo $banner['url']; ?>"  alt="<?php echo $banner['alt']; ?>">
-				<div class="tagline">
-					<?php echo $tagline; ?>
+			$quote=get_field('quote');
+			if($banner) { ?>
+			<div class="banner" style="background-image:url('<?php echo $banner['url']; ?>')">
+				<img class="banner-image" src="<?php echo $banner['url']; ?>"  alt="<?php echo $banner['alt']; ?>" style="display:none;" />
+				<div class="tagline animated fadeInUp">
+					<div class="pad"><?php echo $quote; ?></div>
 				</div>
 			</div>
+			<?php } ?>
+
 		<?php endif;
 } else {
 	$tagline=get_field('tagline');
+	$quote=get_field('quote');
+	$subpage_banner = get_field('banner_image');
+	$bannerImageURL = ( isset($subpage_banner['url']) && $subpage_banner['url'] ) ? $subpage_banner['url'] : '';
+	$bannerAltTxt = ( isset($subpage_banner['title']) && $subpage_banner['title'] ) ? $subpage_banner['title'] : '';
+
 	if(has_post_thumbnail()) { ?>
 		<div class="banner">
 			<?php the_post_thumbnail(); ?>
 			<div class="quote">
-				<?php echo $tagline; ?>
+				<div class="pad"><?php echo $tagline; ?></div>
 			</div>
 		</div>
-		
-	<?php }
-}
+	<?php } else { ?>
+		<div class="subpage banner" style="background-image:url('<?php echo $bannerImageURL; ?>')">
+			<img class="banner-image" src="<?php echo $banner['url']; ?>"  alt="<?php echo $bannerAltTxt; ?>" style="display:none;">
+			<div class="quote">
+				<div class="pad"><?php echo $quote; ?></div>
+			</div>
+		</div>
+	<?php } ?>
 
- ?>
+<?php
+}
+?>

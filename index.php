@@ -15,6 +15,7 @@
 get_header(); 
 /* Start the Loop */
 $wp_query = new WP_Query(array('post_status'=>'private','pagename'=>'homepage'));
+$is_home_page = ( is_front_page() ) ? true:false;
 if ( have_posts() ) : the_post();
 
 $quote_homepage=get_field('quote_homepage');
@@ -27,6 +28,7 @@ $content_section_3_title=get_field('content_section_3_title');
 $content_section_3_text=get_field('content_section_3_text');
 $content_section_3_image=get_field('content_section_3_image');
 $learn_more_link_2=get_field('learn_more_link_2');
+
 $first_box_image=get_field('first_box_image');
 $first_box_title=get_field('first_box_title');
 $first_box_link=get_field('first_box_link');
@@ -36,90 +38,79 @@ $second_box_link=get_field('second_box_link');
 $third_box_title=get_field('third_box_title');
 $third_box_image=get_field('third_box_image');
 $third_box_link=get_field('third_box_link');
-// $tagline=get_field('tagline');
+
+$box_images = array('first_box_image','second_box_image','third_box_image');
+$box_title = array('first_box_title','second_box_title','third_box_title');
+$box_link = array('first_box_link','second_box_link','third_box_link');
+
 ?>
 	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
 			<div class="home-opener">
-				<?php if($quote_homepage) { ?>
-					<div class="quote"><?php echo $quote_homepage; ?></div>
-				<?php } ?>
 				<?php if($quote_description) { ?>
-					<div class="quote-desc"><?php echo $quote_description; ?></div>
+					<div class="quote-desc"><?php echo nl2br($quote_description); ?></div>
 				<?php } ?>
 			</div>
-			<div class="row">
-				<div class="tile left js-blocks lineheight">
-					<img src="<?php echo $content_section_2_image['url']; ?>" alt="<?php echo $content_section_2_image['alt']; ?>">
-				</div>
-				<div class="tile right  js-blocks">
-					<div class="flexwrap">
+
+			<?php if ($content_section_2_image) { ?>
+				<div class="row home-content-1" style="background-image:url('<?php echo $content_section_2_image['url']; ?>')">
+					<img src="<?php echo $content_section_2_image['url']; ?>" alt="<?php echo $content_section_2_image['alt']; ?>" style="display:none;">
+			<?php } else { ?>
+				<div class="row home-content-1 no-bg-image">
+			<?php } ?>
+				<div class="tile right">
+					<div class="flexwrap clear">
 						<?php if($content_section_2_title) { ?>
 							<h2><?php echo $content_section_2_title; ?></h2>
 						<?php } ?>
 						<?php if($content_section_2_title) { ?>
 							<div class="copy"><?php echo $content_section_2_text; ?></div>
 						<?php } ?>
-						<div class="forceleft">
-							<div class="button">
-								<a href="<?php echo $learn_more_link; ?>"><span>learn more</span></a>
-							</div>
-						</div>
-						
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="tile right  js-blocks lineheight">
-					<img src="<?php echo $content_section_2_image['url']; ?>" alt="<?php echo $content_section_2_image['alt']; ?>">
-				</div>
-				<div class="tile left  js-blocks">
-					<div class="flexwrap">
-						<?php if($content_section_3_title) { ?>
-							<h2><?php echo $content_section_3_title; ?></h2>
-						<?php } ?>
-						<?php if($content_section_3_title) { ?>
-							<div class="copy"><?php echo $content_section_3_text; ?></div>
-						<?php } ?>
-						<div class="forceleft">
-							<div class="button">
-								<a href="<?php echo $learn_more_link_2; ?>"><span>learn more</span></a>
-							</div>
+
+			<div class="row home-content-2">
+				<div class="tile clear text-center">
+					<?php if($content_section_3_title) { ?>
+						<h2 class="h2-title"><?php echo $content_section_3_title; ?><span><i></i></span></h2>
+					<?php } ?>
+					<?php if($content_section_3_title) { ?>
+						<div class="copy"><?php echo nl2br($content_section_3_text); ?></div>
+					<?php } ?>
+					<div class="forceleft">
+						<div class="button">
+							<a href="<?php echo $learn_more_link_2; ?>"><span>learn more</span></a>
 						</div>
 					</div>
 				</div>
 			</div>
 			<section class="home-thirds">
-				<div class="link">
-					<img src="<?php echo $first_box_image['url']; ?>">
-					<div class="overlay">
-						<a href="<?php echo $first_box_link; ?>">
-							<div class="flex">
-								<h2><?php echo $first_box_title; ?></h2>
+
+				<?php foreach ($box_images as $k => $img_field) { 
+					$box_img_src = get_field($img_field);
+					$box_title_txt = get_field($box_title[$k]); ?>
+
+					<?php if ($box_img_src) { ?>
+					<div class="link has-image">
+						<div class="inner clear" style="background-image:url('<?php echo $box_img_src['url']?>');">
+							<img src="<?php echo $box_img_src['url']; ?>" alt="<?php echo $box_img_src['title']; ?>">
+					<?php } else { ?>
+					<div class="link no-image">
+						<div class="inner clear">
+					<?php } ?>
+							<div class="overlay">
+								<a href="<?php echo $first_box_link; ?>">
+									<div class="flex">
+										<h2><?php echo $box_title_txt; ?></h2>
+									</div>
+								</a>
 							</div>
-						</a>
+						</div>
 					</div>
-				</div>
-				<div class="link">
-					<img src="<?php echo $second_box_image['url']; ?>">
-					<div class="overlay">
-						<a href="<?php echo $second_box_link; ?>">
-							<div class="flex">
-								<h2><?php echo $second_box_title; ?></h2>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="link">
-					<img src="<?php echo $third_box_image['url']; ?>">
-					<div class="overlay">
-						<a href="<?php echo $third_box_link; ?>">
-							<div class="flex">
-								<h2><?php echo $third_box_title; ?></h2>
-							</div>
-						</a>
-					</div>
-				</div>
+
+				<?php } ?>
+				
 			</section>
 		</main><!-- #main -->
 	</div><!-- #primary -->

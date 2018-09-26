@@ -16,7 +16,6 @@ $nadd1=get_field('new_york_address_line_1', 'option');
 $nadd2=get_field('new_york_address_line_2', 'option');
 $nphone1=get_field('new_york_phone_1', 'option');
 $nphone2=get_field('new_york_phone_2', 'option');
-
 $facebook=get_field('facebook_link', 'option');
 $linkedin=get_field('linkedin_link', 'option');
 ?>
@@ -68,9 +67,9 @@ $linkedin=get_field('linkedin_link', 'option');
 						</a>
 					<?php } ?>
 				</div>
-				<div class="item">
-					&copy;<?php date('Y'); ?> Coleman Lew Canny Bowen
-				</div>
+			</div>
+			<div class="site-info copyright clear">
+				&copy; <?php echo date('Y'); ?> <?php echo get_bloginfo('name'); ?>
 			</div>
 	</div><!-- wrapper -->
 	</footer><!-- #colophon -->

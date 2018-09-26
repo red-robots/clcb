@@ -7,11 +7,19 @@
 	@media screen and (min-width: $tabwidth) {
 		clear: none;
 		width: auto;
-		
-
 	}
 	@media screen and (min-width: $deskwidth) {
 		text-align: left;
+	}
+	@media screen and (max-width: $tabwidth) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		box-shadow: 0 0 5px rgba(50, 50, 50, 0.3);
+		.menu-main-menu-container {
+			margin-top:50px;
+			padding-bottom:10px;
+		}
 	}
 	.menu {
 		@include transition(all ease 1s);
@@ -117,21 +125,31 @@
 	}
 	a {
 		display: block;
-		// align-items: center;
 		text-decoration: none;
 		padding: 10px 0px;
 		color: #000;
 		@include transition(all ease .4s);
 		@media screen and (min-width: $tabwidth) {
-			padding: 0% 20px;
+			padding: 0 20px;
+		}
+		@media screen and (max-width: $midwidth) {
+			font-size:14px;
+			padding: 0 10px;
 		}
 		@media screen and (min-width: $deskwidth) {
 			padding: 0% 20px;
+		}
+		@media screen and (max-width: $tabwidth) {
+			font-size:16px;
+			padding: 10px 0;
 		}
 		&:hover {
 			background-color: rgba(#fff, 1);
 			color: $color-black;
 		}
+	}
+	a:hover {
+		color:$color-red;
 	}
 
 	.current_page_item > a,
@@ -164,22 +182,55 @@
 button.menu-toggle {
 	border: 0px;
 	text-shadow: none;
-	background-color: #ccc;
+	background-color:transparent;
+	-webkit-appearance:none;
 	color: #fff;
 	box-shadow: none;
-	width: auto;
+	width: 35px;
+	height: 30px;
 	display: inline-block;
-	margin: 10px auto;
+	margin: 0 auto;
 	border-radius: 0;
 	text-transform: uppercase;
+	text-indent: -999em;
+	position: absolute;
+	top: 15px;
+	right: 20px;
 	font: {
-		
 		weight :300;
-		size: 20px;
+		size: 2px;
 	}
-	
+	i {
+		display:block;
+		width:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		height:5px;
+		background-color:$color-grey;
+		@include transform(rotate(0deg));
+		@include transition(all ease-in-out .25s);
+	}
+	i:nth-child(2) {
+		top:12px;
+	}
+	i:nth-child(3) {
+		top:24px;
+	}
 	@media screen and (min-width: $tabwidth) {
 		display: none;
+	}
+}
+.main-navigation.toggled {
+	.menu-toggle {
+		i:nth-child(1), i:nth-child(2) {
+			@include transform( rotate(45deg) );
+			top: 12px;
+		}
+		i:nth-child(3) {
+			@include transform( rotate(-45deg) );
+			top: 12px;
+		}
 	}
 }
 
