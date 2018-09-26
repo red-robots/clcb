@@ -133,7 +133,8 @@ section.home-thirds	{
 			top: 0;
 			left: 0;
 			z-index: 5;
-			background: transparent;
+			background-color: transparent;
+			@include transition(all ease-out 0.3s);
 			a {
 				display: block;
 				width: 100%;
@@ -173,6 +174,9 @@ section.home-thirds	{
 				@media screen and (max-width: $tabwidth) {
 					transform: scale(1.1);
 				}
+			}
+			.overlay {
+				background-color:rgba(0,0,0,.35);
 			}
 		}
 	}

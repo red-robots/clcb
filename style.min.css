@@ -1900,7 +1900,7 @@ section.home-thirds .link{width:100%;float:left;overflow:hidden;position:relativ
 }section.home-thirds .link .inner{overflow:hidden;position:relative;height:100%;background-size:cover;background-repeat:no-repeat;background-position:top center;background-attachment:scroll;-webkit-transition:all ease .3s;transition:all ease .3s}
 section.home-thirds .link img{width:100%;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);-webkit-transition:all ease .3s;transition:all ease .3s}
 @media screen and (max-width:768px){section.home-thirds .link img{display:none}
-}section.home-thirds .link .overlay{width:100%;height:100%;position:absolute;top:0;left:0;z-index:5;background:transparent}
+}section.home-thirds .link .overlay{width:100%;height:100%;position:absolute;top:0;left:0;z-index:5;background-color:transparent;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 section.home-thirds .link .overlay a{display:block;width:100%;height:100%}
 section.home-thirds .link .overlay a .flex{width:50%;height:100%;margin:0 auto;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;z-index:6}
 section.home-thirds .link .overlay h2{color:#fff;font-size:35px;font-weight:600;z-index:7;text-align:center;line-height:1;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
@@ -1908,7 +1908,8 @@ section.home-thirds .link .overlay h2{color:#fff;font-size:35px;font-weight:600;
 }section.home-thirds .link:hover img{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
 section.home-thirds .link:hover h2{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
 @media screen and (max-width:768px){section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
-}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+}section.home-thirds .link:hover .overlay{background-color:rgba(0,0,0,0.35)}
+.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}
