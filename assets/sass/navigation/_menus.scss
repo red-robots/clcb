@@ -4,23 +4,25 @@
 	text-align: center;
 	width: 100%;
 	background-color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-shadow: 0 0 5px rgba(50, 50, 50, 0.3);	
 	@media screen and (min-width: $tabwidth) {
+		position: relative;
+		box-shadow:none;
 		clear: none;
 		width: auto;
 	}
-	@media screen and (min-width: $deskwidth) {
-		text-align: left;
-	}
-	@media screen and (max-width: $tabwidth) {
-		position: absolute;
-		top: 0;
-		left: 0;
-		box-shadow: 0 0 5px rgba(50, 50, 50, 0.3);
-		.menu-main-menu-container {
-			margin-top:50px;
-			padding-bottom:10px;
+
+
+	.menu-main-menu-container {
+		margin-top:60px;
+		@media screen and (min-width: $tabwidth) {
+			margin-top: 0;
 		}
 	}
+	
 	.menu {
 		@include transition(all ease 1s);
 		overflow: hidden;
@@ -33,6 +35,12 @@
 		max-height: 0;
 		@media screen and (min-width: $tabwidth) {
 			max-height: 1000px;
+		}
+		> li:last-child {
+			margin-bottom:10px;
+			@media screen and (min-width: $tabwidth) {
+				margin-bottom:0;
+			}
 		}
 	}
 
@@ -63,22 +71,13 @@
 				&.focus > ul {
 					left: 100%;
 				}
-				@media screen and (min-width: $tabwidth) {
-		
-				}
-				@media screen and (min-width: $deskwidth) {
-					
-				}
 			}
 
 
 			a {
 				width: 200px;
-				@media screen and (min-width: $tabwidth) {
-		
-				}
-				@media screen and (min-width: $deskwidth) {
-					
+				@media screen and (min-width: $midwidth) {
+					font-size: 16px;
 				}
 			}
 
@@ -129,19 +128,17 @@
 		padding: 10px 0px;
 		color: #000;
 		@include transition(all ease .4s);
+		font-size: 14px;
 		@media screen and (min-width: $tabwidth) {
-			padding: 0 20px;
-		}
-		@media screen and (max-width: $midwidth) {
-			font-size:14px;
 			padding: 0 10px;
+			font-size: 14px;
+		}
+		@media screen and (min-width: $midwidth) {
+			padding: 0 20px;
+			font-size: 16px;
 		}
 		@media screen and (min-width: $deskwidth) {
 			padding: 0% 20px;
-		}
-		@media screen and (max-width: $tabwidth) {
-			font-size:16px;
-			padding: 10px 0;
 		}
 		&:hover {
 			background-color: rgba(#fff, 1);
@@ -209,7 +206,7 @@ button.menu-toggle {
 		height:5px;
 		background-color:$color-grey;
 		@include transform(rotate(0deg));
-		@include transition(all ease-in-out .25s);
+		@include transition(all ease-in-out .2s);
 	}
 	i:nth-child(2) {
 		top:12px;

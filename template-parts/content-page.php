@@ -10,10 +10,23 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<?php  
+		$post_id = get_the_ID();
+		$subpage_banner = get_field('banner_image',$post_id);
+		$bannerImageURL = ( isset($subpage_banner['url']) && $subpage_banner['url'] ) ? $subpage_banner['url'] : '';
+		$display_title = true;
+		if($bannerImageURL || has_post_thumbnail() ) {
+			$display_title = false;
+		}
+	?>
+
+	<?php if ($display_title) { ?>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
-
+	<?php } ?>
+	
 	<div class="entry-content">
 		<?php
 			the_content();

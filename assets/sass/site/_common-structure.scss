@@ -15,30 +15,32 @@ a{text-decoration: none;}
 	}
 }
 .text-center {text-align:center;}
+.text-left {text-align:left;}
 body {
-	@media screen and (max-width: $tabwidth) {
-		padding-top:60px;
-	}
+	color:$color-grey;
+	font-size:18px;
 }
 #masthead {
-	padding: 10px 0;
 	position: relative;
 	z-index:10;
+	padding: 0 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color:$color-white;
+	z-index:20;
+	height:60px;
 	@media screen and (min-width: $midwidth) {
+		padding: 10px 0;
+	}
+	@media screen and (min-width: $tabwidth) {
+		height: auto;
+		position:relative;
+	}
+	@media screen and (min-width: $deskwidth) {
 		padding: 20px 0;
-	}
-	@media screen and (max-width: $tabwidth) {
-		padding: 0 0;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		background-color:$color-white;
-		z-index:10;
-		.wrapper {
-			padding:20px 20px;
-		}
-	}
+	}	
 
 }
 .flexwrap {
@@ -81,46 +83,62 @@ body {
 /* Logo */
 .logo, h1.logo {
 	display: block;
-	width: 250px;
-	margin: 10px auto;
 	float:left;
+	width: 150px;
+	position:absolute;
+	top: 10px;
+	margin: 0 0;
+	z-index: 2;
 	a,img {
 		float:left;
 	}
 	@media screen and (min-width: $tabwidth) {
-		float: left;
-		margin: 0;
-	}
-	@media screen and (max-width: $midwidth) {
 		width: 200px;
+    	margin: 20px 0;
+    	top: 0;
+    	position:relative;
 	}
-	@media screen and (max-width: $tabwidth) {
-		width: 150px;
-		z-index: 2;
-		margin: 0 0;
-		position:relative;
-		top: -10px;
-		img {
-			width:100%;
-			height:auto;
-		}
+	@media screen and (min-width: $midwidth) {
+		width: 250px;
+		margin: 10px 0;
+		top: 0;
 	}
-
 	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
-	}
+		margin: 0 0;
+	}	
+
 }
 .banner {
 	width: 100%;
-	height:600px;
+	height:300px;
 	position: relative;
 	@include background-image-full(scroll);
-	@media screen and (max-width: $midwidth) {
-		height:450px;
+	margin-top:60px;
+	@media screen and (min-width: $midwidth) {
+		margin-top:0;
+		height:600px;
+		&.subpage {
+			height: 300px;
+		}
 	}
-	@media screen and (max-width: $tabwidth) {
-		height:310px;
+	@media screen and (min-width: $tabwidth) {
+		margin-top:0;
+
 	}
+	&.no-image {
+		background:$color-light-grey;
+		height:auto!important;
+		.pagetitlediv {
+			padding:20px;
+			.innerpad {
+				display:inline-block;
+				.page-title {
+					color:$color-grey;
+				}
+			}
+		}
+	}
+	
 	img {
 		width: 100%;
 		float:left;
@@ -139,22 +157,21 @@ body {
 		padding-right:20px;
 		.pad {
 			display:inline-block;
-			padding:5px 25px;
+			padding:10px 25px;
 			background-color:$color-red;
 			color:$color-white;
-			font-size:60px;
+			font-size:30px;
 			font-weight:600;
-			line-height:1.2;
+			line-height:1.1;
 		}
-		@media screen and (max-width: $midwidth) {
+		@media screen and (min-width: $deskwidth) {
 			.pad {
-				font-size:40px;
-				padding: 12px 25px;
+				font-size:65px;
 			}
 		}
-		@media screen and (max-width: $tabwidth) {
+		@media screen and (min-width: $midwidth) {
 			.pad {
-				font-size:25px;
+				font-size:65px;
 			}
 		}
 
@@ -169,27 +186,27 @@ body {
 	width: 100%;
 	@media screen and (min-width: $tabwidth) {
 		width: 50%;
-		
 	}
 	img {width: 100%;}
 	h2 {
 		color: $color-red;
 		text-align: left;
-		margin: 0 0 10px 0;
+		margin: 0 0 20px 0;
 		width: 100%;
-		font-size:30px;
+		font-size:25px;
 		line-height:1;
-		@media screen and (max-width: $tabwidth) {
-			font-size:25px;
+		@media screen and (min-width: $midwidth) {
+			font-size:30px;
 		}
 	}
 	.copy {
-		font-size: 20px;
+		font-size: 16px;
 		font-weight: 300;
 		width: 100%;
 		float: left;
-		@media screen and (max-width: $tabwidth) {
-			font-size: 16px;
+		text-align: left;
+		@media screen and (min-width: $tabwidth) {
+			font-size: 20px;
 		}
 	}
 	.flexwrap {
@@ -222,12 +239,16 @@ body {
 .button {
 	width: auto;
 	display: inline-block;
+	&.buttondiv {
+		display:block;
+		width:100%;
+	}
 	a {
-		background-color: $color-white;
+		background-color: transparent;
 		border: 2px solid $color-red;
 		border-radius: 0px;
 		color: $color-grey;
-		display: block;
+		display: inline-block;
 		font-size: 1.2em;
 		font-weight: bold;
 		margin: 1em 0;
@@ -261,7 +282,6 @@ body {
 		span {
 			position:relative;
 			z-index: 10;
-			color:$color-red;
 			@include transition( all ease-out .5s );
 		}
 	}
@@ -275,27 +295,28 @@ body {
 	color: #fff;
 	font-weight: 300;
 	overflow: hidden;
-	@media screen and (max-width: $tabwidth) {
-		padding-top:30px;
+	padding-top:30px;
+	@media screen and (min-width: $tabwidth) {
+		padding-top:40px;
 	}
 	.site-info {
 		width: 100%;
 		text-align: center;
 		overflow: hidden;
 		font-size: 13px;
+		margin-top: 20px;
 		@media screen and (min-width: $midwidth) {
 			width: 16.66666%;
 		}
-		@media screen and (max-width: $midwidth) {
+		@media screen and (min-width: $tabwidth) {
 			width: 33.33333%;
-			float: left;
-		}
-		@media screen and (max-width: $tabwidth) {
-			width: 100%;
-			margin-top:20px;
+			float:left;
+			text-align:left;
+			margin-top: 0;
 		}
 		&.left {
 			@media screen and (min-width: $midwidth) {
+				width: 16.66666%;
 				text-align: left;
 				float: left;
 			}
@@ -317,6 +338,7 @@ body {
 		}
 		.social {
 			font-size: 30px;
+			margin-left:-10px;
 			a {
 				color:$color-white;
 				display:inline-block;
@@ -333,6 +355,8 @@ body {
 			}
 			@media screen and (min-width: $tabwidth) {
 				margin-top:60px;
+				margin-left: 0;
+				text-align: right;
 			}
 		}
 	}
@@ -342,5 +366,62 @@ body {
 		text-align:center;
 		width:100%;
 		padding:10px 0;
+	}
+}
+.vcenter {
+	@include vertical-center-text(100%,100%);
+}
+.two-column {
+	.tile {
+		width:100%;
+		float:left;
+		@media screen and (min-width: $tabwidth) {
+			width:50%;
+		}
+	}
+}
+.greydiv {
+	background:$color__background-light-grey;
+}
+.rowImg {
+	.textwrapper {
+		h2 {
+			text-align:center;
+		}
+	}
+	.textdiv {
+		padding: 6% 0 4%;
+	}
+	@media screen and (min-width: $tabwidth) {
+		.imagediv {
+			position: absolute;
+			top: 0;
+			width:50%;
+			height:100%;
+		}
+		&.rowImg1 {
+			.imagediv {
+				right:0;
+			}
+		}
+		&.rowImg2 {
+			.imagediv {
+				left:0;
+			}
+			.tile {
+				float:right;
+			}
+		}
+		.textwrapper {
+			.copy, h2 {
+				text-align:left;
+			}
+		}
+		
+	}
+	&.rowImg2 {
+		.textdiv {
+			background:$color-white;
+		}
 	}
 }

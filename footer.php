@@ -23,7 +23,7 @@ $linkedin=get_field('linkedin_link', 'option');
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="wrapper">
+		<div class="wrapper clear">
 			<div class="site-info left">
 				<h3>Charlotte</h3>
 				<?php if($cadd1) { ?>

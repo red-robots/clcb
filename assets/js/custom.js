@@ -18,6 +18,12 @@ jQuery(document).ready(function ($) {
         }
 	});
 
+	/* button from tinymce */
+	$('.red-button.button a').each(function(){
+		var txt = $(this).text();
+		$(this).wrapInner( "<span></span>");
+	});
+
 	/*
 	*
 	*	Responsive iFrames

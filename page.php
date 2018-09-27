@@ -11,12 +11,13 @@
  *
  * @package ACStarter
  */
-
-get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
+get_header();
+$post_id = get_the_ID();
+$is_about_page = get_post_meta($post_id,'_our_promise_title');
+$is_services_page = get_post_meta($post_id,'_services_2_title');
+?>
+	<div id="primary" class="content-area clear">
+		<main id="main" class="site-main clear" role="main">
 			<?php
 			while ( have_posts() ) : the_post();
 
@@ -31,8 +32,19 @@ get_header(); ?>
 			?>
 
 		</main><!-- #main -->
+
+		<?php /* ABOUT PAGE */ ?>
+		<?php if($is_about_page) { ?>
+			<?php get_template_part('template-parts/content', 'about'); ?>
+		<?php } ?>
+
+		<?php /* SERVICES PAGE */ ?>
+		<?php if($is_services_page) { ?>
+			<?php get_template_part('template-parts/content', 'services'); ?>
+		<?php } ?>
+
+
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

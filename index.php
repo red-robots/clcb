@@ -58,7 +58,7 @@ $box_link = array('first_box_link','second_box_link','third_box_link');
 			<?php } else { ?>
 				<div class="row home-content-1 no-bg-image">
 			<?php } ?>
-				<div class="tile right">
+				<div class="tile right transparentbg">
 					<div class="flexwrap clear">
 						<?php if($content_section_2_title) { ?>
 							<h2><?php echo $content_section_2_title; ?></h2>
@@ -71,25 +71,26 @@ $box_link = array('first_box_link','second_box_link','third_box_link');
 			</div>
 
 			<div class="row home-content-2">
-				<div class="tile clear text-center">
+				<div class="textwrapper">
 					<?php if($content_section_3_title) { ?>
-						<h2 class="h2-title"><?php echo $content_section_3_title; ?><span><i></i></span></h2>
+						<h2 class="h2-title"><?php echo $content_section_3_title; ?></h2>
 					<?php } ?>
 					<?php if($content_section_3_title) { ?>
 						<div class="copy"><?php echo nl2br($content_section_3_text); ?></div>
 					<?php } ?>
-					<div class="forceleft">
-						<div class="button">
-							<a href="<?php echo $learn_more_link_2; ?>"><span>learn more</span></a>
-						</div>
+					<div class="button buttondiv clear text-center">
+						<a href="<?php echo $learn_more_link_2; ?>"><span>learn more</span></a>
 					</div>
 				</div>
 			</div>
+			
 			<section class="home-thirds">
 
 				<?php foreach ($box_images as $k => $img_field) { 
 					$box_img_src = get_field($img_field);
-					$box_title_txt = get_field($box_title[$k]); ?>
+					$box_title_txt = get_field($box_title[$k]); 
+					$box_permalink = get_field($box_link[$k]);
+					?>
 
 					<?php if ($box_img_src) { ?>
 					<div class="link has-image">
@@ -100,7 +101,7 @@ $box_link = array('first_box_link','second_box_link','third_box_link');
 						<div class="inner clear">
 					<?php } ?>
 							<div class="overlay">
-								<a href="<?php echo $first_box_link; ?>">
+								<a href="<?php echo $box_permalink; ?>">
 									<div class="flex">
 										<h2><?php echo $box_title_txt; ?></h2>
 									</div>
