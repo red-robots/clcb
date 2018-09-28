@@ -18,7 +18,7 @@ $post_id = ( isset($post->ID) && $post->ID ) ? $post->ID : 0;
 ?>
 
 <?php if ($services_1_text) { ?>
-	<div class="wrap-image clear two-column greydiv rowImg rowImg1">
+	<div class="wrap-image clear two-column greydiv rowImg rowImg1 serviceinfo">
 		<div class="imagediv" <?php echo $service1bg;?>>
 			
 		</div>
@@ -26,6 +26,9 @@ $post_id = ( isset($post->ID) && $post->ID ) ? $post->ID : 0;
 			<div class="textwrapper clear">
 				<h2 class="h2"><?php echo $services_1_title; ?></h2>
 				<div class="copy"><?php echo $services_1_text; ?></div>
+				<div class="button buttondiv clear">
+					<a href="<?php echo $services_1_button_link; ?>"><span><?php echo $services_1_button_text; ?></span></a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -35,6 +38,8 @@ $post_id = ( isset($post->ID) && $post->ID ) ? $post->ID : 0;
 	$services_2_title = get_field('services_2_title',$post_id);
 	$services_2_text = get_field('services_2_text',$post_id);
 	$services_2_image = get_field('services_2_image',$post_id);
+	$services_2_button_text = get_field('services_2_button_text',$post_id);
+	$services_2_button_link = get_field('services_2_button_link',$post_id);
 	$service2bg = '';
 	$service_class = 'no-image';
 	if($services_2_image) {
@@ -44,7 +49,7 @@ $post_id = ( isset($post->ID) && $post->ID ) ? $post->ID : 0;
 	}
 ?>
 <?php if ($services_2_text) { ?>
-	<div class="wrap-image clear two-column rowImg rowImg2">
+	<div class="wrap-image clear two-column rowImg rowImg2 serviceinfo">
 		<div class="imagediv" <?php echo $service2bg;?>>
 			
 		</div>
@@ -52,6 +57,9 @@ $post_id = ( isset($post->ID) && $post->ID ) ? $post->ID : 0;
 			<div class="textwrapper clear">
 				<h2 class="h2"><?php echo $services_2_title; ?></h2>
 				<div class="copy"><?php echo $services_2_text; ?></div>
+				<div class="button buttondiv clear">
+					<a href="<?php echo $services_2_button_link; ?>"><span><?php echo $services_2_button_text; ?></span></a>
+				</div>
 			</div>
 		</div>
 		

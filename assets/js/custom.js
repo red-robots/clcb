@@ -6,6 +6,10 @@
  */
 
 jQuery(document).ready(function ($) {
+
+	$('.red-button.button a').each(function(){
+		$(this).wrapInner('<span></span>');
+	});
 	
 	/*
 	*
@@ -16,12 +20,6 @@ jQuery(document).ready(function ($) {
     if (this.href == window.location.href) {
         $(this).addClass("active");
         }
-	});
-
-	/* button from tinymce */
-	$('.red-button.button a').each(function(){
-		var txt = $(this).text();
-		$(this).wrapInner( "<span></span>");
 	});
 
 	/*

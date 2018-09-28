@@ -18,7 +18,11 @@ a{text-decoration: none;}
 .text-left {text-align:left;}
 body {
 	color:$color-grey;
-	font-size:18px;
+	font-size:15px;
+	line-height:1.4;
+	@media screen and (min-width: $tabwidth) {
+		font-size:18px;
+	}
 }
 #masthead {
 	position: relative;
@@ -390,7 +394,15 @@ body {
 		}
 	}
 	.textdiv {
-		padding: 6% 0 4%;
+		padding: 6% 0 6%;
+		.button {
+			margin-top:10px;
+		}
+	}
+	&.serviceinfo {
+		.textdiv {
+			background:#dcd8d7;
+		}
 	}
 	@media screen and (min-width: $tabwidth) {
 		.imagediv {
@@ -402,6 +414,11 @@ body {
 		&.rowImg1 {
 			.imagediv {
 				right:0;
+			}
+			&.serviceinfo {
+				.textdiv {
+					width: 70%;
+				}
 			}
 		}
 		&.rowImg2 {
