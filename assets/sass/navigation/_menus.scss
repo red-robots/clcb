@@ -121,6 +121,9 @@
 		&:hover > a,
 		&.focus > a {
 		}
+		&.current_page_item > a {
+			color:$color-red;
+		}
 	}
 	a {
 		display: block;
@@ -129,6 +132,7 @@
 		color: #000;
 		@include transition(all ease .4s);
 		font-size: 14px;
+
 		@media screen and (min-width: $tabwidth) {
 			padding: 0 10px;
 			font-size: 14px;
