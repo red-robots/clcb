@@ -442,3 +442,59 @@ body {
 		}
 	}
 }
+.flex-container {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+  	.excerpt {
+		flex: 1 0 25%; 
+		margin: 5px 12px 20px;
+		text-align:left;
+		border:1px solid $color-light-grey;
+		@include transition(all ease-out .3s);
+		&:hover {
+			border-color:$color-red;
+		}
+  	}
+  	.inner1 {
+  		padding:20px;
+  	}
+}
+.boxed-items {
+	.post-title {
+		font-weight:600;
+		font-size:20px;
+		line-height:1.2;
+		margin:0 0 10px;
+	}
+	.post-excerpt {
+		font-size: 16px;
+	}
+	.post-link {
+		margin-top:15px;
+		a {
+			display:inline-block;
+			color:$color-red;
+			text-decoration:none;
+			position:relative;
+			span {
+				position: relative;
+				top:2px;
+				@include transition(all ease-out .3s);
+			}
+			&:after {
+				content:"";
+				display:block;
+				width:0%;
+				height:2px;
+				background:$color-red;
+				@include transition(all ease-out .3s);
+			}
+			&:hover {
+				&:after {
+					width:100%;
+				}
+			}
+		}
+	}
+}

@@ -424,3 +424,16 @@ section.home-thirds	{
 		height:500px;
 	}
 }
+.single {
+	.content-area, 
+	.widget-area {
+		float:left;
+		position:relative;
+	}
+	.content-area {
+		width:70%;
+	}
+	.widget-area {
+		width:30%;
+	}
+}
