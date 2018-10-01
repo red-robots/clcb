@@ -75,18 +75,19 @@ jQuery(document).ready(function ($) {
         $(this).wrapInner("<span></span>");
     });
     
-    const mySiema = new Siema({
-      selector: '#story-carousel',
-      duration: 200,
-      easing: 'ease-out',
-      perPage: 1,
-      startIndex: 0,
-      draggable: true,
-      multipleDrag: true,
-      threshold: 20,
-      loop: false
-    });
-    document.querySelector('.s_prev').addEventListener('click', () => mySiema.prev());
-    document.querySelector('.s_next').addEventListener('click', () => mySiema.next());
-
+    if( $("#story-carousel").length > 0 ) {
+        const mySiema = new Siema({
+          selector: '#story-carousel',
+          duration: 200,
+          easing: 'ease-out',
+          perPage: 1,
+          startIndex: 0,
+          draggable: true,
+          multipleDrag: true,
+          threshold: 20,
+          loop: false
+        });
+        document.querySelector('.s_prev').addEventListener('click', () => mySiema.prev());
+        document.querySelector('.s_next').addEventListener('click', () => mySiema.next());
+    }
 });// END #####################################    END

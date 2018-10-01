@@ -55,6 +55,38 @@
 					}
 				}
 			}
+            a {
+                color: $color-red;
+                position:relative;
+                display:inline-block;
+                @include transition(all ease-out .3s);
+                &:after {
+                    content:"";
+                    display:block;
+                    width:0;
+                    height:1px;
+                    background:transparent;
+                    margin:0 auto;
+                    @include transition(all ease-out .3s);
+                }
+                &:hover {
+                    &:after {
+                        width:100%;
+                        background:$color-red;
+                    }
+                }
+            }
+            p {
+                a {
+                    text-decoration: underline;
+                    &:after {
+                        display: none;
+                    }
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+            }
 		}
 		@media screen and (min-width: $tabwidth) {
 			&.has-sidebar {
@@ -500,5 +532,15 @@ section.home-thirds	{
         p:last-child {
             margin-bottom: 0;
         }
+    }
+}
+
+.edit-link {
+    a {
+        color:$color-red;
+        display: inline-block;
+        border:1px solid $color-red;
+        padding:8px 15px;
+        text-decoration: none;
     }
 }
