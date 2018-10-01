@@ -17,6 +17,13 @@ function acstarter_scripts() {
 			array(), '20120206', 
 			true 
 		);
+    
+    wp_enqueue_script( 
+			'acstarter-sieam', 
+			get_template_directory_uri() . '/assets/js/siema.min.js', 
+			array(), '20180101', 
+			true 
+		);
 
 	wp_enqueue_script( 
 			'acstarter-custom', 

@@ -6,34 +6,18 @@
  */
 
 jQuery(document).ready(function ($) {
-
-	$('.red-button.button a').each(function(){
-		$(this).wrapInner('<span></span>');
-	});
 	
 	/*
 	*
 	*	Current Page Active
 	*
 	------------------------------------*/
-	$("[href]").each(function() {
-    if (this.href == window.location.href) {
-        $(this).addClass("active");
-        }
-	});
 
 	/*
 	*
 	*	Responsive iFrames
 	*
 	------------------------------------*/
-	var $all_oembed_videos = $("iframe[src*='youtube']");
-	
-	$all_oembed_videos.each(function() {
-	
-		$(this).removeAttr('height').removeAttr('width').wrap( "<div class='embed-container'></div>" );
- 	
- 	});
 	
 	/*
 	*
@@ -60,38 +44,20 @@ jQuery(document).ready(function ($) {
 	*	Isotope with Images Loaded
 	*
 	------------------------------------*/
-	var $container = $('#container').imagesLoaded( function() {
-  	$container.isotope({
-    // options
-	 itemSelector: '.item',
-		  masonry: {
-			gutter: 15
-			}
- 		 });
-	});
 
 	/*
 	*
 	*	Smooth Scroll to Anchor
 	*
 	------------------------------------*/
-	 $('a').click(function(){
-	    $('html, body').animate({
-	        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-	    }, 500);
-	    return false;
-	});
-
 	/*
 	*
 	*	Nice Page Scroll
 	*
 	------------------------------------*/
-	$(function(){	
-		$("html").niceScroll();
-	});
+	$("html").niceScroll();
 	
-	
+    
 	/*
 	*
 	*	Equal Heights Divs
@@ -104,6 +70,23 @@ jQuery(document).ready(function ($) {
 	*	Wow Animation
 	*
 	------------------------------------*/
-	new WOW().init();
+    
+    $("span.red-button a").each(function(){
+        $(this).wrapInner("<span></span>");
+    });
+    
+    const mySiema = new Siema({
+      selector: '#story-carousel',
+      duration: 200,
+      easing: 'ease-out',
+      perPage: 1,
+      startIndex: 0,
+      draggable: true,
+      multipleDrag: true,
+      threshold: 20,
+      loop: false
+    });
+    document.querySelector('.s_prev').addEventListener('click', () => mySiema.prev());
+    document.querySelector('.s_next').addEventListener('click', () => mySiema.next());
 
 });// END #####################################    END
