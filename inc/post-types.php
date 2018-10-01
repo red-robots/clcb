@@ -107,7 +107,32 @@ function js_custom_init()
   } // close custom post type
 
 
-// Add the custom columns to the book post type:
+// Add new taxonomy, make it hierarchical (like categories)
+add_action( 'init', 'ii_custom_taxonomies', 0 );
+function ii_custom_taxonomies() {
+  $labels = array(
+    'name' => _x( 'Assignment Categories', 'taxonomy general name' ),
+    'singular_name' => _x( 'Category', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Category' ),
+    'popular_items' => __( 'Popular Category' ),
+    'all_items' => __( 'All Categories' ),
+    'parent_item' => __( 'Parent Category' ),
+    'parent_item_colon' => __( 'Parent Category:' ),
+    'edit_item' => __( 'Edit Category' ),
+    'update_item' => __( 'Update Category' ),
+    'add_new_item' => __( 'Add New Category' ),
+    'new_item_name' => __( 'New Category' ),
+  );
+  register_taxonomy('position_categories',array('position'), array(
+    'hierarchical' => true,
+    'labels' => $labels,
+    'show_ui' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'position_categories' ),
+  ));
+}
+
+// Add the custom columns to the position post type:
 add_filter( 'manage_position_posts_columns', 'set_custom_edit_position_columns' );
 function set_custom_edit_position_columns($columns) {
     unset( $columns['date'] );
