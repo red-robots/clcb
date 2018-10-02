@@ -1869,8 +1869,8 @@ body{color:#595a5c;font-size:15px;line-height:1.4}
 .forceleft{width:100%;float:left}
 .button{width:auto;display:inline-block}
 .button.buttondiv{display:block;width:100%}
-.button a{background-color:transparent;border:2px solid #e71e25;border-radius:0;color:#383938;display:inline-block;font-size:1.2em;font-weight:bold;margin:1em 0;padding:10px 40px;position:relative;text-transform:capitalize;overflow:hidden;vertical-align:middle}
-.button a:before{content:attr(data-text);position:absolute;top:0;left:-1px;width:100%;height:100%;background:#e71e25;padding:1em 2em;-webkit-transition:-webkit-transform .2s;transition:-webkit-transform .2s;transition:transform .2s;transition:transform .2s,-webkit-transform .2s;-webkit-transform:translate3d(-100%,0,0);-ms-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}
+.button a{background-color:#e71e25;border-radius:0;color:#FFF;display:inline-block;font-size:1.2em;font-weight:bold;margin:1em 0;padding:7px 20px;position:relative;text-transform:capitalize;overflow:hidden;vertical-align:middle}
+.button a:before{content:"";position:absolute;top:0;left:-1px;width:100%;height:100%;background:#383938;padding:1em 2em;-webkit-transition:-webkit-transform .2s;transition:-webkit-transform .2s;transition:transform .2s;transition:transform .2s,-webkit-transform .2s;-webkit-transform:translate3d(-100%,0,0);-ms-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}
 .button a:hover:before{left:0;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
 .button a:hover span{color:#FFF}
 .button a span{position:relative;z-index:10;-webkit-transition:all ease-out .5s;transition:all ease-out .5s}
@@ -1896,10 +1896,9 @@ body{color:#595a5c;font-size:15px;line-height:1.4}
 .rowImg .textwrapper h2{text-align:center}
 .rowImg .textdiv{padding:6% 0 6%}
 .rowImg .textdiv .button{margin-top:10px}
-.rowImg.serviceinfo .textdiv{background:#dcd8d7}
+.rowImg.serviceinfo .textdiv{background:#FFF}
 @media screen and (min-width:768px){.rowImg .imagediv{position:absolute;top:0;width:50%;height:100%}
 .rowImg.rowImg1 .imagediv{right:0}
-.rowImg.rowImg1.serviceinfo .textdiv{width:70%}
 .rowImg.rowImg2 .imagediv{left:0}
 .rowImg.rowImg2 .tile{float:right}
 .rowImg .textwrapper .copy,.rowImg .textwrapper h2{text-align:left}
@@ -1941,7 +1940,7 @@ a.btn_effect:hover:before{left:0;-webkit-transform:translate3d(0,0,0);-ms-transf
 .sub-page .content-area .entry-content p a{text-decoration:underline}
 .sub-page .content-area .entry-content p a:after{display:none}
 .sub-page .content-area .entry-content p a:hover{opacity:.6}
-.sub-page .content-area .entry-content p .button a{text-decoration:none}
+.sub-page .content-area .entry-content p .button a{color:#FFF;text-decoration:none}
 .sub-page .content-area .entry-content p .button a:hover{opacity:1}
 .sub-page .content-area .entry-content h2{font-size:25px;color:#383938;position:relative}
 .sub-page .content-area .entry-content h2:first-child{margin-top:0;margin-bottom:40px}
