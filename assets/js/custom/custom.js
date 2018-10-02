@@ -71,12 +71,7 @@ jQuery(document).ready(function ($) {
 	*	Smooth Scroll to Anchor
 	*
 	------------------------------------*/
-	 $('a').click(function(){
-	    $('html, body').animate({
-	        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-	    }, 500);
-	    return false;
-	});
+	
 
 	/*
 	*
@@ -101,5 +96,33 @@ jQuery(document).ready(function ($) {
 	*
 	------------------------------------*/
 	new WOW().init();
-
+    
+    $("span.red-button a").each(function(){
+      $(this).wrapInner("<span></span>");  
+    });
+    
+    if( $(".simple-carousel").length > 0 ) {
+        var mySiema = new Siema({
+            selector: '.simple-carousel',
+            duration: 200,
+            easing: 'ease-out',
+            perPage: 1,
+            startIndex: 0,
+            draggable: true,
+            multipleDrag: true,
+            threshold: 20,
+            loop: false
+        });
+       
+        $(document).on("click",".s_navi",function(e){
+            e.preventDefault();
+            var a = $(this).data("action");
+            if(a=='next') {
+                mySiema.next();
+            } else {
+                mySiema.prev();
+            }
+        });
+    }
+    
 });// END #####################################    END

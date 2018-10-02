@@ -106,3 +106,15 @@ function truncate($text, $chars = 120) {
     return $text;
 }
 
+function get_page_id_with_field($meta_key) {
+    global $wpdb;
+    $post_id = '';
+    if($meta_key) {
+        $results = $wpdb->get_row( "SELECT * FROM {$wpdb->prefix}postmeta WHERE meta_key = '".$meta_key."'", OBJECT );
+        if($results) {
+            $post_id = $results->post_id;
+        }
+    }   
+    return $post_id;
+}
+

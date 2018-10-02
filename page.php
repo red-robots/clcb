@@ -16,33 +16,32 @@ $post_id = get_the_ID();
 $is_about_page = get_post_meta($post_id,'_our_promise_title');
 $is_services_page = get_post_meta($post_id,'_services_2_title');
 ?>
-	<div id="primary" class="content-area clear">
-		<main id="main" class="site-main clear" role="main">
-			<?php
-			while ( have_posts() ) : the_post();
 
-				if( get_the_content() ) {
+<div id="primary" class="content-area clear text-left-align">
+    <main id="main" class="site-main clear" role="main">
+        <?php
+        while ( have_posts() ) : the_post();
 
-					get_template_part( 'template-parts/content', 'page' );
-				}
+            if( get_the_content() ) {
 
-			endwhile; // End of the loop.
-			?>
+                get_template_part( 'template-parts/content', 'page' );
+            }
 
-		</main><!-- #main -->
+        endwhile; // End of the loop.
+        ?>
 
-		<?php /* ABOUT PAGE */ ?>
-		<?php if($is_about_page) { ?>
-			<?php get_template_part('template-parts/content', 'about'); ?>
-		<?php } ?>
+    </main><!-- #main -->
 
-		<?php /* SERVICES PAGE */ ?>
-		<?php if($is_services_page) { ?>
-			<?php get_template_part('template-parts/content', 'services'); ?>
-		<?php } ?>
+    <?php /* ABOUT PAGE */ ?>
+    <?php if($is_about_page) { ?>
+        <?php get_template_part('template-parts/content', 'about'); ?>
+    <?php } ?>
 
-
-	</div><!-- #primary -->
+    <?php /* SERVICES PAGE */ ?>
+    <?php if($is_services_page) { ?>
+        <?php get_template_part('template-parts/content', 'services'); ?>
+    <?php } ?>
+</div><!-- #primary -->
 
 <?php
 get_footer();

@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area clear">
+	<div id="primary" class="content-area text-left-align clear">
 		<main id="main" class="site-main" role="main">
 			<?php
 			while ( have_posts() ) : the_post();
@@ -33,7 +33,7 @@ get_header(); ?>
 			if ( $items->have_posts() ) { ?>
 			<div class="single-display-wrap success-stories clear">
                 <div class="innerwrap clear">
-                    <div id="story-carousel" class="wrapp clear">
+                    <div id="story-carousel" class="wrapp clear simple-carousel">
                     <?php while ( $items->have_posts() ) : $items->the_post(); ?>
                         <div class="item-details">
                             <h2 class="item-title"><?php the_title(); ?></h2>
@@ -42,8 +42,8 @@ get_header(); ?>
                     <?php endwhile; wp_reset_postdata(); ?>
                     </div>
                 </div>
-                <a class="s_prev s_navi"><span><i class="fa fa-chevron-left"></i></span></a>
-                <a class="s_next s_navi"><span><i class="fa fa-chevron-right"></i></span></a>
+                <a class="s_prev s_navi" data-action="prev"><span><i class="fa fa-chevron-left"></i></span></a>
+                <a class="s_next s_navi" data-action="next"><span><i class="fa fa-chevron-right"></i></span></a>
 			</div>
 			<?php } ?>
 

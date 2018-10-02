@@ -52,4 +52,4 @@
 
 	<?php get_template_part('inc/banner'); ?>
 
-	<div id="content" class="site-content ">
+	<div id="content" class="site-content clear">

@@ -12,12 +12,24 @@ jQuery(document).ready(function ($) {
 	*	Current Page Active
 	*
 	------------------------------------*/
+	$("[href]").each(function() {
+    if (this.href == window.location.href) {
+        $(this).addClass("active");
+        }
+	});
 
 	/*
 	*
 	*	Responsive iFrames
 	*
 	------------------------------------*/
+	var $all_oembed_videos = $("iframe[src*='youtube']");
+	
+	$all_oembed_videos.each(function() {
+	
+		$(this).removeAttr('height').removeAttr('width').wrap( "<div class='embed-container'></div>" );
+ 	
+ 	});
 	
 	/*
 	*
@@ -44,20 +56,33 @@ jQuery(document).ready(function ($) {
 	*	Isotope with Images Loaded
 	*
 	------------------------------------*/
+	var $container = $('#container').imagesLoaded( function() {
+  	$container.isotope({
+    // options
+	 itemSelector: '.item',
+		  masonry: {
+			gutter: 15
+			}
+ 		 });
+	});
 
 	/*
 	*
 	*	Smooth Scroll to Anchor
 	*
 	------------------------------------*/
+	
+
 	/*
 	*
 	*	Nice Page Scroll
 	*
 	------------------------------------*/
-	$("html").niceScroll();
+	$(function(){	
+		$("html").niceScroll();
+	});
 	
-    
+	
 	/*
 	*
 	*	Equal Heights Divs
@@ -70,24 +95,34 @@ jQuery(document).ready(function ($) {
 	*	Wow Animation
 	*
 	------------------------------------*/
+	new WOW().init();
     
     $("span.red-button a").each(function(){
-        $(this).wrapInner("<span></span>");
+      $(this).wrapInner("<span></span>");  
     });
     
-    if( $("#story-carousel").length > 0 ) {
-        const mySiema = new Siema({
-          selector: '#story-carousel',
-          duration: 200,
-          easing: 'ease-out',
-          perPage: 1,
-          startIndex: 0,
-          draggable: true,
-          multipleDrag: true,
-          threshold: 20,
-          loop: false
+    if( $(".simple-carousel").length > 0 ) {
+        var mySiema = new Siema({
+            selector: '.simple-carousel',
+            duration: 200,
+            easing: 'ease-out',
+            perPage: 1,
+            startIndex: 0,
+            draggable: true,
+            multipleDrag: true,
+            threshold: 20,
+            loop: false
         });
-        document.querySelector('.s_prev').addEventListener('click', () => mySiema.prev());
-        document.querySelector('.s_next').addEventListener('click', () => mySiema.next());
+       
+        $(document).on("click",".s_navi",function(e){
+            e.preventDefault();
+            var a = $(this).data("action");
+            if(a=='next') {
+                mySiema.next();
+            } else {
+                mySiema.prev();
+            }
+        });
     }
+    
 });// END #####################################    END

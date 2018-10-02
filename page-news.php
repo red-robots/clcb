@@ -33,7 +33,7 @@ get_header(); ?>
 				);
 			$news = new WP_Query($args);
 			if ( $news->have_posts() ) { ?>
-			<div class="flex-container clear boxed-items">
+			<div class="flex-container clear boxed-items news-list">
 				<?php while ( $news->have_posts() ) : $news->the_post(); ?>
 				<div class="excerpt postcol">
 					<div class="inner1 clear">
