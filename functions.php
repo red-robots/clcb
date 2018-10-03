@@ -118,3 +118,72 @@ function get_page_id_with_field($meta_key) {
     return $post_id;
 }
 
+function friendly_string($string) {
+    $string = strtolower($string);
+    $string = preg_replace("/[^a-z0-9_\s-]/", "", $string);
+    $string = preg_replace("/[\s-]+/", " ", $string);
+    $string = preg_replace("/[\s_]/", "_", $string);
+    return $string;
+}
+
+function generate_sitemap() {
+    global $wpdb;
+    $lists = array();
+    $menus = wp_get_nav_menu_items('main-menu');
+    $news_ID = 112;
+    $cat_args = array('hide_empty' => 1, 'parent' => 0);
+    $menu_orders = array();
+    $menu_with_children = array();
+    if($menus) {
+        $i=0;
+        foreach($menus as $m) {
+            $page_id = $m->object_id;
+            $menu_title = $m->title;
+            $page_url = $m->url;
+            $post_parent = $m->post_parent;
+            $submenu = array();
+            if($post_parent) {
+                $submenu = array(
+                        'id'=>$page_id,
+                        'title'=>$menu_title,
+                        'url'=>$page_url
+                    );
+                $menu_with_children[$post_parent][$page_id] = $submenu;
+            } else {
+                $menu_orders[$page_id] = $menu_title;
+            } 
+            $i++;
+        }
+    }
+    
+    //print_r($menu_orders);
+    //print_r($menu_with_children);
+    
+    $results = $wpdb->get_results( "SELECT ID,post_title FROM {$wpdb->prefix}posts WHERE post_type = 'page' AND post_status='publish' AND post_parent=0 ORDER BY post_title ASC", OBJECT );
+    if($results) {
+        foreach($results as $row) {
+            $id = $row->ID;
+            $page_title = $row->post_title;
+            $page_link = get_permalink($id);
+            if(array_key_exists($id,$menu_orders)) {
+                $page_title = $menu_orders[$id];
+            }
+            
+            $lists[$id]['parent_id'] = $id;
+            $lists[$id]['parent_title'] = $page_title;
+            $lists[$id]['parent_url'] = $page_link;
+            
+            if(array_key_exists($id,$menu_with_children)) {
+                $lists[$id]['children'] = $menu_with_children[$id];
+            }
+            
+            if($id == $news_ID) {
+                $lists[$id]['categories'] = get_categories($cat_args);
+            }
+        }
+    }
+    
+    return $lists;
+    
+}
+

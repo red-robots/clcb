@@ -18,14 +18,42 @@
 
 	.menu-main-menu-container {
 		margin-top:60px;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        @include transition(all ease-out 1s);
 		@media screen and (min-width: $tabwidth) {
 			margin-top: 0;
+            display: block;
+            height: auto;
+            overflow: visible;
+            visibility: visible;
 		}
 	}
+    
+    &.toggled {
+        .menu-toggle {
+            i:nth-child(1), i:nth-child(2) {
+                @include transform( rotate(45deg) );
+                top: 12px;
+            }
+            i:nth-child(3) {
+                @include transform( rotate(-45deg) );
+                top: 12px;
+            }
+        }
+        .menu-main-menu-container {
+            display: block;
+            height: auto;
+            visibility: visible;
+            position: relative;
+            top:5px;
+        }
+    }
+
 	
 	.menu {
 		@include transition(all ease 1s);
-		overflow: hidden;
 		display: block;
 	}
 	&.toggled .menu {
@@ -50,23 +78,40 @@
 		margin: 0;
 		padding-left: 0;
 		@media screen and (min-width: $tabwidth) {
-			display: flex;
+			display: block;
 		}
+        
+        > li {
+            > a {
+                position: relative;
+                z-index: 9;
+            }
+            &:hover {
+                > ul {
+                    left: auto;
+                    animation-name: fadeInDown;
+                }
+            }
+            @media screen and (min-width: $midwidth) {
+                > ul {
+                    border-top:5px solid $color-red;
+                }
+            }
+        }
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+            background: $color-white;
 			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
-
+            width:100%;
 			ul {
 				left: -999em;
 				top: 0;
 			}
 
 			li {
+                display: block;
+                width: 100%;
+                float: left;
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
@@ -75,10 +120,25 @@
 
 
 			a {
-				width: 200px;
+                background: $color-white;
+                display: block;
+                text-align: left;
+                line-height: 1.4;
+                text-align: center;
+                text-transform: capitalize;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                font-size: 15px;
+                color:$color-grey2;
+                border-top: none;
 				@media screen and (min-width: $midwidth) {
 					font-size: 16px;
+                    color:$color-grey;
 				}
+                @media screen and (min-width: $tabwidth) {
+                    text-align: left;
+                    color:$color-grey;
+                }
 			}
 
 			:hover > a,
@@ -88,15 +148,24 @@
 			a:hover,
 			a.focus {
 			}
+            
+            @media screen and (min-width: $tabwidth) {
+                box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+                position: absolute;
+                top: 2.5em;
+                left: -999em;
+                z-index: 99999;
+                width: 250px;
+                padding-top:10px;
+                padding-bottom: 10px;
+                animation-duration: .6s;
+                animation-fill-mode: both;
+            }
 		}
 
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
 	}
+    
 	li {
-		// float: left;
 		position: relative;
 		text-align: center;
 		display: inline-block;
@@ -130,12 +199,14 @@
 		text-decoration: none;
 		padding: 10px 0px;
 		color: #000;
+        font-weight: 400;
 		@include transition(all ease .4s);
-		font-size: 14px;
+		font-size: 16px;
 
 		@media screen and (min-width: $tabwidth) {
 			padding: 0 10px;
 			font-size: 14px;
+            font-weight: 300;
 		}
 		@media screen and (min-width: $midwidth) {
 			padding: 0 20px;
@@ -222,18 +293,7 @@ button.menu-toggle {
 		display: none;
 	}
 }
-.main-navigation.toggled {
-	.menu-toggle {
-		i:nth-child(1), i:nth-child(2) {
-			@include transform( rotate(45deg) );
-			top: 12px;
-		}
-		i:nth-child(3) {
-			@include transform( rotate(-45deg) );
-			top: 12px;
-		}
-	}
-}
+
 
 .comment-navigation,
 .posts-navigation,
@@ -254,4 +314,14 @@ button.menu-toggle {
 		text-align: right;
 		width: 50%;
 	}
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -30%, 0)
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
 }

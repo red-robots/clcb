@@ -18,10 +18,12 @@ $post_id = ( isset($post->ID) && $post->ID ) ? $post->ID : 0;
 	<div class="promise-info clear wrap-image <?php echo $promise_class?>" <?php echo $promise_bg?>>
 		<div class="tile left transparentbg">
 			<div class="flexwrap clear">
-				<h2><?php echo $promise_title; ?></h2>
-				<div class="copy">
-					<?php echo nl2br($promise_text); ?>
-				</div>
+                <div class="inside clear">
+                    <h2 class="h2-title title_line_bottom"><?php echo $promise_title; ?></h2>
+                    <div class="copy">
+                        <?php echo nl2br($promise_text); ?>
+                    </div>
+                </div>
 			</div>
 		</div>
 	</div>
@@ -35,9 +37,9 @@ $content_2_learn_more_link = get_field('learn_more_link',$post_id);
 if ($content_2_text) { ?>
 	<div class="content2_wrap whitediv clear">
 		<div class="textwrapper clear">
-			<h2 class="h2-title"><?php echo $content_2_title; ?></h2>
+			<h2 class="h2-title title_line_bottom"><?php echo $content_2_title; ?></h2>
 			<div class="copy"><?php echo $content_2_text; ?></div>
-			<div class="button buttondiv clear text-center">
+			<div class="button buttondiv clear">
 				<a href="<?php echo ($content_2_learn_more_link) ? $content_2_learn_more_link:'#'?>"><span>learn more</span></a>
 			</div>
 		</div>
@@ -71,7 +73,7 @@ if($content_3_image) {
 			<div class="copy">
 				<?php echo $content_3_text; ?>
 			</div>
-			<div class="button buttondiv clear text-center">
+			<div class="button buttondiv clear">
 				<a href="<?php echo ($content_3_button_link) ? $content_3_button_link:'#'?>"><span><?php echo $content_3_button_text; ?></span></a>
 			</div>
 		</div>

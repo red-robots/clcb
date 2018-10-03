@@ -47,7 +47,8 @@ get_header(); ?>
 			</div>
 			<?php } ?>
 
-
+        
+            <?php get_template_part( 'template-parts/content', 'completed-assignments' ); ?>
 		
 	</div><!-- #primary -->
 

@@ -60,20 +60,22 @@ $box_link = array('first_box_link','second_box_link','third_box_link');
 			<?php } ?>
 				<div class="tile right transparentbg">
 					<div class="flexwrap clear">
-						<?php if($content_section_2_title) { ?>
-							<h2><?php echo $content_section_2_title; ?></h2>
-						<?php } ?>
-						<?php if($content_section_2_title) { ?>
-							<div class="copy"><?php echo $content_section_2_text; ?></div>
-						<?php } ?>
+                        <div class="inside clear">
+                            <?php if($content_section_2_title) { ?>
+                                <h2 class="text-red"><?php echo $content_section_2_title; ?></h2>
+                            <?php } ?>
+                            <?php if($content_section_2_title) { ?>
+                                <div class="copy"><?php echo $content_section_2_text; ?></div>
+                            <?php } ?>
+                        </div>    
 					</div>
 				</div>
 			</div>
 
 			<div class="row home-content-2">
-				<div class="textwrapper">
+				<div class="textwrapper text-center">
 					<?php if($content_section_3_title) { ?>
-						<h2 class="h2-title"><?php echo $content_section_3_title; ?></h2>
+						<h2 class="h2-title title_line_bottom"><?php echo $content_section_3_title; ?></h2>
 					<?php } ?>
 					<?php if($content_section_3_title) { ?>
 						<div class="copy"><?php echo nl2br($content_section_3_text); ?></div>

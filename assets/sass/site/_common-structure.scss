@@ -20,6 +20,7 @@ body {
 	color:$color-grey2;
 	font-size:15px;
 	line-height:1.4;
+    background: $color__body_grey;
 	@media screen and (min-width: $tabwidth) {
 		font-size:18px;
 	}
@@ -220,7 +221,7 @@ body {
 	}
 	img {width: 100%;}
 	h2 {
-		color: $color-red;
+		color: $color-grey;
 		text-align: left;
 		margin: 0 0 20px 0;
 		width: 100%;
@@ -282,7 +283,7 @@ body {
 		font-size: 1.2em;
 		font-weight: bold;
 		margin: 1em 0;
-		padding: 7px 20px;
+		padding: 7px 25px;
 		position: relative;
 		text-transform: capitalize;
 		overflow: hidden;
@@ -413,6 +414,10 @@ body {
 .greydiv {
 	background:$color__background-light-grey;
 }
+.textdiv {
+    background: $color-white;
+    position: relative;
+}
 .rowImg {
 	.textwrapper {
 		h2 {
@@ -423,11 +428,6 @@ body {
 		padding: 6% 0 6%;
 		.button {
 			margin-top:10px;
-		}
-	}
-	&.serviceinfo {
-		.textdiv {
-			background:$color-white;
 		}
 	}
 	@media screen and (min-width: $tabwidth) {
@@ -456,11 +456,6 @@ body {
 			}
 		}
 		
-	}
-	&.rowImg2 {
-		.textdiv {
-			background:$color-white;
-		}
 	}
 }
 .flex-container {
@@ -556,4 +551,32 @@ a.btn_effect {
 
 .edit-post-div {
     margin-top: 20px;
+}
+
+.title_line_bottom {
+    position: relative;
+    font-size: 30px;
+    &:after {
+        content: "";
+        display: block;
+        width: 80px;
+        height:4px;
+        background: #e71e25;
+        margin: 0 0;
+        position: relative;
+        top: 5px;
+    }
+}
+
+.text-center {
+    .title_line_bottom {
+        &:after {
+            margin: 0 auto;
+        }
+    }
+}
+
+h2.text-red,
+.text-red {
+    color:$color-red;
 }
