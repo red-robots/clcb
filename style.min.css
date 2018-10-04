@@ -1857,6 +1857,7 @@ body{color:#595a5c;font-size:15px;line-height:1.4;background:#f4f4f4}
 .banner .tagline .pad{display:inline-block;padding:10px 25px;background-color:#e71e25;color:#FFF;font-size:30px;font-weight:600;line-height:1.1}
 @media screen and (min-width:1200px){.banner .tagline .pad{font-size:65px}
 }@media screen and (min-width:900px){.banner .tagline .pad{font-size:65px}
+}@media screen and (min-width:900px){.home .banner{height:600px}
 }.quotediv{width:100%;position:absolute;color:#FFF;margin-top:-7%}
 .quotediv .quotetext{position:relative;padding:10px 25px;float:right;background:#e71e25;font-size:21px;line-height:1.1;z-index:5;width:85%;margin-top:-3%}
 @media screen and (min-width:768px){.quotediv .quotetext{font-size:35px;margin-top:-2%;width:60%}

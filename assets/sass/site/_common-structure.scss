@@ -185,6 +185,13 @@ body {
 
 	}
 }
+.home {
+	@media screen and (min-width: $midwidth) {
+		.banner {
+			height:600px;
+		}
+	}
+}
 .quotediv {
     width: 100%;
 	position:absolute;

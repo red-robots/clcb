@@ -68,23 +68,6 @@ jQuery(document).ready(function ($) {
 
 	/*
 	*
-	*	Smooth Scroll to Anchor
-	*
-	------------------------------------*/
-	
-
-	/*
-	*
-	*	Nice Page Scroll
-	*
-	------------------------------------*/
-	$(function(){	
-		$("html").niceScroll();
-	});
-	
-	
-	/*
-	*
 	*	Equal Heights Divs
 	*
 	------------------------------------*/
