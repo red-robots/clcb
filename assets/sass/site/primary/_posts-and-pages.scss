@@ -969,3 +969,14 @@ section.home-thirds	{
         opacity: 0.5;
     }
 }
+.archive-page-wrap {
+    width:90%;
+    margin: 0 auto;
+    .content-area  {
+        width:70%;
+        float:left;
+        .site-main {
+            width: 100%;
+        }
+    }
+}

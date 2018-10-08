@@ -2130,6 +2130,9 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 .assignmentlist .boxed-item .inner{padding:30px 20px}
 }@media screen and (min-width:1200px){.assignmentlist .boxed-item{width:25%}
 }.assignmentlist .icon{text-align:center;font-size:14px;opacity:.5}
+.archive-page-wrap{width:90%;margin:0 auto}
+.archive-page-wrap .content-area{width:70%;float:left}
+.archive-page-wrap .content-area .site-main{width:100%}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
