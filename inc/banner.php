@@ -10,9 +10,11 @@ if(is_front_page()) {
 			if($banner) { ?>
 			<div class="banner" style="background-image:url('<?php echo $banner['url']; ?>')">
 				<img class="banner-image" src="<?php echo $banner['url']; ?>"  alt="<?php echo $banner['alt']; ?>" style="display:none;" />
+				<?php if ( strip_tags($quote) ) { ?>
 				<div class="tagline animated fadeInUp">
 					<div class="pad"><?php echo $quote; ?></div>
 				</div>
+				<?php } ?>
 			</div>
 			<?php } ?>
 
@@ -42,7 +44,9 @@ if(is_front_page()) {
 				<div class="pagetitlediv"><div class="innerpad animated fadeInDown"><h1 class="page-title"><?php echo $page_title; ?></h1></div></div>
             </div>
             <div class="quote quotediv clear">
+            	<?php if ( strip_tags($quote) ) { ?>
                 <div class="pad quotetext animated slideInRight"><?php echo $quote; ?></div>
+            	<?php } ?>
                 <div class="banner-bottom svgArt">
                    <svg enable-background="new 0 0 412.2 52.6" version="1.1" viewBox="0 0 412.2 52.6" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
                         <polygon class="st0" points="412.2 52.6 0 52.6 0 1.1 15.3 1.1 32 30 47 1.1 412.2 1.1"/>
