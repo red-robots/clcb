@@ -279,6 +279,7 @@ body {
 		margin-top: 20px;
 		@media screen and (min-width: $midwidth) {
 			width: 16.66666%;
+            text-align:left;
 		}
 		@media screen and (min-width: $tabwidth) {
 			width: 33.33333%;
@@ -335,9 +336,12 @@ body {
 	.copyright {
 		font-family: $font__arial;
 		color: $color-white;
-		text-align:right;
+		text-align:center;
 		width:100%;
 		padding:10px 0;
+        @media screen and (min-width: $tabwidth) {
+            text-align:right;
+        }
 	}
 }
 .vcenter {
@@ -415,7 +419,8 @@ body {
         @media screen and (min-width: $tabwidth) {
             width: 50%;
         }
-        @media screen and (min-width: $midwidth) {
+
+        @media screen and (min-width: $deskwidth) {
             width: 33.333333%;
         }
   	}
