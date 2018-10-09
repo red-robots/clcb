@@ -2044,9 +2044,8 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 }.wrap-image{background-size:cover;background-repeat:no-repeat;background-position:top left;background-attachment:scroll;position:relative}
 .whitediv{padding-top:30px;padding-bottom:30px}
 @media screen and (min-width:768px){.whitediv{padding-top:50px;padding-bottom:60px}
-}.textwrapper{width:90%;margin:0 auto}
-@media screen and (min-width:768px){.textwrapper{width:80%}
-}.content3-info{background:#c0c4c1}
+}.textwrapper{width:85%;margin:0 auto}
+.content3-info{background:#c0c4c1}
 .textdiv{padding:50px 0}
 .textdiv .button{margin-top:40px}
 .textdiv .button a{margin:0}
