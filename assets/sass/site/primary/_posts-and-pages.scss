@@ -23,11 +23,12 @@
 .sub-page {
      background: $color__body_grey;
     .site-content {
+        width: 100%;
         position: relative;
         z-index: 5;
     }
     .site-main {
-        width: 100%;
+        width: 85%;
         margin: 0 auto;
         position: relative;
         padding-top:20px;
@@ -39,6 +40,7 @@
             top:-10px;
         }
         @media screen and (min-width: $midwidth) {
+            width:74%;
             top:-35px;
         }
     }
@@ -1256,6 +1258,11 @@ section.home-thirds	{
     margin: 0 auto;
     margin-top:50px;
     position: relative;
+    &.news-archive {
+        .site-main {
+            width: 100%;
+        }
+    }
     @media screen and (min-width: $tabwidth) {
         margin-top: 0;
         width: 70%;
@@ -1264,6 +1271,7 @@ section.home-thirds	{
         }
     }
 }
+
 .sub-page.archive,
 .sub-page.single-post {
     .site-content {
@@ -1292,8 +1300,12 @@ section.home-thirds	{
         position: relative;
     }
     .news-list {
-        width: 103%;
-        margin-left: -10px;
+        width: 100%;
+        margin-left: 0;
+        @media screen and (min-width: $tabwidth) {
+            width: 103%;
+            margin-left: -10px;
+        }
     }
 }
 @media screen and (min-width: $tabwidth) {
@@ -1354,12 +1366,6 @@ section.home-thirds	{
         .site-main {
             width: 100%;
         }
-    }
-}
-.content-area.ourteam {
-    width: 85%;
-    @media screen and (min-width: $tabwidth) {
-        width: 100%;
     }
 }
 .yshapeGrey {

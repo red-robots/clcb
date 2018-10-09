@@ -411,12 +411,13 @@ body {
   	.excerpt {
         width: 100%;
 		text-align:left;
-        padding: 13px;
+        padding: 13px 0;
 		@include transition(all ease-out .3s);
 		&:hover {
 			border-color:$color-red;
 		}
         @media screen and (min-width: $tabwidth) {
+            padding: 13px;
             width: 50%;
         }
 
