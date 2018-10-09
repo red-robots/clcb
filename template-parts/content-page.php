@@ -6,7 +6,8 @@
  *
  * @package ACStarter
  */
-
+global $post;
+$has_post_parent = ( isset($post->post_parent) && $post->post_parent ) ? $post->post_parent : '';
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

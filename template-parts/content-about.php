@@ -19,7 +19,7 @@ $post_id = ( isset($post->ID) && $post->ID ) ? $post->ID : 0;
 		<div class="tile left transparentbg">
 			<div class="flexwrap clear">
                 <div class="inside clear">
-                    <h2 class="h2-title title_line_bottom"><?php echo $promise_title; ?></h2>
+                    <h2 class="text-red"><?php echo $promise_title; ?></h2>
                     <div class="copy">
                         <?php echo nl2br($promise_text); ?>
                     </div>

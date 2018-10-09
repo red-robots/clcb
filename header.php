@@ -22,7 +22,7 @@
 </head>
 <?php $is_home = ( is_front_page() || is_home() ) ? 'home-page':'sub-page'; ?>
 <body <?php body_class($is_home); ?>>
-<div id="page" class="site">
+<div id="page" class="site clear">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">

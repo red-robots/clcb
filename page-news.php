@@ -7,8 +7,8 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area clear">
+<div class="news-archive archive archive-page-wrap wrapmid clear">
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<?php
 			while ( have_posts() ) : the_post();
@@ -21,7 +21,7 @@ get_header(); ?>
 			?>
 
 			<?php  
-			$perpage = 12;
+			$perpage = 9;
 			$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 			$args = array(
 				'posts_per_page'   => $perpage,
@@ -78,6 +78,10 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+    
+    <?php get_sidebar(); ?>
+    <div class="vdivider"></div>
+    
+</div>
 <?php
 get_footer();

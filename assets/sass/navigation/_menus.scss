@@ -7,7 +7,6 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	box-shadow: 0 0 5px rgba(50, 50, 50, 0.3);	
 	@media screen and (min-width: $tabwidth) {
 		position: relative;
 		box-shadow:none;
@@ -32,6 +31,7 @@
 	}
     
     &.toggled {
+        box-shadow: 0 0 5px rgba(50, 50, 50, 0.3);	
         .menu-toggle {
             i:nth-child(1), i:nth-child(2) {
                 @include transform( rotate(45deg) );

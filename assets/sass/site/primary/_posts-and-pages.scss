@@ -17,28 +17,35 @@
 }
 
 .page-content,
-.entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
 }
 .sub-page {
      background: $color__body_grey;
     .site-content {
-        overflow:hidden;
-        padding-top:30px;
+        position: relative;
+        z-index: 5;
+    }
+    .site-main {
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        padding-top:20px;
+        padding-bottom: 40px;
+        @media screen and (min-width: $tabwidth) {
+            width:70%;
+            padding-top: 0;
+            padding-bottom: 20px;
+            top:-10px;
+        }
+        @media screen and (min-width: $midwidth) {
+            top:-35px;
+        }
     }
 	.content-area {
 		width: 100%;
 		margin: 0 auto;
 		position: relative;
-		.site-main {
-			width:90%;
-			margin: 0 auto;
-			padding-bottom: 30px;
-            @media screen and (min-width: $tabwidth) {
-                width:80%;
-            }
-		}
 		.entry-content {
 			line-height:1.4;
 			ul {
@@ -46,7 +53,7 @@
 				margin-left:20px;
 				padding-left: 0;
 				li {
-					margin-bottom: 20px;
+					margin-bottom: .3em;
 					position:relative;
 					list-style:none;
 					padding-left: 20px;
@@ -135,16 +142,12 @@
 					padding-left:20px;
 				}
 			}
-			.site-main {
-				padding-bottom: 50px;
-			}
 			.entry-content {
 				ul {
 					margin-left:0;
 					padding-left:80px;
 					padding-right:80px;
 					li {
-						margin-bottom: 20px;
 						position:relative;
 						list-style:none;
 						padding-left: 20px;
@@ -174,81 +177,211 @@
             }
         }
     }
-    
-	.widget-area {
-		width: 90%;
-		.widget {
-			border-top: 1px solid $color-light-grey;
-			&:first-child {
-				border-top:none;
-			}
-		}
-		@media screen and (min-width: $tabwidth) {
-			width:25%;
-			float:right;
-			padding-left:20px;
-			padding-right:20px;
-			.widget {	
-			}
-		}
-	}
 }
-
+.entry-content {
+    blockquote {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #FFF;
+        color:$color-red;
+        font-weight: 600;
+        margin: 0 0;
+        p {
+            margin-bottom: 0;
+            margin-top:1.5em;
+        }
+        p:first-child {
+            margin-top: 0;
+        }
+    }
+}
+#primary {
+    position: relative;
+}
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
 }
-.home-opener {
+.banner-outer-wrap {
+    position: relative;
+}
+.banner {
 	width: 100%;
-	padding: 15px 0;
-	background-color: $color__background-grey;
-	color: #fff;
-	.quote-desc {
-		width: 80%;
-		margin: 30px auto;
-		font-weight: 300;
-		font-size: 18px;
-		text-align:center;
+	height:210px;
+	position: relative;
+	@include background-image-full(scroll);
+	margin-top:60px;
+	@media screen and (min-width: $midwidth) {
+		margin-top:0;
+		height:600px;
+		&.subpage {
+			height: 400px;
+		}
 	}
 	@media screen and (min-width: $tabwidth) {
-		padding: 40px 0;
+		margin-top:0;
+        height:350px;
+	}
+	&.no-image {
+		background:$color-light-grey;
+		height:auto!important;
+		.pagetitlediv {
+			padding:20px;
+			.innerpad {
+				display:inline-block;
+				.page-title {
+					color:$color-grey;
+				}
+			}
+		}
+	}
+	
+	img {
+		width: 100%;
+		float:left;
+	}
+	.banner-image {
+		display:none;
+	}
+	.tagline {
+		position:absolute;
+		width: 100%;
+        bottom: -25px;
+        right: 0;
+		text-align:center;
+		color:$color-red;
+		.pad {
+            position: relative;
+			display:inline-block;
+			background-color:$color-red;
+			color:$color-white;
+			font-size:30px;
+			font-weight:600;
+			line-height:1.1;
+            padding: 10px 20px;
+            width: 80%;
+            float: right;
+            text-align: left;
+		}
+		@media screen and (min-width: $deskwidth) {
+			.pad {
+				font-size:65px;
+			}
+		}
+		@media screen and (min-width: $midwidth) {
+			.pad {
+				font-size:65px;
+			}
+		}
+
+	}
+}
+.home {
+    .banner-outer-wrap {
+        position: relative;
+    }
+    .tagline .pad {
+        background-color: transparent;
+    }
+    @media screen and (min-width: $tabwidth) {
+		.banner {
+			height:600px;
+		}
+	}
+}
+.quotediv {
+    width: 100%;
+	color:$color-white;
+	.quotetext {
+        position:absolute;
+        right: 0;
+        top: -28%;
+		padding:10px 25px;
+		background:$color-red;
+		font-size: 18px;
+		line-height:1.1;
+        z-index: 5;
+        width: 75%;
+        @media screen and (min-width: $tabwidth) {
+            font-size:25px;
+            width: 70%;
+            top: -18%;
+        }   
+        @media screen and (min-width: $midwidth) {
+            font-size:35px;
+            width: 60%;
+            top: -15%;
+        }
+        
+	}
+}
+.home-opener {
+	width: 100%;
+	padding: 0 0;
+	color: #fff;
+    position: relative;
+    .innerpad {
+        position: relative;
+        z-index: 3;
+    }
+	.quote-desc {
+		width: 85%;
+		margin: 0 auto;
+		font-weight: 300;
+		font-size: 16px;
+		text-align:left;
+        position: relative;
+        padding-top: 8%;
+        padding-bottom: 12%;
+	}
+    .quoteTitle {
+        margin: 0 0 30px;
+        font-weight: 700;
+        position: relative;
+        left: 0;
+    }
+	@media screen and (min-width: $tabwidth) {
 		.quote-desc {
 			width: 60%;
 			font-size: 20px;
+            padding-top: 0;
+            padding-bottom:10%;
+            margin-top: -10px;
 		}
+        .quoteTitle {
+            margin: 0 0 40px;
+            left: -8%;
+        }
 	}
 }
-.home-content-1 {
-	@include background-image-full(scroll,top left);
-	background-color:$color-white;
-	position:relative;
-	.tile {
-		width:80%;
-		margin: 0 auto;
-	}
-	@media screen and (min-width: $tabwidth) {
-		.title {
-			width:70%;
-		}
-	}
+.yshape {
+    width: 100%;
+    svg {
+        width: 100%;
+        float: left;
+        position: relative;
+        z-index: 3;
+    }
 }
-.home-content-2 {
-	padding:4% 0 4%;
-	width:100%;
-	.tile {
-		width:70%;
-		margin: 0 auto;
-		@media screen and (min-width: $tabwidth) {
-			width:auto;
-		}
-	}
-	@media screen and (min-width: $tabwidth) {
-		padding:6% 0 6%;
-	}
-	.buttondiv {
-		margin-top:30px;
-	}
+.home {
+    background: $color-grey;
 }
+.sub-page {
+    .quotediv {
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+    }    
+    .yshape {
+        position: relative;
+    }
+    &.single-team {
+        .quotediv {
+            bottom: 0;
+        }
+    }
+}
+
 h2.h2-title {
 	color:$color-grey;
 	position:relative;
@@ -290,16 +423,31 @@ section.home-thirds	{
 		.overlay {
 			width: 100%;
 			height: 100%;
+            overflow: hidden;
 			position: absolute;
 			top: 0;
 			left: 0;
 			z-index: 5;
-			background-color: transparent;
 			@include transition(all ease-out 0.3s);
-			a {
+            &:before {
+                content:'';
+                display: block;
+                width: 101%;
+                height: 101%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+                background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+                background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+            }
+            a {
 				display: block;
 				width: 100%;
 				height: 100%;
+                background: transparent;
+                @include transition(all ease-out 0.3s);
 				.flex {
 					width: 50%;
 					height: 100%;
@@ -338,20 +486,21 @@ section.home-thirds	{
 				}
 			}
 			.overlay {
-				background-color:rgba(0,0,0,.35);
+                a {
+                    background:rgba(0,0,0,.5);
+                }
 			}
 		}
 	}
 }
 .pagetitlediv {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index:5;
-	width:100%;
-	height:100%;
+	position: relative;
 	.innerpad {
-		@include vertical-center-text(80%,100%);
+		width: 80%;
+        float:right;
+        text-align: left;
+        padding-bottom: 30px;
+        line-height: 1;
 	}
 	.page-title {
 		color:$color-white;
@@ -393,10 +542,10 @@ section.home-thirds	{
 	}
 }
 .tile {
-	width:80%;
+	width:100%;
 	&.transparentbg {
 		.flexwrap {
-			padding: 10% 0;
+            padding: 20% 0;
 			background-color: rgba(255, 255, 255, 0.8);
 		}
         .inside {
@@ -409,14 +558,59 @@ section.home-thirds	{
 	}
 	@media screen and (min-width: $tabwidth) {
 		&.transparentbg {	
-			width:70%;
+			width:50%;
 		}
 	}
 }
-.home-content-1 {
+.divCol2 {
+    position: relative;
+    .button a {
+        margin-bottom: 0;
+    }
+}
+.home .divCol2 {
+    .flexwrap {
+        padding: 20% 0;
+        @media screen and (min-width: $tabwidth) {
+            padding: 30% 0;
+        }
+    }
+    &.content1 .flexwrap {
+        padding: 14% 0;
+        @media screen and (min-width: $tabwidth) {
+            padding: 30% 0;
+        }
+    }
+}
+.content1 {
+    @include background-image-full(scroll,center center);
     .tile {
-        .flexwrap {
-            padding: 14% 0;
+        margin-top:30%;
+        @media screen and (min-width: $tabwidth) {
+            margin-top: 0;
+        }
+    }
+}
+.content2 {
+    .tile {
+       background: #FFF;
+    }
+    &.divCol2 .flexwrap {
+        padding: 7% 0;
+        @media screen and (min-width: $tabwidth) {
+            padding: 15% 0;
+        }
+    }
+    .imageRight {
+        width: 100%;
+        height: 180px;
+        @include background-image-full(scroll,center center);
+        @media screen and (min-width: $tabwidth) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
         }
     }
 }
@@ -497,13 +691,12 @@ section.home-thirds	{
 	.widget-area {
 		float:left;
 		position:relative;
-	}
-	.content-area {
-		width:70%;
-	}
-	.widget-area {
-		width:30%;
-	}
+	}  
+    @media screen and (min-width: $tabwidth) {
+        .content-area {
+            width: 75%;
+        }
+    }
 }
 .single-display-wrap {
     background: $color__background-grey2;
@@ -601,6 +794,10 @@ section.home-thirds	{
         .inner {
             padding: 10px 10px;
             position:relative;
+            margin-bottom: 30px;
+            @media screen and (min-width: $tabwidth) {
+                margin-bottom: 0;
+            }
         }
         .image-wrap {
             background: $color__background-grey2;
@@ -622,11 +819,8 @@ section.home-thirds	{
                 }
             }
         }
-        @media screen and (min-width: $xswidth) {
-            width: 50%;
-        }
         @media screen and (min-width: $tabwidth) {
-            width: 33.3333333%;
+            width: 50%;
             margin-bottom: 60px;
             .inner {
                 padding: 10px 20px;
@@ -635,6 +829,9 @@ section.home-thirds	{
                 height:340px;
             } 
 	    }
+        @media screen and (min-width: $midwidth) {
+            width: 33.3333333%;
+        }
     }
 }
 .member-details {
@@ -645,28 +842,38 @@ section.home-thirds	{
     width: 100%;
     .divider {
         position: absolute;
-        top:0;
+        top:-20px;
         left:0;
         width: 100%;
         z-index: 3;
         .st0{fill:$color-white;}
         .st1{fill:none;stroke:$color-red;stroke-width:2.5;stroke-miterlimit:10;}
         .st2{fill:$color-red;}
+        &:after {
+            content:"";
+            display: block;
+            width: 100%;
+            height:85px;
+            background: #FFF;
+            position: relative;
+            top: -15px;
+        }
+        @media screen and (min-width: $tabwidth) {
+            top: 0;
+        }
     }
     .nameWrap {
         position: relative;
         text-align:left;
         line-height:1.1;
         font-weight: 400;
-        float: left;
-        width: 100%;
+        float: right;
+        width: 80%;
         z-index: 5;
+        margin-top: 3%;
         padding-right: 20px;
-        padding-left: 63px;    
-        top: 25px;
         @media screen and (min-width: $tabwidth) {
-            top: 35px;
-            padding-left: 60px;
+            margin-top: 10%;
         }
     }
     .name {
@@ -683,6 +890,9 @@ section.home-thirds	{
             top:6px;
         }
         @media screen and (min-width: $tabwidth) {
+            font-size: 18px;
+        }
+        @media screen and (min-width: $midwidth) {
             font-size: 25px;
         }
     }
@@ -702,12 +912,12 @@ section.home-thirds	{
     .link {
         background: $color-white;
         text-align: left;
-        padding-bottom: 25px;
-        padding-top: 40px;
+        padding-bottom: 10px;
+        padding-top: 20px;
         float: left;
         width: 100%;
         position: relative;
-        top: -15px;
+        top: 0;
         a {
             color:$color-white;
             display: inline-block;
@@ -716,32 +926,82 @@ section.home-thirds	{
             text-transform: uppercase;
             padding: 6px 20px 4px 70px;
             margin-top: 20px;
+            position: relative;
+            z-index: 10;
             @media screen and (min-width: $tabwidth) {
                 font-size: 17px;
                 padding: 6px 20px 4px 70px;
                 margin-top: 20px;
             }
         }
+        &:before {
+            content:'';
+            width: 100%;
+            height: 30px;
+            background: #FFF;
+            position: absolute;
+            display: block;
+            left:0;
+            top:-30px;
+            @media screen and (min-width: $tabwidth) {
+                display: block;
+                top: 0;
+            }
+            @media screen and (min-width: $midwidth) {
+                top:-30px;
+            }
+        }
         @media screen and (min-width: $tabwidth) {
+            padding-top: 0;
+            padding-bottom: 25px;
+            top: 10px;
+        }
+        @media screen and (min-width: $midwidth) {
             padding-top: 60px;
-            top: -10px;
         }
     }
 }
 
-.banner-bottom {
-    position: absolute;
-    width:100%;
-    top: 0;
-    left: 0;
-}
 .news-list {
-    margin-top: 50px;
+    &.flex-container {
+        justify-content: left;
+    }
+    @media screen and (min-width: $tabwidth) {
+        width: 102%;
+        margin-left: -10px;
+    }
+    .navigation {
+        margin-top: 20px;
+    }
+    .nav-links {
+        a {
+            color:$color-red;
+            display: inline-block;
+            padding:5px 10px;
+            border: 1px solid $color-red;
+            @media screen and (min-width: $tabwidth) {
+                margin-left: 13px;
+            }
+        }
+        .nav-previous {
+            a {
+                &:before {
+                    content: '\2190';
+                }
+            }
+        }
+    }
 }
 .svgArt {
     .st0{fill:$color__body_grey;}
-    .st1{fill:none;stroke:$color-red;stroke-width:1.2;stroke-miterlimit:10;}
-    .st2{fill:$color-red;}
+	.st1{fill:$color__body_grey;}
+	.st2{fill:none;stroke:#E52227;stroke-width:1.2;stroke-miterlimit:10;}
+	.st3{fill:#FFFFFF;stroke:#E52227;stroke-width:1.2;stroke-miterlimit:10;}
+	.st4{fill:#E52227;}
+    &.grey {
+        .st0{fill:$color-grey;}
+        .st1{fill:$color-grey;}
+    }
 }
 .m_imagecol,
 .m_description_col {
@@ -752,6 +1012,11 @@ section.home-thirds	{
     &.single-team {
         .content-area {
             width: 100%;
+        }
+    }
+    @media screen and (min-width: $tabwidth) {
+        .site-main {
+            top: -70px;
         }
     }
 }
@@ -974,11 +1239,124 @@ section.home-thirds	{
     margin: 0 auto;
     @media screen and (min-width: $tabwidth) {
         .content-area  {
-            width:70%;
+            width:75%;
             float:left;
             .site-main {
                 width: 100%;
             }
+        }
+    }
+}
+.wrapmid {
+    width: 80%;
+    margin: 0 auto;
+    margin-top:50px;
+    position: relative;
+    @media screen and (min-width: $tabwidth) {
+        margin-top: 0;
+        width: 70%;
+    }
+}
+.sub-page.archive,
+.sub-page.single-post {
+    .site-content {
+        margin: 0 auto;
+        position: relative;
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+    .site-main {
+        top: 0;
+        width: 100%;
+        padding-right: 0;
+        @media screen and (min-width: $tabwidth) {
+            padding-right: 20px;
+        }
+        @media screen and (min-width: $midwidth) {
+            padding-right: 30px;
+        }
+    }
+    .entry-title {
+        position: relative;
+        color:$color-grey;
+        margin: .5em 0 1.3em;
+    }
+    .single-outer-wrap {
+        position: relative;
+    }
+    .news-list {
+        width: 103%;
+        margin-left: -10px;
+    }
+}
+@media screen and (min-width: $tabwidth) {
+    .vdivider {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25%;
+        height: 100%;
+        border-left: 1px solid $color-light-grey;
+    }
+}
+.news-archive {
+    margin-bottom: 30px;
+    .site-main {
+        padding-right: 0;
+        top: -10px;
+        @media screen and (min-width: $tabwidth) {
+            padding-right: 20px;
+        }
+        @media screen and (min-width: $midwidth) {
+            padding-right: 30px;
+        }
+    }
+    @media screen and (min-width: $tabwidth) {
+        .flex-container {
+            width: 103%;
+            margin-left: -10px;
+        }
+    }
+}
+.single {
+    .content-area .entry-content {
+        ul, ol {
+            padding-left: 20px;
+            display: inline-block;
+            width: auto;
+            margin-left: 0;
+            @media screen and (min-width: $tabwidth) {
+                width: 100%;
+                float: left;
+                clear: none;
+            }
+        }
+    }
+    .wp-caption {
+        &.alignleft,
+        &.alignright {
+            max-width: 100%;
+            width: 100%;
+            @media screen and (min-width: $tabwidth) {
+                max-width: 250px;
+            }
+        }
+        
+    }
+}
+.yshapeGrey {
+    .st0{fill:#F4F4F4;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:none;stroke:#E52227;stroke-width:1;stroke-miterlimit:10;}
+	.st3{fill:#FFFFFF;stroke:#E52227;stroke-width:1;stroke-miterlimit:10;}
+	.st4{fill:#E52227;}
+    &.top {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        @media screen and (min-width: $tabwidth) {
+            top: 0;
         }
     }
 }

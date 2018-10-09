@@ -19,44 +19,57 @@ $is_home_page = ( is_front_page() ) ? true:false;
 if ( have_posts() ) : the_post();
 
 $quote_homepage=get_field('quote_homepage');
+$quote_title=get_field('quote_title');
 $quote_description=get_field('quote_description');
 $content_section_2_title=get_field('content_section_2_title');
 $content_section_2_text=get_field('content_section_2_text');
 $content_section_2_image=get_field('content_section_2_image');
 $learn_more_link=get_field('learn_more_link');
-$content_section_3_title=get_field('content_section_3_title');
-$content_section_3_text=get_field('content_section_3_text');
-$content_section_3_image=get_field('content_section_3_image');
 $learn_more_link_2=get_field('learn_more_link_2');
 
-$first_box_image=get_field('first_box_image');
-$first_box_title=get_field('first_box_title');
-$first_box_link=get_field('first_box_link');
-$second_box_image=get_field('second_box_image');
-$second_box_title=get_field('first_box_title');
-$second_box_link=get_field('second_box_link');
-$third_box_title=get_field('third_box_title');
-$third_box_image=get_field('third_box_image');
-$third_box_link=get_field('third_box_link');
+//$first_box_image=get_field('first_box_image');
+//$first_box_title=get_field('first_box_title');
+//$first_box_link=get_field('first_box_link');
+//$second_box_image=get_field('second_box_image');
+//$second_box_title=get_field('first_box_title');
+//$second_box_link=get_field('second_box_link');
+//$third_box_title=get_field('third_box_title');
+//$third_box_image=get_field('third_box_image');
+//$third_box_link=get_field('third_box_link');
 
 $box_images = array('first_box_image','second_box_image','third_box_image');
 $box_title = array('first_box_title','second_box_title','third_box_title');
 $box_link = array('first_box_link','second_box_link','third_box_link');
 
+$content_section_3_title=get_field('content_section_3_title');
+$content_section_3_text=get_field('content_section_3_text');
+$content_section_3_image=get_field('content_section_3_image');
+$content_section_3_text=get_field('content_section_3_text');
+$learn_more_link_3=get_field('learn_more_link_2');
+
 ?>
 	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
 			<div class="home-opener">
-				<?php if($quote_description) { ?>
-					<div class="quote-desc"><?php echo nl2br($quote_description); ?></div>
+				<div class="innerpad clear">
+                <?php if($quote_description || $quote_title) { ?>
+                    
+					<div class="quote-desc">
+                        <?php if($quote_title) { ?>
+                            <h2 class="quoteTitle"><?php echo $quote_title; ?></h2>
+                        <?php } ?>
+                        <?php if($quote_description) { ?>
+                            <div class="qquoteContent"><?php echo nl2br($quote_description); ?></div>
+                        <?php } ?>
+                    </div>
 				<?php } ?>
+                </div>    
 			</div>
 
 			<?php if ($content_section_2_image) { ?>
-				<div class="row home-content-1" style="background-image:url('<?php echo $content_section_2_image['url']; ?>')">
-					<img src="<?php echo $content_section_2_image['url']; ?>" alt="<?php echo $content_section_2_image['alt']; ?>" style="display:none;">
+				<div class="row content1 divCol2" style="background-image:url('<?php echo $content_section_2_image['url']; ?>')">
 			<?php } else { ?>
-				<div class="row home-content-1 no-bg-image">
+				<div class="row content1 divCol2 no-bg-image">
 			<?php } ?>
 				<div class="tile right transparentbg">
 					<div class="flexwrap clear">
@@ -64,24 +77,33 @@ $box_link = array('first_box_link','second_box_link','third_box_link');
                             <?php if($content_section_2_title) { ?>
                                 <h2 class="text-red"><?php echo $content_section_2_title; ?></h2>
                             <?php } ?>
-                            <?php if($content_section_2_title) { ?>
-                                <div class="copy"><?php echo $content_section_2_text; ?></div>
+                            <?php if($content_section_2_text) { ?>
+                                <div class="copy"><?php echo nl2br($content_section_2_text); ?></div>
                             <?php } ?>
                         </div>    
 					</div>
 				</div>
 			</div>
 
-			<div class="row home-content-2">
-				<div class="textwrapper text-center">
-					<?php if($content_section_3_title) { ?>
-						<h2 class="h2-title title_line_bottom"><?php echo $content_section_3_title; ?></h2>
-					<?php } ?>
-					<?php if($content_section_3_title) { ?>
-						<div class="copy"><?php echo nl2br($content_section_3_text); ?></div>
-					<?php } ?>
-					<div class="button buttondiv clear text-center">
-						<a href="<?php echo $learn_more_link_2; ?>"><span>learn more</span></a>
+			<?php if ($content_section_3_image) { ?>
+				<div class="row content2 divCol2">
+			         <div class="imageRight" style="background-image:url('<?php echo $content_section_3_image['url']; ?>')"></div>
+            <?php } else { ?>
+				<div class="row content2 divCol2 no-bg-image">
+			<?php } ?>
+				<div class="tile left transparentbg">
+					<div class="flexwrap clear">
+                        <div class="inside clear">
+                            <?php if($content_section_3_title) { ?>
+                                <h2 class="title_line_bottom"><?php echo $content_section_3_title; ?></h2>
+                            <?php } ?>
+                            <?php if($content_section_3_text) { ?>
+                                <div class="copy"><?php echo nl2br($content_section_3_text); ?></div>
+                                <div class="button buttondiv clear">
+                                    <a href="<?php echo $learn_more_link_3; ?>"><span>learn more</span></a>
+                                </div>
+                            <?php } ?>
+                        </div>    
 					</div>
 				</div>
 			</div>

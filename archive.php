@@ -8,44 +8,42 @@
  */
 
 get_header(); ?>
-<div class="archive-page-wrap clear">
+<div class="yshapeGrey top"><?php  get_template_part('template-parts/yshape-grey'); ?></div>
+<div class="archive-page-wrap single-outer-wrap wrapmid clear">
 	<div id="primary" class="content-area ">
 		<main id="main" class="site-main" role="main">
-
-		<?php
-		if ( have_posts() ) : ?>
-
-			<header class="page-header">
+        <?php if ( have_posts() ) { ?>
+            <header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_title( '<h1 class="entry-title title_line_bottom">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
+            
+            <div class="flex-container clear boxed-items news-list">
+            <?php while ( have_posts() ) : the_post(); ?>
+                <div class="excerpt postcol">
+                    <div class="inner1 clear">
+                        <h3 class="post-title"><?php the_title(); ?></h3>
+                        <div class="post-excerpt">
+                            <?php if ($content = get_the_content()) {
+								$s_content = strip_shortcodes($content);
+								$s_content = strip_tags($s_content); ?>
+								<?php echo truncate($s_content,200); ?>
+							<?php } ?>
+                        </div>
+                        <div class="post-link"><a href="<?php echo get_permalink()?>">Continue Reading <span>&rarr;</span></a></div>
+                    </div>
+                </div>
+            <?php endwhile; ?>
+            <?php the_posts_navigation(); ?>
+            </div>
+            
+        <?php } ?>
+        </main>
+    </div>
+    <?php get_sidebar(); ?>
+    <div class="vdivider"></div>
 </div>
 <?php
 get_footer();
