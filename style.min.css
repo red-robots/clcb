@@ -1981,7 +1981,7 @@ h2.text-red,.text-red{color:#e71e25}
 @media screen and (min-width:768px){.home .banner{height:600px}
 }.quotediv{width:100%;color:#FFF}
 .quotediv .quotetext{position:absolute;right:0;top:-28%;padding:10px 25px;background:#e71e25;font-size:18px;line-height:1.1;z-index:5;width:75%}
-@media screen and (min-width:768px){.quotediv .quotetext{font-size:25px;width:70%;top:-18%}
+@media screen and (min-width:768px){.quotediv .quotetext{font-size:25px;width:75%;top:-18%}
 }@media screen and (min-width:980px){.quotediv .quotetext{font-size:30px;width:75%;top:-15%}
 }@media screen and (min-width:1200px){.quotediv .quotetext{width:60%;font-size:35px}
 }.home-opener{width:100%;padding:0;color:#fff;position:relative}
