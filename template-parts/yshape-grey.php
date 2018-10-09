@@ -6,3 +6,4 @@
 	<line class="st3" x1="44.4" x2="44.3" y1="50.2" y2="36.2"/>
 	<circle class="st4" cx="44.5" cy="51.7" r="2.2"/>
 </svg>
+
