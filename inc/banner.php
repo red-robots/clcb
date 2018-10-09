@@ -47,13 +47,18 @@ if( $is_home_page ) {
             <div class="quote quotediv clear">
                 <div class="pagetitlediv"><div class="innerpad animated fadeInDown"><h1 class="page-title"><?php echo $page_title; ?></h1></div></div>
                 <div class="yshape svgArt clear">
-                    <?php if ( strip_tags($quote) ) { ?>
-                        <div class="pad quotetext animated slideInRight"><?php echo $quote; ?></div>
+                    <?php if ( $string = strip_tags($quote) ) {
+                        $total_str = strlen($string);
+                        $resizeFont = ($total_str>=90) ? ' resizeFont':'';
+                    ?>
+                        <div class="pad quotetext animated slideInRight<?php echo $resizeFont; ?>"><?php echo $quote; ?></div>
             	   <?php } ?>
                    <?php  get_template_part('template-parts/yshape'); ?>
                 </div>
             </div>  
-        </div>    
+        </div>   
+
+
         <?php } ?>
 
 	<?php } ?>
