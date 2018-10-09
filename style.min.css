@@ -2045,7 +2045,8 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 .whitediv{padding-top:30px;padding-bottom:30px}
 @media screen and (min-width:768px){.whitediv{padding-top:50px;padding-bottom:60px}
 }.textwrapper{width:85%;margin:0 auto}
-.content3-info{background:#c0c4c1}
+@media screen and (min-width:768px){.textwrapper{width:74%}
+}.content3-info{background:#c0c4c1}
 .textdiv{padding:50px 0}
 .textdiv .button{margin-top:40px}
 .textdiv .button a{margin:0}
@@ -2197,7 +2198,11 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 }.single .wp-caption.alignleft,.single .wp-caption.alignright{max-width:100%;width:100%}
 @media screen and (min-width:768px){.single .wp-caption.alignleft,.single .wp-caption.alignright{max-width:250px}
 }.single.single-team .site-main{width:100%}
-.yshapeGrey .st0{fill:#f4f4f4}
+.promise-info .tile.transparentbg .inside{margin:0 auto;padding-right:0}
+@media screen and (min-width:768px){.promise-info .tile.transparentbg{width:60%}
+.promise-info .tile.transparentbg .inside{width:78%;float:right;padding-right:80px;margin:0}
+.promise-info .tile.transparentbg .flexwrap{display:block}
+}.yshapeGrey .st0{fill:#f4f4f4}
 .yshapeGrey .st1{fill:#fff}
 .yshapeGrey .st2{fill:none;stroke:#e52227;stroke-width:1;stroke-miterlimit:10}
 .yshapeGrey .st3{fill:#fff;stroke:#e52227;stroke-width:1;stroke-miterlimit:10}

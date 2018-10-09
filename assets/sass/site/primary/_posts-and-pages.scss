@@ -635,6 +635,9 @@ section.home-thirds	{
 .textwrapper {
 	width: 85%;
 	margin: 0 auto;
+    @media screen and (min-width: $tabwidth) {
+        width: 74%;
+    }
 }
 .content3-info {
 	background:$color__background-light-grey;
@@ -1362,6 +1365,26 @@ section.home-thirds	{
     &.single-team {
         .site-main {
             width: 100%;
+        }
+    }
+}
+.promise-info {
+    .tile.transparentbg {
+        .inside {
+            margin: 0 auto;
+            padding-right: 0;
+        }
+        @media screen and (min-width: $tabwidth) {
+            width: 60%;
+            .inside {
+                width: 78%;
+                float: right;
+                padding-right: 80px;
+                margin: 0 0;
+            }
+            .flexwrap {
+                display: block;
+            }
         }
     }
 }
