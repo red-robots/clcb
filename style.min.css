@@ -2202,6 +2202,7 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 @media screen and (min-width:768px){.promise-info .tile.transparentbg{width:60%}
 .promise-info .tile.transparentbg .inside{width:78%;float:right;padding-right:80px;margin:0}
 .promise-info .tile.transparentbg .flexwrap{display:block}
+}@media screen and (min-width:768px){.content3-info .textdiv .textwrapper{padding-right:100px}
 }.yshapeGrey .st0{fill:#f4f4f4}
 .yshapeGrey .st1{fill:#fff}
 .yshapeGrey .st2{fill:none;stroke:#e52227;stroke-width:1;stroke-miterlimit:10}

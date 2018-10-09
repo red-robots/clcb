@@ -1388,6 +1388,13 @@ section.home-thirds	{
         }
     }
 }
+.content3-info {
+    @media screen and (min-width: $tabwidth) {
+        .textdiv .textwrapper {
+            padding-right: 100px;
+        }
+    }
+}
 .yshapeGrey {
     .st0{fill:$color__body_grey;}
 	.st1{fill:#FFFFFF;}
