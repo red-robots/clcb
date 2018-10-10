@@ -199,6 +199,9 @@
 }
 #primary {
     position: relative;
+    &.pagewrap404 {
+        padding-top: 40px;
+    }
 }
 .page-links {
 	clear: both;
@@ -1287,9 +1290,6 @@ section.home-thirds	{
         @media screen and (min-width: $tabwidth) {
             padding-right: 20px;
         }
-        @media screen and (min-width: $midwidth) {
-            padding-right: 30px;
-        }
     }
     .entry-title {
         position: relative;
@@ -1308,16 +1308,6 @@ section.home-thirds	{
         }
     }
 }
-@media screen and (min-width: $tabwidth) {
-    .vdivider {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 20%;
-        height: 100%;
-        border-left: 1px solid $color-light-grey;
-    }
-}
 .news-archive {
     margin-bottom: 30px;
     .site-main {
@@ -1327,7 +1317,7 @@ section.home-thirds	{
             padding-right: 20px;
         }
         @media screen and (min-width: $midwidth) {
-            padding-right: 30px;
+            padding-right: 20px;
         }
     }
     @media screen and (min-width: $tabwidth) {

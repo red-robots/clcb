@@ -92,7 +92,7 @@
                     animation-name: fadeInDown;
                 }
             }
-            @media screen and (min-width: $midwidth) {
+            @media screen and (min-width: $tabwidth) {
                 > ul {
                     border-top:5px solid $color-red;
                 }

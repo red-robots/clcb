@@ -8,8 +8,8 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
+<div class="yshapeGrey top"><?php  get_template_part('template-parts/yshape-grey'); ?></div>
+	<div id="primary" class="content-area pagewrap404">
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found">
