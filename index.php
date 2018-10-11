@@ -56,7 +56,7 @@ $learn_more_link_3=get_field('learn_more_link_2');
                     
 					<div class="quote-desc">
                         <?php if($quote_title) { ?>
-                            <h2 class="quoteTitle"><?php echo $quote_title; ?></h2>
+                            <h2 class="quoteTitle title_line_bottom"><?php echo $quote_title; ?></h2>
                         <?php } ?>
                         <?php if($quote_description) { ?>
                             <div class="qquoteContent"><?php echo nl2br($quote_description); ?></div>

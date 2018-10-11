@@ -1928,9 +1928,8 @@ h2.text-red,.text-red{color:#e71e25}
 .page-content,.entry-summary{margin:1.5em 0 0}
 .sub-page{background:#f4f4f4}
 .sub-page .site-content{width:100%;position:relative;z-index:5}
-.sub-page .site-main{width:85%;margin:0 auto;position:relative;padding-top:20px;padding-bottom:40px}
-@media screen and (min-width:768px){.sub-page .site-main{width:74%;padding-top:0;padding-bottom:20px;top:-10px}
-}@media screen and (min-width:980px){.sub-page .site-main{width:74%;top:-35px}
+.sub-page .site-main{width:85%;margin:0 auto;position:relative;padding-top:40px;padding-bottom:40px}
+@media screen and (min-width:768px){.sub-page .site-main{width:75%}
 }.sub-page .content-area{width:100%;margin:0 auto;position:relative}
 .sub-page .content-area .entry-content{line-height:1.4}
 .sub-page .content-area .entry-content ul{text-align:left;margin-left:20px;padding-left:0}
@@ -1973,27 +1972,45 @@ h2.text-red,.text-red{color:#e71e25}
 .banner.no-image .pagetitlediv .innerpad .page-title{color:#383938}
 .banner img{width:100%;float:left}
 .banner .banner-image{display:none}
-.banner .tagline{position:absolute;width:100%;bottom:-25px;right:0;text-align:center;color:#e71e25}
-.banner .tagline .pad{position:relative;display:inline-block;background-color:#e71e25;color:#FFF;font-size:30px;font-weight:600;line-height:1.1;padding:10px 20px;width:80%;float:right;text-align:left}
-@media screen and (min-width:1200px){.banner .tagline .pad{font-size:65px}
-}@media screen and (min-width:980px){.banner .tagline .pad{font-size:65px}
-}.home .banner-outer-wrap{position:relative}
-.home .tagline .pad{background-color:transparent}
-@media screen and (min-width:768px){.home .banner{height:600px}
+.banner-bottom-text{position:absolute;bottom:0;left:0;width:100%;height:100%;overflow:hidden}
+.banner-bottom-text .leftdiv,.banner-bottom-text .rightdiv{position:absolute;bottom:0;height:60px}
+@media screen and (min-width:768px){.banner-bottom-text .leftdiv,.banner-bottom-text .rightdiv{height:90px}
+}.banner-bottom-text .leftdiv{display:none}
+@media screen and (min-width:768px){.banner-bottom-text .leftdiv{width:20px;background:#f4f4f4;left:0;display:none}
+}.banner-bottom-text .rightdiv{width:82%;background:transparent;right:0}
+@media screen and (min-width:980px){.banner-bottom-text .rightdiv{width:86%}
+}.banner-bottom-text .rightdiv:after{content:'';display:block;width:80px;height:100%;position:absolute;top:0;right:0;background:#f4f4f4}
+.banner-bottom-text .rightdiv .left-skew{width:150px;height:100%;background:#f4f4f4;left:-4.5%;-webkit-transform:skew(25deg);-ms-transform:skew(25deg);transform:skew(25deg);position:absolute;top:0;left:-210px}
+@media screen and (min-width:768px){.banner-bottom-text .rightdiv .left-skew{left:-226px}
+}.banner-bottom-text .rightdiv .left-skew:before{content:"";width:150px;height:100%;background:#f4f4f4;left:-50%;position:absolute;top:0}
+.banner-bottom-text .rightdiv #triangle-right{width:100%;height:100%;background:#f4f4f4;position:absolute;top:0;-webkit-transform:skew(-30deg);-ms-transform:skew(-30deg);transform:skew(-30deg)}
+@media screen and (min-width:768px){.banner-bottom-text .rightdiv #triangle-right{left:-30px}
+}.banner-bottom-text .titlediv{position:absolute;top:-100%;right:0;width:100%;height:100%}
+.banner-bottom-text .titlediv .title{width:100%;height:100%;padding-left:30px}
+@media screen and (min-width:768px){.banner-bottom-text .titlediv .title{padding-left:70px}
+}.banner-bottom-text .titlediv h3{display:inline-block;margin:0;color:#383938;font-size:5vw;font-weight:600;line-height:1.1;position:relative;z-index:5;position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+.banner-bottom-text .titlediv .top-triangle{width:100%;height:100%;right:-5px;position:absolute;top:0;-webkit-transform:skew(-30deg);-ms-transform:skew(-30deg);transform:skew(-30deg);background:-webkit-linear-gradient(left,white 0,rgba(255,255,255,0) 100%);background:linear-gradient(to right,white 0,rgba(255,255,255,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#00ffffff',GradientType=1)}
+@media screen and (min-width:768px){.banner-bottom-text .titlediv .top-triangle{right:-22px}
+}.banner-bottom-text .quote-container{width:90%;height:100%;position:absolute;left:0;bottom:0;z-index:7;text-align:right}
+.banner-bottom-text .quote-container .bg{width:100%;height:100%;background:#FFF;position:absolute;bottom:0;left:-30px;-webkit-transform:skew(-30deg);-ms-transform:skew(-30deg);transform:skew(-30deg)}
+.banner-bottom-text .quote-container .bg.nocolor{background:#f4f4f4}
+.banner-bottom-text .quote-container .inner{display:inline-block;position:relative;z-index:10;width:80%;line-height:1.2;padding-right:30px;color:#e71e25;left:-45px;font-size:1.5vh;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
+@media screen and (min-width:768px){.banner-bottom-text .quote-container .inner{width:50%;font-size:1.5vw}
+}.home .banner{height:350px}
+@media screen and (min-width:768px){.home .banner{height:550px}
 }.quotediv{width:100%;color:#FFF}
 .quotediv .quotetext{position:absolute;right:0;top:-28%;padding:10px 25px;background:#e71e25;font-size:18px;line-height:1.1;z-index:5;width:75%}
 @media screen and (min-width:768px){.quotediv .quotetext{font-size:25px;width:75%;top:-18%}
 }@media screen and (min-width:980px){.quotediv .quotetext{font-size:30px;width:75%;top:-15%}
 }@media screen and (min-width:1200px){.quotediv .quotetext{width:60%;font-size:35px}
-}.home-opener{width:100%;padding:0;color:#fff;position:relative}
+}.home-opener{width:100%;padding:0;color:#383938;position:relative}
 .home-opener .innerpad{position:relative;z-index:3}
-.home-opener .quote-desc{width:85%;margin:0 auto;font-weight:300;font-size:16px;text-align:left;position:relative;padding-top:8%;padding-bottom:12%}
-.home-opener .quoteTitle{margin:0 0 30px;font-weight:700;position:relative;left:0}
-@media screen and (min-width:768px){.home-opener .quote-desc{width:63%;font-size:20px;padding-top:0;padding-bottom:10%;margin-top:-10px}
-.home-opener .quoteTitle{margin:0 0 40px;left:-8%}
+.home-opener .quote-desc{width:60%;margin:0 auto;font-weight:300;font-size:16px;text-align:left;position:relative;padding-top:8%;padding-bottom:12%}
+@media screen and (min-width:768px){.home-opener .quote-desc{width:60%;font-size:20px;padding-top:0;padding-bottom:100px}
+}.home-opener .quoteTitle{margin:0 0 30px;font-weight:700;position:relative}
+@media screen and (min-width:768px){.home-opener .quoteTitle{margin:0 0 40px}
 }.yshape{width:100%}
 .yshape svg{width:100%;float:left;position:relative;z-index:3}
-.home{background:#383938}
 .sub-page .quotediv{position:absolute;bottom:-10px;left:0}
 .sub-page .yshape{position:relative}
 .sub-page.single-team .quotediv{bottom:0}
@@ -2052,7 +2069,7 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 .textdiv .button{margin-top:40px}
 .textdiv .button a{margin:0}
 @media screen and (min-width:768px){.textdiv.flexcol{position:absolute;top:0;right:0;height:100%}
-.textdiv .textwrapper{width:80%;height:100%;margin:0 auto;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;z-index:6}
+.textdiv .textwrapper{width:54%;height:100%;margin:0 auto;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;z-index:6}
 }.flexcol{width:100%;float:left;position:relative}
 @media screen and (min-width:768px){.flexcol{width:50%}
 }.imagediv{position:relative;height:300px;background-size:cover;background-repeat:no-repeat;background-position:center center;background-attachment:scroll}

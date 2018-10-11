@@ -31,17 +31,10 @@
         width: 85%;
         margin: 0 auto;
         position: relative;
-        padding-top:20px;
+        padding-top:40px;
         padding-bottom: 40px;
         @media screen and (min-width: $tabwidth) {
-            width:74%;
-            padding-top: 0;
-            padding-bottom: 20px;
-            top:-10px;
-        }
-        @media screen and (min-width: $midwidth) {
-            width:74%;
-            top:-35px;
+            width: 75%;
         }
     }
 	.content-area {
@@ -248,51 +241,171 @@
 	.banner-image {
 		display:none;
 	}
-	.tagline {
-		position:absolute;
-		width: 100%;
-        bottom: -25px;
-        right: 0;
-		text-align:center;
-		color:$color-red;
-		.pad {
-            position: relative;
-			display:inline-block;
-			background-color:$color-red;
-			color:$color-white;
-			font-size:30px;
-			font-weight:600;
-			line-height:1.1;
-            padding: 10px 20px;
-            width: 80%;
-            float: right;
-            text-align: left;
-		}
-		@media screen and (min-width: $deskwidth) {
-			.pad {
-				font-size:65px;
-			}
-		}
-		@media screen and (min-width: $midwidth) {
-			.pad {
-				font-size:65px;
-			}
-		}
-
-	}
 }
-.home {
-    .banner-outer-wrap {
-        position: relative;
+.banner-bottom-text {
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .leftdiv,
+    .rightdiv {
+        position: absolute;
+        bottom: 0;
+        height: 60px;
+        @media screen and (min-width: $tabwidth) {
+            height: 90px;
+        }
     }
-    .tagline .pad {
-        background-color: transparent;
+    .leftdiv {
+        display: none;
+        @media screen and (min-width: $tabwidth) {
+            width: 20px;
+            background: $color__body_grey;
+            left: 0;
+            display: none;
+        }
     }
+    .rightdiv {
+        width: 82%;
+        background: transparent;
+        right: 0;
+        @media screen and (min-width: $midwidth) {
+            width: 86%;
+        }
+        &:after {
+            content:'';
+            display: block;
+            width: 80px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: $color__body_grey;
+        }
+        .left-skew {
+            width: 150px;
+            height: 100%;
+            background: $color__body_grey;
+            left: -4.5%;
+            @include transform( skew(25deg) );
+            position: absolute;
+            top: 0;
+            left: -210px;
+            @media screen and (min-width: $tabwidth) {
+                left:-226px;
+            }
+            &:before {
+                content:"";
+                width: 150px;
+                height: 100%;
+                background: $color__body_grey;
+                left: -50%;
+                position: absolute;
+                top: 0;
+                
+            }
+        }
+        #triangle-right {
+            width: 100%; 
+            height: 100%;
+            background: $color__body_grey;
+            position: absolute;
+            top: 0;
+            @include transform( skew(-30deg) );
+            @media screen and (min-width: $tabwidth) {
+                left: -30px;
+            }
+        }
+    }
+    .titlediv {
+        position: absolute;
+        top: -100%;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        .title {
+            width: 100%;
+            height: 100%;
+            padding-left:30px;
+            @media screen and (min-width: $tabwidth) {
+                padding-left:70px;
+            }
+        }
+        h3 {
+            display: inline-block;
+            margin: 0 0;
+            color:$color-grey;
+            font-size:5vw;
+            font-weight: 600;
+            line-height: 1.1;
+            position: relative;
+            z-index: 5;
+            position: relative;
+            top: 50%;
+            @include transform( translateY(-50%) );
+        }
+        .top-triangle {
+            width: 100%; 
+            height: 100%;
+            right: -5px;
+            position: absolute;
+            top: 0;
+            @include transform( skew(-30deg) );
+            background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+            background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+            background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+            @media screen and (min-width: $tabwidth) {
+                right: -22px;
+            }
+        }
+    }
+    .quote-container {
+        width: 90%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 7;
+        text-align: right;
+        .bg {
+            width: 100%;
+            height: 100%;
+            background: #FFF;
+            position: absolute;
+            bottom: 0;
+            left: -30px;
+            @include transform( skew(-30deg) );
+            &.nocolor {
+                background: $color__body_grey;
+            }
+        }
+        .inner {
+            display: inline-block;
+            position: relative;
+            z-index: 10;
+            width: 80%;
+            line-height: 1.2;
+            padding-right: 30px;
+            color:$color-red;
+            left: -45px;
+            font-size: 1.5vh;
+            top: 50%;
+            @include transform( translateY(-50%) );
+            @media screen and (min-width: $tabwidth) {
+                width: 50%;
+                font-size: 1.5vw;
+            }
+        }
+    }
+}
+.home .banner {
+    height: 350px;
     @media screen and (min-width: $tabwidth) {
-		.banner {
-			height:600px;
-		}
-	}
+        height: 550px;
+    }
 }
 .quotediv {
     width: 100%;
@@ -327,14 +440,14 @@
 .home-opener {
 	width: 100%;
 	padding: 0 0;
-	color: #fff;
+	color: $color-grey;
     position: relative;
     .innerpad {
         position: relative;
         z-index: 3;
     }
 	.quote-desc {
-		width: 85%;
+		width: 60%;
 		margin: 0 auto;
 		font-weight: 300;
 		font-size: 16px;
@@ -342,26 +455,21 @@
         position: relative;
         padding-top: 8%;
         padding-bottom: 12%;
+        @media screen and (min-width: $tabwidth) {
+            width: 60%;
+			font-size: 20px;
+            padding-top: 0;
+            padding-bottom:100px;
+        }
 	}
     .quoteTitle {
         margin: 0 0 30px;
         font-weight: 700;
         position: relative;
-        left: 0;
-    }
-	@media screen and (min-width: $tabwidth) {
-		.quote-desc {
-			width: 63%;
-			font-size: 20px;
-            padding-top: 0;
-            padding-bottom:10%;
-            margin-top: -10px;
-		}
-        .quoteTitle {
+        @media screen and (min-width: $tabwidth) {
             margin: 0 0 40px;
-            left: -8%;
         }
-	}
+    }
 }
 .yshape {
     width: 100%;
@@ -371,9 +479,6 @@
         position: relative;
         z-index: 3;
     }
-}
-.home {
-    background: $color-grey;
 }
 .sub-page {
     .quotediv {
@@ -661,7 +766,7 @@ section.home-thirds	{
 			height:100%;
 		}	
 		.textwrapper {
-			@include vertical-center-text(80%,100%);
+			@include vertical-center-text(54%,100%);
 		}
 	}
 }

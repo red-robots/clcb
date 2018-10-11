@@ -27,7 +27,6 @@ $post_type = ( isset($query['post_type']) ) ? $query['post_type'] : '';
                     <?php if ( strip_tags($quote) ) { ?>
                         <div class="pad quotetext animated slideInRight"><?php echo $quote; ?></div>
             	   <?php } ?>
-                   <?php  get_template_part('template-parts/yshape'); ?>
                 </div>
             </div>  
         </div>    

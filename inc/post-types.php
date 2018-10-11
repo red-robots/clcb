@@ -86,7 +86,7 @@ function js_custom_init() {
 // Add new taxonomy, make it hierarchical (like categories)
 add_action( 'init', 'ii_custom_taxonomies', 0 );
 function ii_custom_taxonomies() {
-    $posts = array(
+        $posts = array(
             array(
                 'post_type' => 'position',
                 'menu_name' => 'Assignment Categories',
