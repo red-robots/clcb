@@ -29,14 +29,20 @@ $exclude = array('team');
                     $img_src = ( isset($img['url']) && $img['url'] ) ? $img['url']:'';
                     $img_alt = ( isset($img['title']) && $img['title'] ) ? $img['title']:'';
                     $atts = '';
+                    $classPic= 'no-photo';
                     if($img) {
                         $atts = "style='background-image:url(".$img_src.");'";
+                        $classPic = 'has-photo';
                     }
                 ?>
 
-                    <div class="m_imagecol">
+                    <div class="m_imagecol <?php echo $classPic;?>">
                         <div class="inner clear">
-                            <div class="m_photo" <?php echo $atts?>></div>
+                            <div class="m_photo" <?php echo $atts?>>
+                                <?php if(!$img) { ?>
+                                <span class="nophotoIcon"><i class="fa fa-user"></i></span>
+                                <?php } ?>
+                            </div>
                             <div class="m_info clear">
                                 <div class="smtxt"><strong>On a personal note</strong></div>
                                 <div class="note"><?php echo $personal_note; ?></div>
