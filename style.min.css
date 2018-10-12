@@ -1925,11 +1925,14 @@ h2.text-red,.text-red{color:#e71e25}
 .sub-page .site-main{width:85%;margin:0 auto;position:relative;padding-top:40px;padding-bottom:40px}
 @media screen and (min-width:768px){.sub-page .site-main{width:75%}
 }.sub-page .content-area{width:100%;margin:0 auto;position:relative}
-.sub-page .content-area .entry-content{line-height:1.4}
+.sub-page .content-area .entry-content{line-height:1.5}
 .sub-page .content-area .entry-content ul{text-align:left;margin-left:20px;padding-left:0}
-.sub-page .content-area .entry-content ul li{margin-bottom:.3em;position:relative;list-style:none;padding-left:20px}
-.sub-page .content-area .entry-content ul li:before{content:'';display:block;width:10px;height:10px;background:#e71e25;position:absolute;left:0;top:8px}
-.sub-page .content-area .entry-content a{color:#e71e25;position:relative;display:inline-block;text-decoration:none;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
+.sub-page .content-area .entry-content ul li{margin-bottom:.3em;position:relative;list-style:none;padding-left:16px}
+.sub-page .content-area .entry-content ul li:before{content:'';display:block;width:8px;height:8px;background:#e71e25;position:absolute;left:0;top:4px}
+@media screen and (min-width:768px){.sub-page .content-area .entry-content ul li{position:relative;list-style:none;padding-left:18px}
+.sub-page .content-area .entry-content ul li:before{top:8px}
+}@media screen and (min-width:768px){.sub-page .content-area .entry-content ul{margin-left:0;padding-left:80px;padding-right:80px}
+}.sub-page .content-area .entry-content a{color:#e71e25;position:relative;display:inline-block;text-decoration:none;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 .sub-page .content-area .entry-content a:after{content:"";display:block;width:0;height:1px;background:transparent;margin:0 auto;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 .sub-page .content-area .entry-content a:hover:after{width:100%;background:#e71e25}
 .sub-page .content-area .entry-content p a{text-decoration:underline}
@@ -1943,9 +1946,6 @@ h2.text-red,.text-red{color:#e71e25}
 @media screen and (min-width:768px){.sub-page .content-area .entry-content h2{font-size:30px}
 }@media screen and (min-width:768px){.sub-page .content-area.has-sidebar{width:70%;float:left}
 .sub-page .content-area.has-sidebar .site-main{padding-left:20px}
-.sub-page .content-area .entry-content ul{margin-left:0;padding-left:80px;padding-right:80px}
-.sub-page .content-area .entry-content ul li{position:relative;list-style:none;padding-left:20px}
-.sub-page .content-area .entry-content ul li:before{top:8px}
 }.sub-page .text-center-align{text-align:center}
 .sub-page .text-left-align{text-align:left}
 .sub-page .text-left-align .entry-content h2:first-child:after{margin:0;width:80px;height:4px}
@@ -2226,9 +2226,9 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 @media screen and (min-width:768px){.email_link .icon{font-size:25px}
 }.email_link a{color:#e71e25;text-decoration:none;font-size:1.2em;position:relative}
 .single.sub-page .fullwidth .content-area,.single.sub-page .fullwidth .site-main{width:100%}
-.single.sub-page .fullwidth .entry-content h2,.single.sub-page .fullwidth .entry-content h3,.single.sub-page .fullwidth .entry-content h4,.single.sub-page .fullwidth .entry-content h5{color:#e71e25;font-weight:600}
+.single.sub-page .fullwidth .entry-content h2,.single.sub-page .fullwidth .entry-content h3,.single.sub-page .fullwidth .entry-content h4,.single.sub-page .fullwidth .entry-content h5{color:#e71e25;font-weight:600;margin-bottom:.5em;margin-top:1.5em}
 .single.sub-page .fullwidth .entry-content h2{font-size:1.8em}
-.single.sub-page .fullwidth .entry-content h3{font-size:1.3em;margin-top:1.5em;margin-bottom:0}
+.single.sub-page .fullwidth .entry-content h3{font-size:1.3em;margin-top:1.5em;margin-bottom:.5em}
 .single.sub-page .fullwidth .entry-content h3:first-child{margin-top:0}
 .single.sub-page .fullwidth .entry-content h4{font-size:1em}
 .single.sub-page .fullwidth .entry-content h5{font-size:.8em}
