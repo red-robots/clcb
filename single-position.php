@@ -24,14 +24,19 @@ if($obj) {
 <div class="single-outer-wrap wrapmid clear fullwidth has-breadcrumb">
     <div id="primary" class="content-area">
         <?php if($parent_title) { ?>
-                <div class="breadcrumb clear">
-                    <a href="<?php echo $parent_url?>"><?php echo $parent_title;?></a>
-                    <span class="sep">&raquo;</span>
-                    <span class="current"><?php the_title(); ?></span>
-                </div>
-                <?php } ?>
+        <div class="breadcrumb clear" style="display:none;">
+            <a href="<?php echo $parent_url?>"><?php echo $parent_title;?></a>
+            <span class="sep">&raquo;</span>
+            <span class="current"><?php the_title(); ?></span>
+        </div>
+        <?php } ?>
         <main id="main" class="site-main clear" role="main">
-            <?php while ( have_posts() ) : the_post(); $postId = get_the_ID(); ?>    
+            <?php while ( have_posts() ) : the_post(); $postId = get_the_ID(); ?>
+                
+            <header class="entry-header">
+                <?php the_title( '<h1 class="entry-title title_line_bottom">', '</h1>' ); ?>
+            </header><!-- .entry-header -->
+            
                 <?php if(has_post_thumbnail()) { ?>
                 <div class="single-featured-image clear">
                     <?php echo  get_the_post_thumbnail($postId);  ?>

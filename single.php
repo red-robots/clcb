@@ -16,59 +16,7 @@ $exclude = array('team');
 <div class="single-outer-wrap wrapmid clear">
     <div id="primary" class="content-area">
         <main id="main" class="site-main clear" role="main">
-
-
-            <?php /* MEMBER DETAILS */ ?>
-            <?php if( $post_type=='team' ) { ?>
-
-                <?php while ( have_posts() ) : the_post();  
-                    $post_id = get_the_ID();
-                    $personal_note = get_field('personal_note',$post_id);
-                    $title = get_field('title',$post_id);
-                    $img = get_field('team_individual_image',$post_id);
-                    $img_src = ( isset($img['url']) && $img['url'] ) ? $img['url']:'';
-                    $img_alt = ( isset($img['title']) && $img['title'] ) ? $img['title']:'';
-                    $atts = '';
-                    $classPic= 'no-photo';
-                    if($img) {
-                        $atts = "style='background-image:url(".$img_src.");'";
-                        $classPic = 'has-photo';
-                    }
-                ?>
-
-                    <div class="m_imagecol <?php echo $classPic;?>">
-                        <div class="inner clear">
-                            <div class="m_photo" <?php echo $atts?>>
-                                <?php if(!$img) { ?>
-                                <span class="nophotoIcon"><i class="fa fa-user"></i></span>
-                                <?php } ?>
-                            </div>
-                            <div class="m_info clear">
-                                <div class="smtxt"><strong>On a personal note</strong></div>
-                                <div class="note"><?php echo $personal_note; ?></div>
-                            </div>
-                        </div>    
-                    </div>
-                    <div class="m_description_col">
-                        <div class="inner clear">
-                            <h2 class="m_title line_bottom"><?php echo get_the_title()?></h2>
-                            <?php the_content(); ?>
-
-                            <?php if( is_user_logged_in() ) { ?>
-                            <footer class="entry-footer edit-post-div">
-                                <?php acstarter_entry_footer(); ?>
-                            </footer><!-- .entry-footer -->
-                            <?php } ?>
-                        </div>
-                    </div>
-
-                <?php endwhile; ?>
             
-                 </main><!-- #main -->
-            </div><!-- #primary -->
-
-            <?php }  else { ?>
-
                 <?php /* SINGLE POST */ ?>
                 <?php while ( have_posts() ) : the_post(); $postId = get_the_ID(); ?>
 
@@ -92,14 +40,9 @@ $exclude = array('team');
                     </footer><!-- .entry-footer -->
                     <?php } ?>
 
-                <?php endwhile; ?>
-    
-                </main><!-- #main -->
-            </div><!-- #primary --> 
-            <?php get_sidebar(); ?>
-            <div class="vdivider"></div>
-
-            <?php }  ?>
-    
+                <?php endwhile; ?>    
+        </main><!-- #main -->
+    </div><!-- #primary --> 
+    <?php get_sidebar(); ?>
 </div>
 <?php get_footer();

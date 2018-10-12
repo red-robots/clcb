@@ -108,4 +108,9 @@ jQuery(document).ready(function ($) {
         });
     }
     
+    $('#viewMemberList').on("click",function(){
+        $('#otherMembers').slideToggle('fast').toggleClass('open');
+        
+    });
+    
 });// END #####################################    END

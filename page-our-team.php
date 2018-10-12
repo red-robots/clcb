@@ -1,7 +1,7 @@
 <?php
 /**
+ * Template Name: Our Team
  * 
- * This template is only for NEWS page.	
  *
  * @package ACStarter
  */

@@ -445,6 +445,16 @@
                 font-size: 1.5vw;
             }
         }
+        &.has-members {
+            .inner {
+                top: 30px;
+                padding-right: 0;
+                left: -30px;
+                @media screen and (min-width: $tabwidth) {
+                    top: 0;
+                }
+            }
+        }
     }
 }
 .home .banner {
@@ -1622,6 +1632,9 @@ section.home-thirds	{
     .content-area, .site-main {
         width: 100%;
     }
+    &.no-member-list .site-main {
+        padding-top: 0;
+    }
     .entry-content {
         h2, h3, h4, h5 {
             color:$color-red;
@@ -1667,11 +1680,107 @@ section.home-thirds	{
     }
 }
 
-.single-team.sub-page .site-main {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    @media screen and (min-width: $tabwidth) {
-        padding-top: 100px;
-        padding-bottom: 100px;
+.single-team.sub-page  {
+    .site-main {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .banner-bottom-text {
+        overflow: visible;
+    }
+}
+.other-team-members {
+    position: relative;
+    &.no-members .bg {
+        background: transparent;
+    }
+    .inner {
+        max-width: 300px;
+        width: 100%;
+        position: relative;
+    }
+    .om_title {
+        position: relative;
+        height: 40px;
+        text-align: center;
+        cursor: pointer;
+        .txt {
+            color: #FFF;
+            text-transform: uppercase;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            position: absolute;
+            left: -7px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 3;
+            text-align: left;
+            @media screen and (min-width: $tabwidth) {
+                left: 0;
+            }
+            span {
+                display: inline-block;
+                position: relative;
+                padding-left: 30px;
+            }
+        }
+        .arrow {
+            width: 0;
+            height: 0;
+            border-top: 7px solid #FFF;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            position: absolute;
+            top: 7px;
+            right: 10px;
+            @media screen and (min-width: $tabwidth) {
+                right: 23px;
+            }
+        }
+    }
+    .skew {
+        height:100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $color-grey;
+        transform: skew(-30deg);
+    }
+    .dropdownList {
+        display: none;
+        position: absolute;
+        top: 40px;
+        width: 100%;
+        background: #FFF;
+        text-align: left;
+        left: -11px;
+        width: 100%;
+        box-shadow: 0px 1px 6px 1px rgba(0,0,0,0.21);
+        &.open {
+            display: block;
+        }
+    }
+    ul {
+        margin: 0 0;
+        padding: 20px 0;
+        list-style: none;
+        a {
+            display: block;
+            padding:4px 25px;
+            color:$color-grey;
+            font-size: 18px;
+            background: transparent;
+            @include transition(all ease-out .3s);
+            @media screen and (min-width: $tabwidth) {
+                font-size: 22px;
+                padding:4px 40px;
+            }
+            &:hover {
+                color:$color-red;
+                background: $color__body_grey;
+            }
+        }
     }
 }
