@@ -447,7 +447,7 @@
         z-index: 3;
     }
 	.quote-desc {
-		width: 60%;
+		width: 85%;
 		margin: 0 auto;
 		font-weight: 300;
 		font-size: 16px;
@@ -769,6 +769,13 @@ section.home-thirds	{
 			@include vertical-center-text(54%,100%);
 		}
 	}
+}
+.content3-info {
+    @media screen and (min-width: $tabwidth) {
+        .textwrapper {
+			@include vertical-center-text(60%,100%);
+		}
+    }
 }
 .flexcol {
 	width:100%;
@@ -1472,7 +1479,7 @@ section.home-thirds	{
         @media screen and (min-width: $tabwidth) {
             width: 60%;
             .inside {
-                width: 78%;
+                width: 79%;
                 float: right;
                 padding-right: 80px;
                 margin: 0 0;
