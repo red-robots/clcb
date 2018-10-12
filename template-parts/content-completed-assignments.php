@@ -10,7 +10,13 @@ $args = array(
     'orderby'          => 'date',
     'order'            => 'DESC',
     'post_type'        => 'position',
-    'post_status'      => 'publish'
+    'post_status'      => 'publish',
+    'meta_query'       => array(
+            array(
+                'key' => 'assignment_status',
+                'value' => 'completed'        
+            )
+        )
     );
 $items = new WP_Query($args);
 if ( $items->have_posts() ) { ?>

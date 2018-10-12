@@ -12,9 +12,7 @@ $query = isset($wp_query->query) ? $wp_query->query : '';
 $post_type = ( isset($query['post_type']) ) ? $query['post_type'] : '';
 $exclude = array('team');
 ?>
-<?php if( !in_array($post_type,$exclude) ) { ?>
-<div class="yshapeGrey top"><?php  get_template_part('template-parts/yshape-grey'); ?></div>
-<?php } ?>
+<div class="topShape"><span></span></div>
 <div class="single-outer-wrap wrapmid clear">
     <div id="primary" class="content-area">
         <main id="main" class="site-main clear" role="main">
@@ -66,11 +64,17 @@ $exclude = array('team');
             <?php }  else { ?>
 
                 <?php /* SINGLE POST */ ?>
-                <?php while ( have_posts() ) : the_post(); ?>
+                <?php while ( have_posts() ) : the_post(); $postId = get_the_ID(); ?>
 
                     <header class="entry-header">
                         <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
                     </header><!-- .entry-header -->
+    
+                    <?php if(has_post_thumbnail()) { ?>
+                    <div class="single-featured-image clear">
+                        <?php echo  get_the_post_thumbnail($postId);  ?>
+                    </div>
+                    <?php } ?>
 
                     <div class="entry-content">
                         <?php the_content(); ?>

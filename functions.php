@@ -235,3 +235,17 @@ function generate_sitemap() {
     
 }
 
+function get_default_single_banner($post_type) {
+    global $wpdb;
+    $results = $wpdb->get_row( "SELECT p.ID as post_id, p.post_title FROM {$wpdb->prefix}postmeta as m, {$wpdb->prefix}posts as p WHERE m.meta_value = '".$post_type."' AND m.post_id = p.ID AND p.post_type='page'", OBJECT );
+    $object = array();
+    if($results) {
+        $postId = $results->post_id;
+        $img_src = get_field('default_banner_single_page',$postId);
+        $object['image_url'] = $img_src;
+        $object['parent_id'] = $postId;
+        $object['parent_title'] = $results->post_title;
+    }
+    
+    return $object;
+}

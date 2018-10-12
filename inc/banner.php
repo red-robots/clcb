@@ -19,7 +19,7 @@ if( $is_home_page ) {
                             <?php if ( strip_tags($tagline) ) { ?>
                             <div class="titlediv">
                                 <div class="top-triangle"></div>
-                                <div class="title"><h3><?php echo $tagline; ?></h3></div>
+                                <div class="title"><h1 class="ptitle"><?php echo $tagline; ?></h1></div>
                             </div>
                             <?php } ?>
                             <div class="quote-container">
@@ -53,7 +53,7 @@ if( $is_home_page ) {
                         <?php if ( $page_title ) { ?>
                         <div class="titlediv">
                             <div class="top-triangle"></div>
-                            <div class="title"><h3><?php echo $page_title; ?></h3></div>
+                            <div class="title"><h1 class="ptitle"><?php echo $page_title; ?></h1></div>
                         </div>
                         <div class="quote-container">
                             <div class="bg"></div>

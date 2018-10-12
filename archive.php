@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-<div class="yshapeGrey top"><?php  get_template_part('template-parts/yshape-grey'); ?></div>
+<div class="topShape"><span></span></div>
 <div class="archive-page-wrap single-outer-wrap wrapmid clear">
 	<div id="primary" class="content-area ">
 		<main id="main" class="site-main" role="main">
