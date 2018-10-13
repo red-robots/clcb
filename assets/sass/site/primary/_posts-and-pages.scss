@@ -1809,7 +1809,7 @@ section.home-thirds	{
                 text-align: center;
                 margin-bottom: 8px;
                 @media screen and (min-width: $tabwidth) {
-                    min-height: 70px;
+                    min-height: 75px;
                     padding: 0 0;
                     height: 100%;
                     margin-bottom: 0;
@@ -1841,7 +1841,7 @@ section.home-thirds	{
                 @include transition(all ease-out .3s);
                 text-align: center;
                 @media screen and (min-width: $tabwidth) {
-                    font-size: 1.7vw;
+                    font-size: 1.6vw;
                     padding: 0 0;
                     display: flex;
                     align-content: center;
@@ -1849,6 +1849,7 @@ section.home-thirds	{
                     span {
                         display: inline-block;
                         width: 100%;
+                        line-height: 1;
                     }
                 }
             }
@@ -1892,7 +1893,7 @@ section.home-thirds	{
             min-height: 290px;
             &.active {
                 display: block;
-                border-bottom: 5px solid $color-red;
+                border-bottom: 6px solid $color-red;
             }
         }
     }
