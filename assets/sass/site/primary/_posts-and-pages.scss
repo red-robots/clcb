@@ -1784,3 +1784,116 @@ section.home-thirds	{
         }
     }
 }
+.leadership-services {
+    margin-bottom: 30px;
+    .tablist {
+        position: relative;
+        ul {
+            margin: 0 0;
+            padding: 0 0;
+            list-style: none;
+            @media screen and (min-width: $tabwidth) {
+                width: 101%;
+                left: -5px;
+                display: flex;
+                align-content: center;
+                align-items: center;
+                position: relative;
+                justify-content: center;
+            }
+            li {
+                width: 100%;
+                text-align: center;
+                display: inline-block;
+                position: relative;
+                text-align: center;
+                margin-bottom: 8px;
+                @media screen and (min-width: $tabwidth) {
+                    min-height: 70px;
+                    padding: 0 0;
+                    height: 100%;
+                    margin-bottom: 0;
+                    &.content-mobile {
+                        display: none;
+                    }
+                }
+                &.content-mobile {
+                    display: none;
+                }
+            }
+            .inside {
+                width: 100%;
+                height: 100%;
+                @media screen and (min-width: $tabwidth) {
+                    padding:0 5px;
+                    position: absolute;
+                }
+            }
+            a {
+                color:$color-grey;
+                padding:15px;
+                line-height: 1.1;
+                width: 100%;
+                height: 100%;
+                background: #e2e2e2;
+                font-size: 16px;
+                display: block;
+                @include transition(all ease-out .3s);
+                text-align: center;
+                @media screen and (min-width: $tabwidth) {
+                    font-size: 1.7vw;
+                    padding: 0 0;
+                    display: flex;
+                    align-content: center;
+                    align-items: center;
+                    span {
+                        display: inline-block;
+                        width: 100%;
+                    }
+                }
+            }
+            li.tab.active {
+                z-index: 10;
+                a {
+                    background: $color-red;
+                    color:#FFF;
+                }
+                &:after {
+                    content:'';
+                    width: 0; 
+                    height: 0;
+                    display: inline-block;
+                    border-top: 10px solid $color-red;
+                    border-left: 10px solid transparent; 
+                    border-right: 10px solid transparent; 
+                    position: absolute;
+                    margin-left: -10px;
+                    bottom: -10px;
+                }
+            }
+            li.content-mobile.active {
+                display: block;
+                @media screen and (min-width: $tabwidth) {
+                    display: none;
+                }
+            }
+            
+        }
+    }
+    .tabcontent {
+        display: none;
+        @media screen and (min-width: $tabwidth) {
+            display: block;
+        }
+        .text {
+            display: none;
+            padding-top: 10px;
+            padding-bottom: 8px;
+            min-height: 290px;
+            &.active {
+                display: block;
+                border-bottom: 5px solid $color-red;
+            }
+        }
+    }
+}

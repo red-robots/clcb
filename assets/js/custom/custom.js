@@ -110,7 +110,17 @@ jQuery(document).ready(function ($) {
     
     $('#viewMemberList').on("click",function(){
         $('#otherMembers').slideToggle('fast').toggleClass('open');
-        
     });
+    
+    $('#leadershipTabs li').on('click',function(e){
+        e.preventDefault();
+        var tab = $(this).find('a').attr('href');
+        $('#leadershipTabs li').removeClass('active');
+        $(this).addClass('active');
+        $('.tabcontent .text').removeClass('active');
+        $(tab).addClass('active');
+        $(this).next().toggleClass('active');
+    });
+    
     
 });// END #####################################    END
