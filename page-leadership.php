@@ -22,12 +22,12 @@ get_header(); ?>
                 <?php $i=1; while( have_rows('services') ) : the_row(); 
                     $title = get_sub_field('title'); 
                     $text = get_sub_field('text'); ?>
-                    <li id="tab<?php echo $i;?>" class="tab <?php echo ($i==1) ? ' active':''?>">
+                    <li id="tab<?php echo $i;?>" class="tab<?php echo ($i==1) ? ' active':''?>">
                         <div class="inside">
                             <a href="#tabcontent<?php echo $i;?>"><span><?php echo $title;?></span></a>
                         </div>
                     </li>
-                    <li class="content-mobile">
+                    <li class="content-mobile<?php echo ($i==1) ? ' active':''?>">
                         <div class="m-content"><?php echo $text;?></div>
                     </li>
                 <?php $i++; endwhile; ?>
