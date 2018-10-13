@@ -16,17 +16,21 @@
 
 
 	.menu-main-menu-container {
+        display: none;
 		margin-top:60px;
         height: 0;
         overflow: hidden;
         visibility: hidden;
         @include transition(all ease-out 1s);
 		@media screen and (min-width: $tabwidth) {
+            display: block;
 			margin-top: 0;
             display: block;
             height: auto;
             overflow: visible;
             visibility: visible;
+            max-height: auto;
+            height: auto;
 		}
 	}
     

@@ -1668,8 +1668,8 @@ a:focus{outline:thin dotted}
 a:hover,a:active{outline:0}
 .main-navigation{clear:both;display:block;text-align:center;width:100%;background-color:#fff;position:absolute;top:0;left:0}
 @media screen and (min-width:768px){.main-navigation{position:relative;box-shadow:none;clear:none;width:auto}
-}.main-navigation .menu-main-menu-container{margin-top:60px;height:0;overflow:hidden;visibility:hidden;-webkit-transition:all ease-out 1s;transition:all ease-out 1s}
-@media screen and (min-width:768px){.main-navigation .menu-main-menu-container{margin-top:0;display:block;height:auto;overflow:visible;visibility:visible}
+}.main-navigation .menu-main-menu-container{display:none;margin-top:60px;height:0;overflow:hidden;visibility:hidden;-webkit-transition:all ease-out 1s;transition:all ease-out 1s}
+@media screen and (min-width:768px){.main-navigation .menu-main-menu-container{display:block;margin-top:0;display:block;height:auto;overflow:visible;visibility:visible;max-height:auto;height:auto}
 }.main-navigation.toggled{box-shadow:0 0 5px rgba(50,50,50,0.3)}
 .main-navigation.toggled .menu-toggle i:nth-child(1),.main-navigation.toggled .menu-toggle i:nth-child(2){-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);top:12px}
 .main-navigation.toggled .menu-toggle i:nth-child(3){-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);top:12px}
