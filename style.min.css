@@ -1674,7 +1674,9 @@ a:hover,a:active{outline:0}
 .main-navigation.toggled .menu-toggle i:nth-child(1),.main-navigation.toggled .menu-toggle i:nth-child(2){-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);top:12px}
 .main-navigation.toggled .menu-toggle i:nth-child(3){-webkit-transform:rotate(-45deg);-ms-transform:rotate(-45deg);transform:rotate(-45deg);top:12px}
 .main-navigation.toggled .menu-main-menu-container{display:block;height:auto;visibility:visible;position:fixed;top:0;background:#FFF;width:100%;-webkit-transition:none;transition:none;overflow-y:scroll;max-height:540px;height:100%;box-shadow:0 3px 9px -4px rgba(0,0,0,0.44)}
+.main-navigation.toggled .menu-main-menu-container .sub-menu .current_page_item>a{color:#e71e25}
 .main-navigation.toggled .menu-main-menu-container .sub-menu a{font-size:17px;color:#383938}
+.main-navigation.toggled .menu-main-menu-container .sub-menu a:hover{color:#e71e25}
 .main-navigation .menu{-webkit-transition:all ease 1s;transition:all ease 1s;display:block}
 @media screen and (min-width:768px){.main-navigation .menu{max-height:1000px}
 }.main-navigation .menu>li:last-child{margin-bottom:10px}
