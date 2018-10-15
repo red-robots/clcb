@@ -97,7 +97,7 @@ jQuery(document).ready(function ($) {
             loop: false
         });
        
-        $(document).on("click",".s_navi",function(e){
+        $('body').on("click",".s_navi",function(e){
             e.preventDefault();
             var a = $(this).data("action");
             if(a=='next') {
