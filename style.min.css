@@ -2307,7 +2307,7 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 @media screen and (min-width:768px){.locationsInfo .map-wrapper{margin-bottom:30px;position:absolute;bottom:0}
 }.locationsInfo iframe{width:100%;height:100%;border:0;margin:0}
 .submit-title{display:block;width:100%;margin:25px 0 20px}
-@media screen and (min-width:768px){.submit-resume-info .box{width:50%;min-height:190px}
+@media screen and (min-width:768px){.submit-resume-info .box{width:50%;min-height:160px}
 }.submit-resume-info .box .pad{padding:20px 30px;font-size:20px;line-height:1.3}
 .submit-resume-info .box p{margin:0}
 .submit-resume-info .box p strong{font-weight:bold}
