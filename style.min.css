@@ -1959,7 +1959,7 @@ h2.text-red,.text-red{color:#e71e25}
 #primary.pagewrap404{padding-top:40px}
 .page-links{clear:both;margin:0 0 1.5em}
 .banner-outer-wrap{position:relative}
-.banner{width:100%;height:210px;position:relative;background-size:cover;background-repeat:no-repeat;background-position:top center;background-attachment:scroll;margin-top:60px}
+.banner{width:100%;height:350px;position:relative;background-size:cover;background-repeat:no-repeat;background-position:top center;background-attachment:scroll;margin-top:60px}
 @media screen and (min-width:768px){.banner{margin-top:0;height:600px}
 }@media screen and (min-width:980px){.banner{margin-top:0;height:650px}
 }.banner.no-image{background:#bdbec1;height:auto !important}
