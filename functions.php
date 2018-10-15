@@ -249,3 +249,18 @@ function get_default_single_banner($post_type) {
     
     return $object;
 }
+
+add_filter("gform_init_scripts_footer", "init_scripts");
+function init_scripts() {
+    return true;
+}
+
+add_action('admin_head', 'ii_custom_css_styles');
+function ii_custom_css_styles() { ?>
+    <style type="text/css">
+        /* Contact TinyMce Style - Contact Page */
+        #acf-group_5bc3f1e77346b iframe {
+            height: 150px!important;
+        }
+    </style>
+<?php }

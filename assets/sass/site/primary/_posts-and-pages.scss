@@ -454,7 +454,7 @@
                 width: 70%;
             }
         }
-        &.has-members {
+        &.other-team-members {
             .inner {
                 top: 30px;
                 padding-right: 0;
@@ -1704,7 +1704,7 @@ section.home-thirds	{
         background: transparent;
     }
     .inner {
-        max-width: 300px;
+        max-width: 320px;
         width: 100%;
         position: relative;
     }
@@ -1761,6 +1761,7 @@ section.home-thirds	{
         display: none;
         position: absolute;
         top: 40px;
+        overflow: hidden;
         width: 100%;
         background: #FFF;
         text-align: left;
@@ -1777,14 +1778,14 @@ section.home-thirds	{
         list-style: none;
         a {
             display: block;
-            padding:4px 25px;
+            padding:5px 25px;
             color:$color-grey;
             font-size: 18px;
             background: transparent;
             @include transition(all ease-out .3s);
             @media screen and (min-width: $tabwidth) {
-                font-size: 22px;
-                padding:4px 40px;
+                font-size: 20px;
+                padding:4px 30px;
             }
             &:hover {
                 color:$color-red;
@@ -1959,4 +1960,247 @@ section.home-thirds	{
             font-size:18px;
         }
     }
+}
+.flexbox-contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-right: -30px;
+    margin-left: -30px;
+    .box {
+        width: 100%;
+        padding: 0 30px;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 30px;
+        .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 0 30px;
+            div {
+                height: 100%;
+                width: 100%;
+                background: #FFF;
+            }
+        }
+        .pad {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            padding:20px 15px 0;
+            background: #FFF;
+            box-sizing: border-box;
+        }
+    }
+}
+.locationsInfo {
+    margin-top:50px;
+    .box {
+        @media screen and (min-width: $tabwidth) {
+            width: 50%;
+            min-height: 510px;
+        }
+    }
+    .pad2 {
+        height: 100%;
+        position: relative;
+    }
+    h3 {
+        margin: 0 0;
+        font-weight: 400;
+        font-size: 1.5em;
+    }
+    .info {
+        font-weight: 300;
+    }
+    .map-wrapper {
+        width: 100%;
+        height: 300px;
+        background: $color__body_grey;
+        margin-bottom: 20px;
+        margin-top:20px;
+        @media screen and (min-width: $tabwidth) {
+            margin-bottom: 30px;
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        margin: 0 0;
+    }
+}
+.submit-title {
+    display: block;
+    width: 100%;
+    margin: 25px 0 20px;
+}
+.submit-resume-info {
+    .box {
+        @media screen and (min-width: $tabwidth) {
+            width: 50%;
+            min-height: 190px;
+        }
+        .pad {
+            padding:20px 30px;
+            font-size: 20px;
+            line-height: 1.3;
+        }
+        p {
+            margin: 0 0;
+            strong {
+                font-weight: bold;
+            }
+        }
+        .buttondiv {
+            margin-top:20px;
+            a {
+                font-weight: 300;
+                padding: 5px 35px;
+                margin: 0 0;
+            }
+        }
+    }
+}
+.form-note-text {
+    margin-bottom: 20px;
+}
+.contact-form-wrapper {
+    padding-bottom: 30px;
+    .gform_heading {
+        display: none;
+    }
+    .gform_wrapper {
+        margin: 0 0;
+        float: left;
+        width: 100%;
+        .gform_body {
+            width: 100%;
+            float: left;
+            position: relative;
+            @media screen and (min-width: $tabwidth) {
+                width: 106.8%;
+                left: -30px;
+            }
+        }
+        ul.gform_fields {
+            textarea,
+            input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+                border-radius: 0;
+                -webkit-appearance: none;
+                outline: none;
+                @include transition(all ease-in .3s);
+                border-color: transparent;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 10px 15px;
+                font-size: 20px;
+            }
+            textarea:focus,
+            input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]):focus {
+                border-color:$color-grey;
+
+            }
+            textarea {
+                line-height: 1.2em;
+                padding: 15px 15px;
+            }
+            input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+                line-height: 1em;
+            }
+            li.gfield {
+                clear: none;
+                width: 100%;
+                float: left;
+                padding: 0 0;
+                margin-top: 30px;
+                margin-bottom: 0;
+                list-style: none;
+                &.email_field,
+                &.message_field {
+                    max-width: 100%;
+                    width: 100%;
+                }
+                @media screen and (min-width: $tabwidth) {
+                    width: 50%;
+                    padding: 0 30px;
+                }
+                label {
+                    margin-top: 0;
+                    span {
+                        color:#908f8f;
+                    }
+                }
+                &.gfield_error {
+                    background: transparent;
+                    border-top: none;
+                    border-bottom: none;
+                    max-width: 50%;
+                    label,span {
+                        margin-top: 0;
+                        color:$color-red;
+                    }
+                    .gfield_description {
+                        display: none;
+                        color:$color-red;
+                        padding-right: 0;
+                        padding-top: 4px;
+                        font-weight: normal;
+                    }
+                    textarea,
+                    input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
+                        border-color:$color-red;
+                    }
+                }
+            }
+        }
+        div.validation_error {
+            color:$color-red;
+            border-top:1px solid $color-red;
+            border-left:1px solid $color-red;
+            border-bottom:1px solid $color-red;
+            border-right:1px solid $color-red;
+            background: #fcecec;
+        }
+        .gform_footer {
+            display: none;
+            padding: 5px 0 10px;
+            input[type=submit] {
+                border: none;
+                -webkit-appearance:none;
+                border-radius: 0;
+                background: $color-red;
+                color:#FFF;
+                box-shadow: none;
+                padding: 12px 40px;
+                margin: 0 0;
+                font-size: 20px;
+                font-weight: 300;
+            }
+        }
+    }
+    .buttondiv {
+        padding-top:30px;
+    }
+    #submitButton {
+        cursor: pointer;
+        border: none;
+        -webkit-appearance:none;
+        border-radius: 0;
+        background: $color-red;
+        color:#FFF;
+        box-shadow: none;
+        padding: 4px 45px;
+        margin: 0 0;
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+    
 }

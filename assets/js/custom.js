@@ -122,5 +122,9 @@ jQuery(document).ready(function ($) {
         $(this).next().toggleClass('active');
     });
     
+    $("#submitButton").on("click",function(e){
+        e.preventDefault();
+        $('.gform_wrapper form').trigger("submit");
+    });
     
 });// END #####################################    END

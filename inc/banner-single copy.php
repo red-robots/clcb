@@ -41,20 +41,12 @@ if($obj) {
                         
                         
                         <?php if( $post_type=='team') { 
-                            $args = array(
-                                    'posts_per_page'   => -1,
-                                    'orderby'          => 'date',
-                                    'order'            => 'DESC',
-                                    'post_type'        => 'team',
-                                    'post_status'      => 'publish'
-                            );
-                            $teams = get_posts($args);
-        
+                            $other_members = get_field('other_team_members',$post_id);
                         ?>
-                        <div class="quote-container other-team-members <?php echo ($teams) ? 'has-members':'no-members'?>">
+                        <div class="quote-container other-team-members <?php echo ($other_members) ? 'has-members':'no-members'?>">
                             <div class="bg"></div>
                             <div class="inner">
-                                <?php if($teams) { ?>
+                                <?php if($other_members) { ?>
                                     <div id="viewMemberList" class="om_title">
                                         <div class="skew"></div>
                                         <span class="txt">
@@ -62,15 +54,12 @@ if($obj) {
                                             <i class="arrow down"></i>
                                         </span>
                                     </div>
-                                    <div id="otherMembers" class="dropdownList">
+                                    <div id="otherMembers" class="dropdownList open">
                                         <ul>
-                                            <?php foreach($teams as $tm) {  
-                                            $mem_id = $tm->ID;
-                                            $member_name = get_the_title($mem_id);
-                                            $pagelink = get_permalink($mem_id);
-                                                if($post_id!=$mem_id) { ?> 
-                                                    <li><a href="<?php echo $pagelink;?>"><?php echo $member_name;?></a></li>
-                                                <?php } ?>
+                                            <?php foreach($other_members as $m_id) { 
+                                            $member_name = get_the_title($m_id);
+                                            $pagelink = get_permalink($m_id); ?>
+                                            <li><a href="<?php echo $pagelink;?>"><?php echo $member_name;?></a></li>
                                             <?php } ?>
                                         </ul>
                                     </div>

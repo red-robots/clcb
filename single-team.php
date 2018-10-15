@@ -20,10 +20,9 @@ if($obj) {
     $parent_url = get_permalink($parent_id);
     $email = get_field('institution_email',$post_id);
 }
-$other_members = get_field('other_team_members',$post_id);
 ?>
 <?php  get_template_part('inc/banner-single');  ?>
-<div class="single-outer-wrap wrapmid clear fullwidth has-breadcrumb <?php echo ($other_members) ? 'has-member-list':'no-member-list';?>">
+<div class="single-outer-wrap wrapmid clear fullwidth has-breadcrumb">
     <div id="primary" class="content-area">
         <?php if($parent_title) { ?>
         <div class="breadcrumb clear" style="display:none;">
