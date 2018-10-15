@@ -2337,6 +2337,7 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 .contact-form-wrapper .gform_wrapper .gform_footer input[type=submit]{border:0;-webkit-appearance:none;border-radius:0;background:#e71e25;color:#FFF;box-shadow:none;padding:12px 40px;margin:0;font-size:20px;font-weight:300}
 .contact-form-wrapper .buttondiv{padding-top:30px}
 .contact-form-wrapper #submitButton{cursor:pointer;border:0;-webkit-appearance:none;border-radius:0;background:#e71e25;color:#FFF;box-shadow:none;padding:4px 45px;margin:0;font-size:1.5em;font-weight:300}
+.contact-form-wrapper .gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half){max-width:calc(100% - 0px) !important}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
