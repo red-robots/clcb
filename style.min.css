@@ -1960,9 +1960,8 @@ h2.text-red,.text-red{color:#e71e25}
 .page-links{clear:both;margin:0 0 1.5em}
 .banner-outer-wrap{position:relative}
 .banner{width:100%;height:210px;position:relative;background-size:cover;background-repeat:no-repeat;background-position:top center;background-attachment:scroll;margin-top:60px}
-@media screen and (min-width:980px){.banner{margin-top:0;height:600px}
-.banner.subpage{height:400px}
-}@media screen and (min-width:768px){.banner{margin-top:0;height:350px}
+@media screen and (min-width:768px){.banner{margin-top:0;height:600px}
+}@media screen and (min-width:980px){.banner{margin-top:0;height:650px}
 }.banner.no-image{background:#bdbec1;height:auto !important}
 .banner.no-image .pagetitlediv{padding:20px}
 .banner.no-image .pagetitlediv .innerpad{display:inline-block}
@@ -1999,8 +1998,6 @@ h2.text-red,.text-red{color:#e71e25}
 }@media screen and (min-width:1200px){.banner-bottom-text .quote-container .inner{font-size:22px;width:70%}
 }.banner-bottom-text .quote-container.other-team-members .inner{top:30px;padding-right:0;left:-30px}
 @media screen and (min-width:768px){.banner-bottom-text .quote-container.other-team-members .inner{top:0}
-}.home .banner{height:350px}
-@media screen and (min-width:768px){.home .banner{height:550px}
 }.quotediv{width:100%;color:#FFF}
 .quotediv .quotetext{position:absolute;right:0;top:-28%;padding:10px 25px;background:#e71e25;font-size:18px;line-height:1.1;z-index:5;width:75%}
 @media screen and (min-width:768px){.quotediv .quotetext{font-size:25px;width:75%;top:-18%}

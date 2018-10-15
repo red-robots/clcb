@@ -249,16 +249,13 @@
 	position: relative;
 	@include background-image-full(scroll);
 	margin-top:60px;
+    @media screen and (min-width: $tabwidth) {
+		margin-top:0;
+        height:600px;
+	}
 	@media screen and (min-width: $midwidth) {
 		margin-top:0;
-		height:600px;
-		&.subpage {
-			height: 400px;
-		}
-	}
-	@media screen and (min-width: $tabwidth) {
-		margin-top:0;
-        height:350px;
+		height:650px;
 	}
 	&.no-image {
 		background:$color-light-grey;
@@ -464,12 +461,6 @@
                 }
             }
         }
-    }
-}
-.home .banner {
-    height: 350px;
-    @media screen and (min-width: $tabwidth) {
-        height: 550px;
     }
 }
 .quotediv {
