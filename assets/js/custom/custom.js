@@ -122,6 +122,12 @@ jQuery(document).ready(function ($) {
         $(this).next().toggleClass('active');
     });
     
+    $('#searchTabs .top').on('click',function(){
+        var parent = $(this).parents('li.tab');
+        $('#searchTabs li').removeClass('active');
+        parent.toggleClass('active');
+    });
+    
     $("#submitButton").on("click",function(e){
         e.preventDefault();
         $('.gform_wrapper form').trigger("submit");

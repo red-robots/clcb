@@ -44,7 +44,7 @@ if( $is_home_page ) {
 
 		<?php if ($bannerImageURL) { ?>
         <div class="banner-outer-wrap clear">
-            <div class="banner" style="background-image:url('<?php echo $bannerImageURL; ?>')">
+            <div class="banner inner-page" style="background-image:url('<?php echo $bannerImageURL; ?>')">
                 <div class="banner-bottom-text clear">
                     <div class="leftdiv"><div id="triangle-left"></div></div>
                     <div class="rightdiv">

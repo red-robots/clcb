@@ -95,3 +95,14 @@
     justify-content: center;
     z-index: 6;
 }
+
+@mixin bottom_red_line($width:75px,$height:4px) {
+    content: "";
+    display: block;
+    width: $width;
+    height: $height;
+    background: $color-red;
+    margin: 0 0;
+    position: relative;
+    top: 4px;
+}
