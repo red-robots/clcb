@@ -42,9 +42,11 @@ get_header(); ?>
                         $img_src = $img['url'];
                         $img_alt = $img['title'];
                     }
-                ?>
-                <div class="member-info">   
-                    <div class="inner clear">
+                    $show = get_field('show_on_team_page',$post_id);
+                    $is_show = ($show=='no') ? false : true;
+                    if( $is_show ) { ?>
+                    <div class="member-info">   
+                        <div class="inner clear">
                         <div class="inner-pad clear">
                             <?php if($img_src) { ?>
                                 <div class="image-wrap has-image" style="background-image:url('<?php echo $img_src;?>')">
@@ -69,10 +71,11 @@ get_header(); ?>
                                     <div class="title"><?php echo ($title) ? $title : '<span class="na">N/A</span>';?></div>
                                 </div>
                             </div>
-                            <div class="link"><a class="btn_effect" href="<?php echo get_permalink(); ?>"><span>Full Bio</span></a></div>
+                            <div class="link"><a class="btn_effect" href="<?php echo get_permalink(); ?>"><span>Bio</span></a></div>
                         </div>
                     </div>
-                </div>
+                    </div>
+                    <?php } ?>
 				<?php endwhile; wp_reset_postdata(); ?>
 			</div>
 			<?php } ?>

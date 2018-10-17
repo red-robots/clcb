@@ -55,25 +55,34 @@ if($obj) {
                             <div class="bg"></div>
                             <div class="inner">
                                 <?php if($teams) { ?>
-                                    <div id="viewMemberList" class="om_title">
-                                        <div class="skew"></div>
-                                        <span class="txt">
-                                            <span>Other Team Members</span> 
-                                            <i class="arrow down"></i>
-                                        </span>
-                                    </div>
-                                    <div id="otherMembers" class="dropdownList">
-                                        <ul>
-                                            <?php foreach($teams as $tm) {  
-                                            $mem_id = $tm->ID;
-                                            $member_name = get_the_title($mem_id);
-                                            $pagelink = get_permalink($mem_id);
-                                                if($post_id!=$mem_id) { ?> 
-                                                    <li><a href="<?php echo $pagelink;?>"><?php echo $member_name;?></a></li>
+                                    <?php 
+                                    $s_show = get_field('show_on_team_page',$post_id); 
+                                    $show_navi = ($s_show=='no') ? false : true;
+                                    if($show_navi) { ?>
+                                        <div id="viewMemberList" class="om_title">
+                                            <div class="skew"></div>
+                                            <span class="txt">
+                                                <span>Other Team Members</span> 
+                                                <i class="arrow down"></i>
+                                            </span>
+                                        </div>
+                                        <div id="otherMembers" class="dropdownList">
+                                            <ul>
+                                                <?php foreach($teams as $tm) {  
+                                                $mem_id = $tm->ID;
+                                                $member_name = get_the_title($mem_id);
+                                                $pagelink = get_permalink($mem_id);
+                                                $show = get_field('show_on_team_page',$mem_id);
+                                                $is_show = ($show=='no') ? false : true;
+                                                if($is_show) {
+                                                        if($post_id!=$mem_id) { ?> 
+                                                            <li><a href="<?php echo $pagelink;?>"><?php echo $member_name;?></a></li>
+                                                        <?php } ?>
+                                                    <?php } ?>
                                                 <?php } ?>
-                                            <?php } ?>
-                                        </ul>
-                                    </div>
+                                            </ul>
+                                        </div>
+                                    <?php } ?>
                                 <?php } ?>
                             </div>
                         </div>
