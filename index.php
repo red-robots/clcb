@@ -126,9 +126,9 @@ $learn_more_link_3=get_field('learn_more_link_2');
 					<?php } ?>
 							<div class="overlay">
 								<a href="<?php echo $box_permalink; ?>">
-									<div class="flex">
+									<span class="flex">
 										<h2><?php echo $box_title_txt; ?></h2>
-									</div>
+									</span>
 								</a>
 							</div>
 						</div>
