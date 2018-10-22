@@ -98,7 +98,7 @@
 
 @mixin bottom_red_line($width:75px,$height:4px) {
     content: "";
-    display: block;
+    display: none;
     width: $width;
     height: $height;
     background: $color-red;

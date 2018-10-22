@@ -1909,7 +1909,7 @@ a.btn_effect:hover:before{left:0;-webkit-transform:translate3d(0,0,0);-ms-transf
 .site-content{position:relative;z-index:10}
 .edit-post-div{margin-top:20px}
 .sub-page.single .entry-title,.title_line_bottom{position:relative;font-size:30px;line-height:1.2}
-.sub-page.single .entry-title:after,.title_line_bottom:after{content:"";display:block;width:75px;height:4px;background:#e71e25;margin:0;position:relative;top:4px}
+.sub-page.single .entry-title:after,.title_line_bottom:after{content:"";display:none;width:75px;height:4px;background:#e71e25;margin:0;position:relative;top:4px}
 .sub-page.single .entry-title.entry-title,.title_line_bottom.entry-title{margin-bottom:1.3em}
 .sub-page.single .entry-title{color:#383938;margin-top:0}
 .text-center .title_line_bottom:after{margin:0 auto}
@@ -1946,13 +1946,13 @@ h2.text-red,.text-red{color:#e71e25}
 .sub-page .content-area .entry-content p .button a:hover{opacity:1}
 .sub-page .content-area .entry-content h2{font-size:25px;color:#383938;position:relative;line-height:1.2}
 .sub-page .content-area .entry-content h2:first-child{margin-top:0;margin-bottom:40px}
-.sub-page .content-area .entry-content h2:first-child:after{content:"";display:block;width:75px;height:4px;background:#e71e25;margin:0;position:relative;top:4px}
+.sub-page .content-area .entry-content h2:first-child:after{content:"";display:none;width:75px;height:4px;background:#e71e25;margin:0;position:relative;top:4px}
 @media screen and (min-width:768px){.sub-page .content-area .entry-content h2{font-size:30px}
 }@media screen and (min-width:768px){.sub-page .content-area.has-sidebar{width:70%;float:left}
 .sub-page .content-area.has-sidebar .site-main{padding-left:20px}
 }.sub-page .text-center-align{text-align:center}
 .sub-page .text-left-align{text-align:left}
-.sub-page .text-left-align .entry-content h2:first-child:after{content:"";display:block;width:75px;height:4px;background:#e71e25;margin:0;position:relative;top:4px}
+.sub-page .text-left-align .entry-content h2:first-child:after{content:"";display:none;width:75px;height:4px;background:#e71e25;margin:0;position:relative;top:4px}
 .entry-content blockquote{display:inline-block;padding:10px 20px;background:#FFF;color:#e71e25;font-weight:600;margin:0}
 .entry-content blockquote p{margin-bottom:0;margin-top:1.5em}
 .entry-content blockquote p:first-child{margin-top:0}
@@ -2115,7 +2115,7 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 @media screen and (min-width:768px){.member-details .nameWrap{margin-top:10%;margin-bottom:100px}
 }.member-details .name{margin:0;font-size:20px;font-weight:400}
 @media screen and (min-width:768px){.member-details .name{font-size:2.2vw}
-}.member-details .name:after{content:"";display:block;width:50px;height:2px;background:#e71e25;margin:0;position:relative;top:4px}
+}.member-details .name:after{content:"";display:none;width:50px;height:2px;background:#e71e25;margin:0;position:relative;top:4px}
 .member-details .title{color:#bdbec1;margin-top:12px;margin-bottom:0;font-size:15px}
 .member-details .title .na{text-indent:999em;display:inline-block}
 @media screen and (min-width:768px){.member-details .title{font-size:20px}
@@ -2360,7 +2360,7 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 .contact-form-wrapper #submitButton{cursor:pointer;border:0;-webkit-appearance:none;border-radius:0;background:#e71e25;color:#FFF;box-shadow:none;padding:4px 45px;margin:0;font-size:1.5em;font-weight:300}
 .contact-form-wrapper .gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half){max-width:calc(100% - 0px) !important}
 .page-id-958 .entry-content h2{position:relative;line-height:1.2}
-.page-id-958 .entry-content h2:after{content:"";display:block;width:75px;height:4px;background:#e71e25;margin:0;position:relative;top:4px}
+.page-id-958 .entry-content h2:after{content:"";display:none;width:75px;height:4px;background:#e71e25;margin:0;position:relative;top:4px}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
