@@ -11,9 +11,9 @@ get_header(); ?>
 	<div id="primary" class="content-area ourteam text-left-align clear">
 		<main id="main" class="site-main" role="main">
 			<?php while ( have_posts() ) : the_post(); ?>
-                <h2 class="title_line_bottom">Locations</h2>
+                
 				<?php if( get_the_content() ) {
-					get_template_part( 'template-parts/content', 'page' );
+					get_template_part( 'template-parts/intro' );
 				}
 			
             ?>

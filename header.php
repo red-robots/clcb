@@ -50,6 +50,10 @@
 		</div><!-- wrapper -->
 	</header><!-- #masthead -->
 
-	<?php get_template_part('inc/banner'); ?>
+	<?php 
+	if( get_post_type() != 'position' ) {
+		get_template_part('inc/banner'); 
+	}
+	?>
 
 	<div id="content" class="site-content clear">

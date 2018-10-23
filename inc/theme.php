@@ -28,6 +28,9 @@ function loginpage_custom_link() {
 }
 add_filter('login_headerurl','loginpage_custom_link');
 
+
+add_image_size('square', 500, 500, array('center', 'center'));
+
 /*-------------------------------------
 	Favicon.
 ---------------------------------------*/

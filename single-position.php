@@ -20,7 +20,10 @@ if($obj) {
     $email = get_field('institution_email',$post_id);
 }
 ?>
-<?php  get_template_part('inc/banner-single');  ?>
+<?php  
+get_template_part('inc/banner-single');  
+    // get_template_part('inc/banner'); 
+?>
 <div class="single-outer-wrap wrapmid clear fullwidth has-breadcrumb">
     <div id="primary" class="content-area">
         <?php if($parent_title) { ?>
@@ -32,26 +35,24 @@ if($obj) {
         <?php } ?>
         <main id="main" class="site-main clear" role="main">
             <?php while ( have_posts() ) : the_post(); $postId = get_the_ID(); ?>
-                
-            <header class="entry-header">
-                <?php the_title( '<h1 class="entry-title title_line_bottom">', '</h1>' ); ?>
-            </header><!-- .entry-header -->
+                <article class="opening">
+                    <header class="entry-header ">
+                        <?php the_title( '<h1 class="entry-title title_line_bottom">', '</h1>' ); ?>
+                    </header><!-- .entry-header -->
+                    
+                    <?php if(has_post_thumbnail()) { ?>
+                    <div class="single-featured-image clear">
+                        <?php echo  get_the_post_thumbnail($postId);  ?>
+                    </div>
+                    <?php } ?>
+
+                    <div class="entry-content opening">
+                        <?php the_content(); ?>
+                    </div><!-- .entry-content -->
+                </article>
             
-                <?php if(has_post_thumbnail()) { ?>
-                <div class="single-featured-image clear">
-                    <?php echo  get_the_post_thumbnail($postId);  ?>
-                </div>
-                <?php } ?>
 
-                <div class="entry-content">
-                    <?php the_content(); ?>
-                </div><!-- .entry-content -->
-
-                <?php if( is_user_logged_in() ) { ?>
-                <footer class="entry-footer edit-post-div">
-                    <span class="edit-link"><a href="<?php echo get_edit_post_link(get_the_ID()) ?>">Edit</a></span>
-                </footer><!-- .entry-footer -->
-                <?php } ?>
+               
 
             <?php endwhile; ?>
         </main><!-- #main -->

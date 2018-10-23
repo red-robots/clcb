@@ -67,10 +67,11 @@ $linkedin=get_field('linkedin_link', 'option');
 						</a>
 					<?php } ?>
 				</div>
+				<div class="site-info copyright clear">
+					&copy; <?php echo date('Y'); ?> <?php echo get_bloginfo('name'); ?>
+				</div>
 			</div>
-			<div class="site-info copyright clear">
-				&copy; <?php echo date('Y'); ?> <?php echo get_bloginfo('name'); ?>
-			</div>
+			
 	</div><!-- wrapper -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

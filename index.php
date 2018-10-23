@@ -119,7 +119,7 @@ $learn_more_link_3=get_field('learn_more_link_2');
 					<?php if ($box_img_src) { ?>
 					<div class="link has-image">
 						<div class="inner clear" style="background-image:url('<?php echo $box_img_src['url']?>');">
-							<img src="<?php echo $box_img_src['url']; ?>" alt="<?php echo $box_img_src['title']; ?>">
+							<img src="<?php echo $box_img_src['sizes']['square']; ?>" alt="<?php echo $box_img_src['title']; ?>">
 					<?php } else { ?>
 					<div class="link no-image">
 						<div class="inner clear">

@@ -145,6 +145,45 @@ body {
 	}	
 
 }
+section.flatbanner {
+	width: 100%;
+	position: relative;
+	line-height: 0;
+	header {
+		width: 100%;
+		position: absolute;
+		bottom:0;
+		left: 0;
+		line-height: 1.2;
+		margin: 0;
+		padding: 20px 0;
+		@include blackgrad;
+		color: #fff;
+	}
+	h1, h2 {
+		width: 100%;
+		float: left;
+		font-size: 7vw;
+		font-weight: 300;
+		text-align: center;
+		@media screen and (min-width: $tabwidth) {
+			font-size: 6vw;
+			margin: 0 0 0 20%;
+			text-align: left;
+			width: auto;
+		}
+		@media screen and (min-width: $midwidth) {
+			font-size: 5vw;
+		}
+		@media screen and (min-width: $deskwidth) {
+			font-size: 4vw;
+		}
+	}
+	img {
+		width: 100%;
+	}
+	
+}
 .row {
 	width: 100%;
 	float: left;
@@ -163,6 +202,7 @@ body {
 		width: 100%;
 		font-size:25px;
 		line-height:1;
+		font-weight: 400;
 		@media screen and (min-width: $midwidth) {
 			font-size:30px;
 		}
@@ -207,6 +247,7 @@ body {
 .button {
 	width: auto;
 	display: inline-block;
+	font-weight: 300;
 	&.buttondiv {
 		display:block;
 		width:100%;
@@ -217,7 +258,6 @@ body {
 		color: $color-white;
 		display: inline-block;
 		font-size: 1.2em;
-		font-weight: bold;
 		margin: 1em 0;
 		padding: 7px 25px;
 		position: relative;
@@ -284,7 +324,7 @@ body {
 		}
 		&.left {
 			@media screen and (min-width: $midwidth) {
-				width: 16.66666%;
+				width: 18.66666%;
 				text-align: left;
 				float: left;
 			}
@@ -322,7 +362,7 @@ body {
 				}
 			}
 			@media screen and (min-width: $tabwidth) {
-				margin-top:60px;
+				margin-top:10px;
 				margin-left: 0;
 				text-align: right;
 			}
@@ -511,6 +551,7 @@ a.btn_effect {
     position: relative;
     font-size: 30px;
     line-height: 1.2;
+    font-weight: 400;
     &:after {
         @include bottom_red_line();
     }
