@@ -1838,9 +1838,11 @@ body{color:#595a5c;font-size:15px;line-height:1.4;background:#f4f4f4}
 @media screen and (min-width:768px){.logo,h1.logo{width:200px;margin:20px 0;top:0;position:relative}
 }@media screen and (min-width:980px){.logo,h1.logo{width:250px;margin:10px 0;top:0}
 }@media screen and (min-width:1200px){.logo,h1.logo{margin:0}
-}section.flatbanner{width:100%;position:relative;line-height:0}
-section.flatbanner header{width:100%;position:absolute;bottom:0;left:0;line-height:1.2;margin:0;padding:20px 0;background:-webkit-linear-gradient(top,transparent 0,rgba(0,0,0,0.64) 99%,rgba(0,0,0,0.65) 100%);background:linear-gradient(to bottom,transparent 0,rgba(0,0,0,0.64) 99%,rgba(0,0,0,0.65) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000',endColorstr='#a6000000',GradientType=0);color:#fff}
-section.flatbanner h1,section.flatbanner h2{width:100%;float:left;font-size:7vw;font-weight:300;text-align:center}
+}section.flatbanner{width:100%;position:relative;line-height:0;margin-top:60px}
+@media screen and (min-width:768px){section.flatbanner{margin-top:0}
+}section.flatbanner header{width:100%;position:absolute;bottom:-70px;left:0;line-height:1.2;margin:0;padding:0;background-color:#fff;color:#333}
+@media screen and (min-width:768px){section.flatbanner header{bottom:0;padding:20px 0;background:-webkit-linear-gradient(top,transparent 0,rgba(0,0,0,0.64) 99%,rgba(0,0,0,0.65) 100%);background:linear-gradient(to bottom,transparent 0,rgba(0,0,0,0.64) 99%,rgba(0,0,0,0.65) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000',endColorstr='#a6000000',GradientType=0);color:#fff}
+}section.flatbanner h1,section.flatbanner h2{width:100%;float:left;font-size:7vw;font-weight:300;text-align:center}
 @media screen and (min-width:768px){section.flatbanner h1,section.flatbanner h2{font-size:6vw;margin:0 0 0 20%;text-align:left;width:auto}
 }@media screen and (min-width:980px){section.flatbanner h1,section.flatbanner h2{font-size:5vw}
 }@media screen and (min-width:1200px){section.flatbanner h1,section.flatbanner h2{font-size:4vw}
@@ -2098,21 +2100,21 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 .single-display-wrap .item-title{margin-top:0;color:#e71e25}
 .single-display-wrap .item-description p:last-child{margin-bottom:0}
 .edit-link a{color:#e71e25;display:inline-block;border:1px solid #e71e25;padding:8px 15px;text-decoration:none}
-.teamlist{margin-top:50px}
+.teamlist{width:100%;margin-top:50px}
 .teamlist.flex-container{margin-left:-10px;margin-right:-10px}
-.teamlist .member-info{display:inline-block;width:100%;position:relative;margin-bottom:30px}
-.teamlist .member-info .inner{padding:0 10px;position:relative;margin-bottom:30px;top:0;left:0;width:100%;height:100%;overflow:hidden}
+@media screen and (min-width:768px){.teamlist{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;margin-bottom:60px}
+}.teamlist .member-info{display:inline-block;width:100%;position:relative;margin-bottom:30px;background-color:#fff}
+@media screen and (min-width:768px){.teamlist .member-info{-webkit-flex-basis:45%;-ms-flex-preferred-size:45%;flex-basis:45%;width:45%}
+}@media screen and (min-width:1200px){.teamlist .member-info{-webkit-flex-basis:30%;-ms-flex-preferred-size:30%;flex-basis:30%;width:30%}
+}.teamlist .member-info .inner{padding:0 10px;position:relative;margin-bottom:30px;top:0;left:0;width:100%;height:100%;overflow:hidden}
 @media screen and (min-width:768px){.teamlist .member-info .inner{margin-bottom:0;padding:0 15px}
 }.teamlist .member-info .inner-pad{position:relative;width:100%;height:100%;background:#FFF}
-.teamlist .member-info .image-wrap{background:#e5e5e5;position:relative;text-align:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;height:350px;width:100%;background-size:cover;background-repeat:no-repeat;background-position:center center;background-attachment:scroll}
+.teamlist .member-info .image-wrap{background:#e5e5e5;position:relative;text-align:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;width:100%;background-size:cover;background-repeat:no-repeat;background-position:center center;background-attachment:scroll}
 .teamlist .member-info .image-wrap.no-image span{color:#bdbec1;font-size:100px;display:inline-block;position:relative;top:-20px}
-@media screen and (min-width:768px){.teamlist .member-info .image-wrap{height:350px}
-}@media screen and (min-width:768px){.teamlist .member-info{width:50%;margin-bottom:60px}
-}@media screen and (min-width:980px){.teamlist .member-info{width:33.3333333%}
-}.teamlist .link{background:#FFF;width:100%;height:55px;position:absolute;bottom:0;left:0;z-index:99}
+.teamlist .link{background:#FFF;width:100%;height:55px;position:absolute;bottom:0;left:0;z-index:99}
 @media screen and (min-width:768px){.teamlist .link{height:65px}
 }.teamlist .link a{color:#FFF;display:inline-block;background:#bbb;text-decoration:none;text-transform:uppercase;padding:6px 20px 4px 70px;position:relative}
-.member-details{position:relative;margin-top:-40px;z-index:2;float:left;width:100%}
+.member-details{position:relative;z-index:2;float:left;width:100%}
 .member-details .divider{position:absolute;top:-20px;left:0;width:100%;z-index:3}
 .member-details .divider .st0{fill:#FFF}
 .member-details .divider .st1{fill:none;stroke:#e71e25;stroke-width:2.5;stroke-miterlimit:10}

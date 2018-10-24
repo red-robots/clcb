@@ -149,16 +149,26 @@ section.flatbanner {
 	width: 100%;
 	position: relative;
 	line-height: 0;
+	margin-top: 60px;
+	@media screen and (min-width: $tabwidth) {
+		margin-top: 0px;
+	}
 	header {
 		width: 100%;
 		position: absolute;
-		bottom:0;
+		bottom:-70px;
 		left: 0;
 		line-height: 1.2;
 		margin: 0;
-		padding: 20px 0;
-		@include blackgrad;
-		color: #fff;
+		padding: 0px 0;
+		background-color: #fff;
+		color: #333;
+		@media screen and (min-width: $tabwidth) {
+			bottom:0;
+			padding: 20px 0;
+			@include blackgrad;
+			color: #fff;
+		}
 	}
 	h1, h2 {
 		width: 100%;

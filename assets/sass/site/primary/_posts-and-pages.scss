@@ -947,6 +947,7 @@ section.home-thirds	{
 }
 
 .teamlist {
+    width: 100%;
     margin-top:50px;
     &.flex-container {
         margin-left:-10px;
@@ -955,11 +956,31 @@ section.home-thirds	{
             
         }
     }
+    @media screen and (min-width: $tabwidth) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;   
+        flex-wrap: wrap; 
+        align-items: stretch;
+        margin-bottom: 60px;
+    }
+    @media screen and (min-width: $deskwidth) {
+
+    }
     .member-info {
         display:inline-block;
         width: 100%;
         position: relative;
         margin-bottom: 30px;
+        background-color: #fff;
+        @media screen and (min-width: $tabwidth) {
+            flex-basis: 45%;
+            width: 45%;
+        }
+        @media screen and (min-width: $deskwidth) {
+            flex-basis: 30%;
+            width: 30%;
+        }
         .inner {
             padding: 0 10px;
             position:relative;
@@ -987,7 +1008,7 @@ section.home-thirds	{
             display: flex;
             justify-content: center;
             align-items: center;
-            height:350px;
+            // height:350px;
             width: 100%;
             @include background-image-full(scroll,center center);
             &.no-image {
@@ -1000,15 +1021,15 @@ section.home-thirds	{
                 }
             }
             @media screen and (min-width: $tabwidth) {
-                height:350px;
+                // height:350px;
             }
         }
         @media screen and (min-width: $tabwidth) {
-            width: 50%;
-            margin-bottom: 60px;
+            // width: 50%;
+            
 	    }
         @media screen and (min-width: $midwidth) {
-            width: 33.3333333%;
+            // width: 33.3333333%;
         }
     }
     .link {
@@ -1035,7 +1056,7 @@ section.home-thirds	{
 }
 .member-details {
     position: relative;
-    margin-top: -40px;
+    // margin-top: -40px;
     z-index: 2;
     float: left;
     width: 100%;
