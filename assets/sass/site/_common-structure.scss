@@ -52,7 +52,10 @@ body {
 		align-items: center;
 	}
 }
-
+main#main {
+	width: 100%;
+	position: relative;
+}
 .widget-title {
     text-align: left;
     font-weight: 400;

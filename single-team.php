@@ -22,7 +22,33 @@ if($obj) {
 }
 ?>
 <?php  get_template_part('inc/banner-single');  ?>
+
+    
 <div class="single-outer-wrap wrapmid clear fullwidth has-breadcrumb">
+
+    <?php
+    $wp_query = new WP_Query();
+    $wp_query->query(array(
+        'post_type'=>'team',
+        'posts_per_page' => -1
+    ));
+    if ($wp_query->have_posts()) : ?>
+        <div class="otherteam">
+            <div class="dropdown-btn">
+                Other Team Members <div class="rotate hover"><i class="far fa-plus"></i></div>
+            </div>
+            <div class="dropdown closed">
+                <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+                    <li>
+                        <a href="<?php the_permalink(); ?>">
+                            <?php the_title(); ?>
+                        </a>
+                    </li>
+                <?php endwhile; ?>
+            </div>
+        </div>
+    <?php endif; wp_reset_query(); ?>
+
     <div id="primary" class="content-area">
         <?php if($parent_title) { ?>
         <div class="breadcrumb clear" style="display:none;">

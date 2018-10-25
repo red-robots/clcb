@@ -14,8 +14,12 @@ if($obj) {
 ?>
     <?php if($bannerImageURL) { ?>
         <section class="flatbanner">
-        		<header><h1><?php the_title(); ?></h1></header>
+        		<?php if( $post_type != 'team' ) { ?>
+                    <header><h1><?php the_title(); ?></h1></header>
+                <?php } ?>
            		<img src="<?php echo $bannerImageURL; ?>" alt="<?php echo $subpage_banner['alt']; ?>">
            </section>  
 
-<?php } }
+<?php 
+        } 
+}

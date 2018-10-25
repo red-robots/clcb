@@ -7,6 +7,19 @@
 
 jQuery(document).ready(function ($) {
 	
+	
+	// $('.otherteam').hover(function() {
+	// 	$(this).find('.dropdown').addClass('open');
+	// });
+
+	$('.otherteam').hover(
+		function(){$(this).find('.dropdown').addClass('open')},
+		function(){$(this).find('.dropdown').removeClass('open')}
+	);
+	$('.otherteam').hover(
+		function(){$(this).find('.rotate').addClass('closed')},
+		function(){$(this).find('.rotate').removeClass('closed')}
+	);
 	/*
 	*
 	*	Current Page Active

@@ -2340,3 +2340,53 @@ section.home-thirds	{
         }
     }
 }
+.otherteam {
+    width: auto;
+    position: absolute;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    color: $color-red;
+    border-bottom: 2px solid $color-light-grey;
+    .dropdown-btn {
+        width: 100%;
+        .rotate {
+            width: 25px;
+            height: 25px;
+            float: left;
+            @include transition(all ease .05s);
+            &.hover {
+                transform: rotate(0deg);
+            }
+            &.closed {
+                transform: rotate(45deg);
+            }
+        }
+    }
+    .dropdown {
+        width: 100%;
+        overflow: hidden;
+        &.closed {
+            max-height: 0;
+            padding: 0;
+            @include transition(all ease .3s);
+        }
+        &.open {
+            max-height: 1000px;
+            padding: 10px 0;
+        }
+        li {
+            list-style: none;
+            border-bottom: 1px solid #ccc;
+        }
+        a {
+            color: #666;
+            padding: 5px 0;
+            &:hover {
+                color: $color-red;
+            }
+        }
+    }
+}
