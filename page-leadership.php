@@ -16,6 +16,7 @@ get_header(); ?>
         ?>
         
         <?php if( have_rows('services') ) { ?>
+        <div class="wrapper">
         <div class="leadership-services clear">
             <div class="tablist">
                 <ul id="leadershipTabs">
@@ -41,6 +42,7 @@ get_header(); ?>
                 </div>
                 <?php $p++; endwhile; ?>
             </div>
+        </div>
         </div>
         <?php } ?>
         

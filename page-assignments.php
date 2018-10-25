@@ -39,6 +39,7 @@ get_header(); ?>
                 );
             $items = new WP_Query($args);
             if ( $items->have_posts() ) { ?>
+            <div class="wrapper">
             <div class="textwrapper assignmentlist clear current">
                 <div class="row clear">
                     <div class="flex-container clear">
@@ -79,7 +80,7 @@ get_header(); ?>
                         <?php
                 } ?>
 
-
+             </div>
             </div>
             <?php } ?>
         

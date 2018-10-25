@@ -31,6 +31,7 @@ get_header(); ?>
             ?>
             
             <?php if($step_list) { ?>
+            <div class="wrapper">
             <div class="clear search-process">
                 <div class="tablist">
                     <ul id="searchTabs">
@@ -52,7 +53,7 @@ get_header(); ?>
                     <?php  $i++; } ?>
                     </ul>
                 </div>
-                
+            </div>
             </div>
              <?php } ?>
             

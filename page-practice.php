@@ -15,6 +15,7 @@ get_header(); ?>
             } ?>
 
             <?php if( have_rows('practice_areas') ) { ?>
+            <div class="wrapper">
             <div class="practice-areas clear">
                 <div class="masonry">
                 <?php $i=1; while( have_rows('practice_areas') ) : the_row(); 
@@ -28,6 +29,7 @@ get_header(); ?>
                     </div>
                 <?php $i++; endwhile; ?>
                 </div>
+            </div>
             </div>
             <?php } ?>
     

@@ -37,6 +37,7 @@ get_header(); ?>
                         'google_map'=>get_field('new_york_google_map','option')
                     );
             ?>
+            <div class="wrapper">
             <div class="locationsInfo clear">
                 <div class="flexbox-contact">
                     <?php foreach($locations as $loc) { ?>
@@ -117,6 +118,7 @@ get_header(); ?>
                         </div>
                     <?php } ?>
                 </div>
+            </div>
                 <?php } ?>
             <?php endwhile; ?> 
             
