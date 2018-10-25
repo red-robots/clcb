@@ -1815,7 +1815,7 @@ a{text-decoration:none}
 .clear{clear:both}
 .wrapper{width:100%;margin:0 auto;padding:0 20px}
 @media screen and (min-width:768px){.wrapper{width:100%}
-}@media screen and (min-width:1200px){.wrapper{width:95%}
+}@media screen and (min-width:1200px){.wrapper{width:80%}
 }.text-center{text-align:center}
 .text-left{text-align:left}
 body{color:#595a5c;font-size:15px;line-height:1.4;background:#f4f4f4}

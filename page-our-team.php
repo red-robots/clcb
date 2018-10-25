@@ -30,6 +30,7 @@ get_header(); ?>
 				);
 			$teams = new WP_Query($args);
 			if ( $teams->have_posts() ) { ?>
+            <div class="wrapper">
 			<div class="teamlist ">
 				<?php while ( $teams->have_posts() ) : $teams->the_post(); 
                     $post_id = get_the_ID();
@@ -74,6 +75,7 @@ get_header(); ?>
                     <?php } ?>
 				<?php endwhile; wp_reset_postdata(); ?>
 			</div>
+            </div>
 			<?php } ?>
             
             
