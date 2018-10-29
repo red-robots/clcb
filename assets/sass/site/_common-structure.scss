@@ -2,6 +2,9 @@ a{text-decoration: none;}
 .clear:before, .clear:after { content: " "; display: table; }
 .clear { *zoom: 1; }
 .clear {clear: both;}
+.red {
+	color: $color-red;
+}
 .wrapper {
 	width: 100%;
 	margin: 0px auto;

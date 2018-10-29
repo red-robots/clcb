@@ -1813,6 +1813,7 @@ a{text-decoration:none}
 .clear:before,.clear:after{content:" ";display:table}
 .clear{*zoom:1}
 .clear{clear:both}
+.red{color:#e71e25}
 .wrapper{width:100%;margin:0 auto;padding:0 20px}
 @media screen and (min-width:768px){.wrapper{width:100%;padding:0}
 }@media screen and (min-width:1200px){.wrapper{width:80%;padding:0}

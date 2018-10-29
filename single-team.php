@@ -81,7 +81,7 @@ if($obj) {
                         <?php } ?>
                     </div>
                     <div class="m_info clear">
-                        <div class="smtxt"><strong>On a personal note</strong></div>
+                        <div class="smtxt red"><strong>On a personal note</strong></div>
                         <div class="note"><?php echo $personal_note; ?></div>
                     </div>
                 </div>    

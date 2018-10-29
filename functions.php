@@ -83,6 +83,12 @@ function ii_mce_before_init_insert_formats( $init_array ) {
             'block' => 'span',  
             'classes' => 'red-button button',
             'wrapper' => true
+        ),
+        array(  
+            'title' => 'Red Type',  
+            'block' => 'span',  
+            'classes' => 'red',
+            'wrapper' => true
         )
     );  
     // Insert the array, JSON ENCODED, into 'style_formats'
