@@ -21,16 +21,40 @@ get_header(); ?>
 			?>
 
 			<?php  
+
+            $terms = get_terms(
+                    array(
+                        'taxonomy' => 'team_type',
+                        // 'exclude'  => 'founder'
+                    )
+                );
+            // echo '<pre>';
+            // print_r($terms);
+            // echo '</pre>';
+            foreach( $terms as $term ) :
+
 			$args = array(
 				'posts_per_page'   => -1,
-				'orderby'          => 'date',
-				'order'            => 'DESC',
 				'post_type'        => 'team',
-				'post_status'      => 'publish'
+				'post_status'      => 'publish',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => $term->taxonomy,
+                        'field'    => 'slug',
+                        'terms'    => $term->slug,
+                    ),
+                ),
 				);
 			$teams = new WP_Query($args);
-			if ( $teams->have_posts() ) { ?>
+            $i=0;
+			if ( $teams->have_posts() && $term->slug != 'founder' ) { $i++; ?>
             <div class="wrapper">
+            <?php 
+            //if( $term->slug != 'founder' ) {
+                if( $i == 1 ) {
+                    echo '<h2 class="teamlist-header">'.$term->name.'</h2>';
+                } 
+            ?>
 			<div class="teamlist ">
 				<?php while ( $teams->have_posts() ) : $teams->the_post(); 
                     $post_id = get_the_ID();
@@ -45,6 +69,9 @@ get_header(); ?>
                     }
                     $show = get_field('show_on_team_page',$post_id);
                     $is_show = ($show=='no') ? false : true;
+
+                    
+
                     if( $is_show ) { ?>
                     <div class="member-info">   
                         
@@ -77,7 +104,8 @@ get_header(); ?>
 			</div>
             </div>
 			<?php } ?>
-            
+            <?php //} ?>
+            <?php endforeach; ?>
             
 		</main><!-- #main -->
 	</div><!-- #primary -->

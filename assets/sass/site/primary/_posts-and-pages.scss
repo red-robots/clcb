@@ -945,7 +945,13 @@ section.home-thirds	{
         text-decoration: none;
     }
 }
-
+h2.teamlist-header {
+    width: 100%;
+    color: $color-red;
+    font-weight: 300;
+    border-bottom: 1px solid $color-light-grey;
+    padding: 5px 0;
+}
 .teamlist {
     width: 100%;
     margin-top:50px;
@@ -967,6 +973,7 @@ section.home-thirds	{
     @media screen and (min-width: $deskwidth) {
 
     }
+    
     .member-info {
         display:inline-block;
         width: 100%;

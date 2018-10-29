@@ -94,6 +94,13 @@ function ii_custom_taxonomies() {
                 'single'    => 'Category',
                 'taxonomy'  => 'position_categories'
             ),
+            array(
+                'post_type' => 'team',
+                'menu_name' => 'Team Type',
+                'plural'    => 'Team Type',
+                'single'    => 'Category',
+                'taxonomy'  => 'team_type'
+            ),
         );
     
     if($posts) {
