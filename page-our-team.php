@@ -51,7 +51,7 @@ get_header(); ?>
             <div class="wrapper">
             <?php 
             //if( $term->slug != 'founder' ) {
-                if( $i == 1 ) {
+                if( $term->slug == 'leadership-development-partners' ) {
                     echo '<h2 class="teamlist-header">'.$term->name.'</h2>';
                 } 
             ?>
