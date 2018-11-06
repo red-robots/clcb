@@ -750,7 +750,8 @@ section.home-thirds	{
 .content1 {
     @include background-image-full(scroll,center center);
     .tile {
-        margin-top:30%;
+        // margin-top:30%;
+        margin-top:100%;
         @media screen and (min-width: $tabwidth) {
             margin-top: 0;
         }
@@ -768,7 +769,8 @@ section.home-thirds	{
     }
     .imageRight {
         width: 100%;
-        height: 180px;
+        // height: 180px;
+        height: 380px;
         @include background-image-full(scroll,center center);
         @media screen and (min-width: $tabwidth) {
             position: absolute;
@@ -1017,6 +1019,9 @@ h2.teamlist-header {
             align-items: center;
             // height:350px;
             width: 100%;
+            img {
+                width: 100%;
+            }
             @include background-image-full(scroll,center center);
             &.no-image {
                 span {
@@ -1122,7 +1127,7 @@ h2.teamlist-header {
         margin-bottom: 0;
         font-size: 15px;
         .na {
-            text-indent: 999em;
+            // text-indent: 999em;
             display: inline-block;
         }
         @media screen and (min-width: $tabwidth) {

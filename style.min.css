@@ -2060,12 +2060,12 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 }.home .divCol2.content1 .flexwrap{padding:14% 0}
 @media screen and (min-width:768px){.home .divCol2.content1 .flexwrap{padding:30% 0}
 }.content1{background-size:cover;background-repeat:no-repeat;background-position:center center;background-attachment:scroll}
-.content1 .tile{margin-top:30%}
+.content1 .tile{margin-top:100%}
 @media screen and (min-width:768px){.content1 .tile{margin-top:0}
 }.content2 .tile{background:#FFF}
 .content2.divCol2 .flexwrap{padding:7% 0}
 @media screen and (min-width:768px){.content2.divCol2 .flexwrap{padding:15% 0}
-}.content2 .imageRight{width:100%;height:180px;background-size:cover;background-repeat:no-repeat;background-position:center center;background-attachment:scroll}
+}.content2 .imageRight{width:100%;height:380px;background-size:cover;background-repeat:no-repeat;background-position:center center;background-attachment:scroll}
 @media screen and (min-width:768px){.content2 .imageRight{position:absolute;top:0;right:0;width:50%;height:100%}
 }.wrap-image{background-size:cover;background-repeat:no-repeat;background-position:top left;background-attachment:scroll;position:relative}
 .whitediv{padding-top:30px;padding-bottom:30px}
@@ -2113,6 +2113,7 @@ h2.teamlist-header{width:100%;color:#e71e25;font-weight:300;border-bottom:1px so
 @media screen and (min-width:768px){.teamlist .member-info .inner{margin-bottom:0;padding:0 15px}
 }.teamlist .member-info .inner-pad{position:relative;width:100%;height:100%;background:#FFF}
 .teamlist .member-info .image-wrap{background:#e5e5e5;position:relative;text-align:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;width:100%;background-size:cover;background-repeat:no-repeat;background-position:center center;background-attachment:scroll}
+.teamlist .member-info .image-wrap img{width:100%}
 .teamlist .member-info .image-wrap.no-image span{color:#bdbec1;font-size:100px;display:inline-block;position:relative;top:-20px}
 .teamlist .link{background:#FFF;width:100%;height:55px;position:absolute;bottom:0;left:0;z-index:99}
 @media screen and (min-width:768px){.teamlist .link{height:65px}
@@ -2130,7 +2131,7 @@ h2.teamlist-header{width:100%;color:#e71e25;font-weight:300;border-bottom:1px so
 @media screen and (min-width:768px){.member-details .name{font-size:2.2vw}
 }.member-details .name:after{content:"";display:none;width:50px;height:2px;background:#e71e25;margin:0;position:relative;top:4px}
 .member-details .title{color:#bdbec1;margin-top:12px;margin-bottom:0;font-size:15px}
-.member-details .title .na{text-indent:999em;display:inline-block}
+.member-details .title .na{display:inline-block}
 @media screen and (min-width:768px){.member-details .title{font-size:20px}
 }.news-list.flex-container{-webkit-box-pack:left;-webkit-justify-content:left;-ms-flex-pack:left;justify-content:left}
 @media screen and (min-width:768px){.news-list{width:102%;margin-left:-10px}

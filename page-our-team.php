@@ -88,7 +88,9 @@ get_header(); ?>
                         
                             <div class="nameWrap">
                                 <h4 class="name"><?php echo get_the_title(); ?></h4>
-                                <div class="title"><?php echo ($title) ? $title : '<span class="na">N/A</span>';?></div>
+                                <div class="title">
+                                <?php echo ($title) ? $title : '<span class="na"></span>';?>
+                                </div>
                             </div>
                         </div>
                         <div class="link">
@@ -100,10 +102,10 @@ get_header(); ?>
                         
                     </div>
                     <?php } ?>
-				<?php endwhile; wp_reset_postdata(); ?>
+				<?php endwhile;  ?>
 			</div>
             </div>
-			<?php } ?>
+			<?php } wp_reset_postdata();?>
             <?php //} ?>
             <?php endforeach; ?>
             
