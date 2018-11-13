@@ -2140,7 +2140,7 @@ h2.teamlist-header{width:100%;color:#e71e25;font-weight:300;border-bottom:1px so
 }.team-row{margin-left:-23px;margin-right:-23px}
 #term_leadership-development-partners .teamlist{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 #term_leadership-development-partners .teamlist .member-info{width:100%}
-@media screen and (min-width:768px){#term_leadership-development-partners .teamlist .member-info{-webkit-flex-basis:25%;-ms-flex-preferred-size:25%;flex-basis:25%;width:25%}
+@media screen and (min-width:768px){#term_leadership-development-partners .teamlist .member-info{-webkit-flex-basis:23%;-ms-flex-preferred-size:23%;flex-basis:23%;width:23%}
 }.news-list.flex-container{-webkit-box-pack:left;-webkit-justify-content:left;-ms-flex-pack:left;justify-content:left}
 @media screen and (min-width:768px){.news-list{width:102%;margin-left:-10px}
 }.news-list .navigation{margin-top:20px}

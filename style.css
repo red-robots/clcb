@@ -8619,10 +8619,10 @@ h2.teamlist-header {
     width: 100%; }
     @media screen and (min-width: 768px) {
       #term_leadership-development-partners .teamlist .member-info {
-        -webkit-flex-basis: 25%;
-            -ms-flex-preferred-size: 25%;
-                flex-basis: 25%;
-        width: 25%; } }
+        -webkit-flex-basis: 23%;
+            -ms-flex-preferred-size: 23%;
+                flex-basis: 23%;
+        width: 23%; } }
 
 .news-list.flex-container {
   -webkit-box-pack: left;
