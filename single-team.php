@@ -13,6 +13,8 @@ $query = isset($wp_query->query) ? $wp_query->query : '';
 $post_type = ( isset($query['post_type']) ) ? $query['post_type'] : '';
 $obj = get_default_single_banner($post_type);
 $parent_title = '';
+$opt_show = get_field('show_on_team_page',$post_id); 
+$show_dropdown_list = ($opt_show=='no') ? false : true;
 if($obj) {
     $bannerImageURL = $obj['image_url'];
     $parent_id = $obj['parent_id'];
@@ -25,29 +27,40 @@ if($obj) {
 
     
 <div class="single-outer-wrap wrapmid clear fullwidth has-breadcrumb">
+    
+    <?php if($show_dropdown_list) { ?>
 
     <?php
-    $wp_query = new WP_Query();
-    $wp_query->query(array(
+    $args = array(
         'post_type'=>'team',
         'posts_per_page' => -1
-    ));
+    );
+    $wp_query = new WP_Query($args);
+    //$wp_query->query();
+    
     if ($wp_query->have_posts()) : ?>
         <div class="otherteam">
             <div class="dropdown-btn">
                 Other Team Members <div class="rotate hover"><i class="far fa-plus"></i></div>
             </div>
             <div class="dropdown closed">
-                <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+                <?php while ($wp_query->have_posts()) : $wp_query->the_post(); 
+                    $postId = get_the_ID();
+                    $show_option = get_field('show_on_team_page',$postId); 
+                    $is_show_name =  ($show_option=='no') ? false : true;
+                    if($is_show_name) { ?>
                     <li>
                         <a href="<?php the_permalink(); ?>">
                             <?php the_title(); ?>
                         </a>
                     </li>
+                    <?php } ?>
                 <?php endwhile; ?>
             </div>
         </div>
     <?php endif; wp_reset_query(); ?>
+    
+     <?php } ?>
 
     <div id="primary" class="content-area">
         <?php if($parent_title) { ?>
@@ -81,7 +94,13 @@ if($obj) {
                         <?php } ?>
                     </div>
                     <div class="m_info clear">
-                        <div class="smtxt red"><strong>But, wait! There's more.</strong></div>
+                        <div class="smtxt red">
+                            <?php if($title=='Founder') { ?>
+                            <strong><?php echo $title;?></strong>
+                            <?php } else { ?>
+                            <strong>But, wait! There's more.</strong>
+                            <?php } ?>
+                        </div>
                         <div class="note"><?php echo $personal_note; ?></div>
                     </div>
                 </div>    
