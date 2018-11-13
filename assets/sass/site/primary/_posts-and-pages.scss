@@ -1066,8 +1066,9 @@ h2.teamlist-header {
             background: $color-red;
             text-decoration: none;
             text-transform: uppercase;
-            padding: 6px 20px 4px 70px;
+            padding: 6px 20px 6px 70px;
             position: relative;
+            font-size: 18px;
             &.btn_effect:before {
                 background: $color-grey;
             }
@@ -1119,10 +1120,10 @@ h2.teamlist-header {
     }
     .name {
         margin: 0 0;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: 400;
         @media screen and (min-width: $tabwidth) {
-            font-size: 2.2vw;
+            font-size: 28px;
         }
         &:after {
             @include bottom_red_line(50px,2px);
@@ -1130,8 +1131,8 @@ h2.teamlist-header {
     }
     .title {
         color:$color-light-grey;
-        margin-top: 12px;
-        margin-bottom: 0;
+        margin-top: 8px;
+        margin-bottom: 15px;
         font-size: 15px;
         .na {
             // text-indent: 999em;
@@ -1139,6 +1140,8 @@ h2.teamlist-header {
         }
         @media screen and (min-width: $tabwidth) {
             font-size: 20px;
+            margin-top: 12px;
+            margin-bottom: 0;
         }
     }
 }
@@ -1160,8 +1163,8 @@ h2.teamlist-header {
         .member-info {
             width: 100%;   
             @media screen and (min-width: $tabwidth) {
-                flex-basis: 38%;     
-                width: 38%;            
+                flex-basis: 25%;     
+                width: 25%;            
             }
         }
     }
@@ -1245,6 +1248,9 @@ h2.teamlist-header {
     }
     .m_info {
         margin-top:20px;
+        .large_txt {
+            font-size: 20px;
+        }
     }
     .note {
         margin-top:10px;

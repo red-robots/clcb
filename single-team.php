@@ -96,7 +96,7 @@ if($obj) {
                     <div class="m_info clear">
                         <div class="smtxt red">
                             <?php if($title=='Founder') { ?>
-                            <strong><?php echo $title;?></strong>
+                            <span class="large_txt"><strong><?php echo $title;?></strong></span>
                             <?php } else { ?>
                             <strong>But, wait! There's more.</strong>
                             <?php } ?>
