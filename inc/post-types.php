@@ -89,10 +89,24 @@ function ii_custom_taxonomies() {
         $posts = array(
             array(
                 'post_type' => 'position',
-                'menu_name' => 'Assignment Categories',
+                'menu_name' => 'Categories',
                 'plural'    => 'Assignment Categories',
                 'single'    => 'Category',
                 'taxonomy'  => 'position_categories'
+            ),
+            array(
+                'post_type' => 'position',
+                'menu_name' => 'Focus Areas',
+                'plural'    => 'Focus Areas',
+                'single'    => 'Focus Area',
+                'taxonomy'  => 'focus_area'
+            ),
+            array(
+                'post_type' => 'position',
+                'menu_name' => 'Status',
+                'plural'    => 'Status',
+                'single'    => 'Status',
+                'taxonomy'  => 'status'
             ),
             array(
                 'post_type' => 'team',
