@@ -35,7 +35,7 @@ add_image_size('square', 500, 500, array('center', 'center'));
 	Favicon.
 ---------------------------------------*/
 function mytheme_favicon() { 
- echo '<link rel="shortcut icon" href="' . get_bloginfo('stylesheet_directory') . '/images/favicon.ico" >'; 
+ echo '<link rel="shortcut" href="' . get_bloginfo('stylesheet_directory') . '/images/favicon.ico" >'; 
 } 
 add_action('wp_head', 'mytheme_favicon');
 

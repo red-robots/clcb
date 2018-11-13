@@ -48,14 +48,15 @@ get_header(); ?>
 			$teams = new WP_Query($args);
             $i=0;
 			if ( $teams->have_posts() && $term->slug != 'founder' ) { $i++; ?>
-            <div class="wrapper">
+            <div class="wrapper team-wrapper">
             <?php 
             //if( $term->slug != 'founder' ) {
                 if( $term->slug == 'leadership-development-partners' ) {
                     echo '<h2 class="teamlist-header">'.$term->name.'</h2>';
                 } 
             ?>
-			<div class="teamlist ">
+                <div class="team-row clear">
+                    <div class="teamlist ">
 				<?php while ( $teams->have_posts() ) : $teams->the_post(); 
                     $post_id = get_the_ID();
                     $post_thumbnail_id = get_post_thumbnail_id( $post_id );
@@ -74,7 +75,7 @@ get_header(); ?>
 
                     if( $is_show ) { ?>
                     <div class="member-info">   
-                        
+                        <div class="midwrap clear">
                         <?php if($img_src) { ?>
                             <div class="image-wrap has-image">
                                 <img src="<?php echo $img_src; ?>" alt="<?php echo $img_alt; ?>" />
@@ -84,26 +85,26 @@ get_header(); ?>
                                 <span><i class="fa fa-user" aria-hidden="true"></i></span>
                             </div>
                         <?php } ?>
-                        <div class="member-details">
-                        
-                            <div class="nameWrap">
-                                <h4 class="name"><?php echo get_the_title(); ?></h4>
-                                <div class="title">
-                                <?php echo ($title) ? $title : '<span class="na"></span>';?>
+                            <div class="member-details">
+
+                                <div class="nameWrap clear">
+                                    <h4 class="name"><?php echo get_the_title(); ?></h4>
+                                    <div class="title">
+                                    <?php echo ($title) ? $title : '<span class="na"></span>';?>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="link">
+                                <a class="btn_effect" href="<?php echo get_permalink(); ?>">
+                                    <span>Bio</span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="link">
-                            <a class="btn_effect" href="<?php echo get_permalink(); ?>">
-                                <span>Bio</span>
-                            </a>
-                        </div>
-
-                        
                     </div>
                     <?php } ?>
 				<?php endwhile;  ?>
 			</div>
+                </div>    
             </div>
 			<?php } wp_reset_postdata();?>
             <?php //} ?>

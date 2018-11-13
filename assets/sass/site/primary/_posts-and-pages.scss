@@ -967,13 +967,12 @@ h2.teamlist-header {
     @media screen and (min-width: $tabwidth) {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;   
         flex-wrap: wrap; 
         align-items: stretch;
         margin-bottom: 60px;
     }
     @media screen and (min-width: $deskwidth) {
-
+        
     }
     
     .member-info {
@@ -981,14 +980,20 @@ h2.teamlist-header {
         width: 100%;
         position: relative;
         margin-bottom: 30px;
-        background-color: #fff;
+        box-sizing: border-box;
+        padding-left: 20px;
+        padding-right: 20px;
         @media screen and (min-width: $tabwidth) {
-            flex-basis: 45%;
-            width: 45%;
+            flex-basis: 50%;     
+            width: 50%;            
         }
         @media screen and (min-width: $deskwidth) {
-            flex-basis: 30%;
-            width: 30%;
+            flex-basis: 33.333%;
+            width: 33.333%;
+        }
+        .midwrap {
+            position: relative;
+            background-color: #fff;
         }
         .inner {
             padding: 0 10px;
@@ -1058,11 +1063,14 @@ h2.teamlist-header {
         a {
             color: #FFF;
             display: inline-block;
-            background: #bbbbbb;
+            background: $color-red;
             text-decoration: none;
             text-transform: uppercase;
             padding: 6px 20px 4px 70px;
             position: relative;
+            &.btn_effect:before {
+                background: $color-grey;
+            }
         }
     }
 }
@@ -1099,11 +1107,10 @@ h2.teamlist-header {
         text-align:left;
         line-height:1.1;
         font-weight: 400;
-        float: right;
-        width: 80%;
         z-index: 5;
         margin-top: 3%;
         padding-right: 20px;
+        padding-left: 20px;
         margin-bottom: 60px;
         @media screen and (min-width: $tabwidth) {
             margin-top: 10%;
@@ -1135,7 +1142,18 @@ h2.teamlist-header {
         }
     }
 }
-
+.team-wrapper {
+    padding-right: 30px;
+    padding-left: 30px;
+    @media screen and (min-width: $deskwidth) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+.team-row {
+    margin-left: -20px;
+    margin-right: -20px;
+}
 .news-list {
     &.flex-container {
         justify-content: left;
