@@ -1866,6 +1866,16 @@ h2.teamlist-header {
 }
 .leadership-services {
     margin-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    @media screen and (min-width: $tabwidth) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media screen and (min-width: $deskwidth) {
+        padding-left: 0;
+        padding-right: 0;
+    }
     .tablist {
         position: relative;
         ul {
@@ -1921,8 +1931,8 @@ h2.teamlist-header {
                 @include transition(all ease-out .3s);
                 text-align: center;
                 @media screen and (min-width: $tabwidth) {
-                    font-size: 1.6vw;
-                    padding: 0 0;
+                    font-size: 20px;
+                    padding: 0 15px;
                     display: flex;
                     align-content: center;
                     align-items: center;
