@@ -981,8 +981,8 @@ h2.teamlist-header {
         position: relative;
         margin-bottom: 30px;
         box-sizing: border-box;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 23px;
+        padding-right: 23px;
         @media screen and (min-width: $tabwidth) {
             flex-basis: 50%;     
             width: 50%;            
@@ -1151,8 +1151,20 @@ h2.teamlist-header {
     }
 }
 .team-row {
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: -23px;
+    margin-right: -23px;
+}
+#term_leadership-development-partners {
+    .teamlist  {
+        justify-content: center;
+        .member-info {
+            width: 100%;   
+            @media screen and (min-width: $tabwidth) {
+                flex-basis: 38%;     
+                width: 38%;            
+            }
+        }
+    }
 }
 .news-list {
     &.flex-container {

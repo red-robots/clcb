@@ -47,8 +47,8 @@ get_header(); ?>
 				);
 			$teams = new WP_Query($args);
             $i=0;
-			if ( $teams->have_posts() && $term->slug != 'founder' ) { $i++; ?>
-            <div class="wrapper team-wrapper">
+			if ( $teams->have_posts() && $term->slug != 'founder' ) { $i++;  ?>
+            <div id="term_<?php echo $term->slug;?>" class="wrapper team-wrapper">
             <?php 
             //if( $term->slug != 'founder' ) {
                 if( $term->slug == 'leadership-development-partners' ) {

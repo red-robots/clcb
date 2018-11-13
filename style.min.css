@@ -2106,7 +2106,7 @@ h2.teamlist-header{width:100%;color:#e71e25;font-weight:300;border-bottom:1px so
 .teamlist{width:100%;margin-top:50px}
 .teamlist.flex-container{margin-left:-10px;margin-right:-10px}
 @media screen and (min-width:768px){.teamlist{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;margin-bottom:60px}
-}.teamlist .member-info{display:inline-block;width:100%;position:relative;margin-bottom:30px;box-sizing:border-box;padding-left:20px;padding-right:20px}
+}.teamlist .member-info{display:inline-block;width:100%;position:relative;margin-bottom:30px;box-sizing:border-box;padding-left:23px;padding-right:23px}
 @media screen and (min-width:768px){.teamlist .member-info{-webkit-flex-basis:50%;-ms-flex-preferred-size:50%;flex-basis:50%;width:50%}
 }@media screen and (min-width:1200px){.teamlist .member-info{-webkit-flex-basis:33.333%;-ms-flex-preferred-size:33.333%;flex-basis:33.333%;width:33.333%}
 }.teamlist .member-info .midwrap{position:relative;background-color:#fff}
@@ -2137,8 +2137,11 @@ h2.teamlist-header{width:100%;color:#e71e25;font-weight:300;border-bottom:1px so
 @media screen and (min-width:768px){.member-details .title{font-size:20px}
 }.team-wrapper{padding-right:30px;padding-left:30px}
 @media screen and (min-width:1200px){.team-wrapper{padding-right:0;padding-left:0}
-}.team-row{margin-left:-20px;margin-right:-20px}
-.news-list.flex-container{-webkit-box-pack:left;-webkit-justify-content:left;-ms-flex-pack:left;justify-content:left}
+}.team-row{margin-left:-23px;margin-right:-23px}
+#term_leadership-development-partners .teamlist{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+#term_leadership-development-partners .teamlist .member-info{width:100%}
+@media screen and (min-width:768px){#term_leadership-development-partners .teamlist .member-info{-webkit-flex-basis:38%;-ms-flex-preferred-size:38%;flex-basis:38%;width:38%}
+}.news-list.flex-container{-webkit-box-pack:left;-webkit-justify-content:left;-ms-flex-pack:left;justify-content:left}
 @media screen and (min-width:768px){.news-list{width:102%;margin-left:-10px}
 }.news-list .navigation{margin-top:20px}
 .news-list .nav-links a{color:#e71e25;display:inline-block;padding:5px 10px;border:1px solid #e71e25}
