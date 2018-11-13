@@ -2241,10 +2241,10 @@ h2.teamlist-header{width:100%;color:#e71e25;font-weight:300;border-bottom:1px so
 @media screen and (min-width:768px){.single .wp-caption.alignleft,.single .wp-caption.alignright{max-width:250px}
 }.single.single-team .site-main{width:100%}
 .promise-info .tile.transparentbg .inside{margin:0 auto;padding-right:0}
-@media screen and (min-width:768px){.promise-info .tile.transparentbg{width:60%}
-.promise-info .tile.transparentbg .inside{width:79%;float:right;padding-right:80px;margin:0}
-.promise-info .tile.transparentbg .flexwrap{display:block}
-}@media screen and (min-width:768px){.content3-info .textdiv .textwrapper{padding-right:100px}
+@media screen and (min-width:768px){.promise-info .tile.transparentbg{width:58%}
+.promise-info .tile.transparentbg .inside{width:82%;float:right;padding-right:80px;margin:0}
+.promise-info .tile.transparentbg .flexwrap{display:block;background-color:transparent}
+}@media screen and (min-width:768px){.content3-info .textdiv .textwrapper{padding-right:0}
 }.topShape{position:absolute;top:0;left:0;width:15%;height:100px}
 .topShape span{width:0;height:0;border-top:90px solid #FFF;border-left:50px solid transparent;border-right:50px solid transparent;position:absolute;top:0;right:0}
 .single-featured-image{width:100%}
@@ -2396,7 +2396,8 @@ h2.teamlist-header{width:100%;color:#e71e25;font-weight:300;border-bottom:1px so
 .otherteam .dropdown li{list-style:none;border-bottom:1px solid #ccc}
 .otherteam .dropdown a{color:#666;padding:5px 0}
 .otherteam .dropdown a:hover{color:#e71e25}
-.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+@media screen and (min-width:768px){.jack_jill .textwrapper{width:80%}
+}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}

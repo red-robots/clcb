@@ -2,7 +2,9 @@
 global $post;
 $post_id = ( isset($post->ID) && $post->ID ) ? $post->ID : 0;
 ?>
+
 <?php  
+    /* OUR PROMISE */
 	$promise_title = get_field('our_promise_title',$post_id);
 	$promise_image = get_field('our_promise_image',$post_id);
 	$promise_text = get_field('our_promise_text',$post_id);
@@ -13,8 +15,8 @@ $post_id = ( isset($post->ID) && $post->ID ) ? $post->ID : 0;
 		$promise_img_src = $promise_image['url'];
 		$promise_bg = 'style="background-image:url('.$promise_img_src.')"';
 	}
-?>
-<?php if ($promise_text) { ?>
+    
+    if ($promise_text) { ?>
 	<div class="promise-info clear wrap-image <?php echo $promise_class?>" <?php echo $promise_bg?>>
 		<div class="tile left transparentbg">
 			<div class="flexwrap clear">
@@ -29,13 +31,13 @@ $post_id = ( isset($post->ID) && $post->ID ) ? $post->ID : 0;
 	</div>
 <?php } ?>
 
-
 <?php  
+/* Jacks and Jills... */
 $content_2_title = get_field('content_2_title',$post_id);
 $content_2_text = get_field('content_2_text',$post_id);
 $content_2_learn_more_link = get_field('learn_more_link',$post_id);
 if ($content_2_text) { ?>
-	<div class="content2_wrap whitediv clear">
+	<div class="jack_jill content2_wrap whitediv clear">
 		<div class="textwrapper clear">
 			<h2 class="h2-title title_line_bottom"><?php echo $content_2_title; ?></h2>
 			<div class="copy"><?php echo $content_2_text; ?></div>
@@ -48,6 +50,7 @@ if ($content_2_text) { ?>
 
 
 <?php
+/* HISTORY */
 $content_3_text = get_field('content_3_text',$post_id);
 $content_3_image = get_field('content_3_image',$post_id);
 $content_3_button_text = get_field('button_text',$post_id);

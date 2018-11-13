@@ -1643,15 +1643,16 @@ h2.teamlist-header {
             padding-right: 0;
         }
         @media screen and (min-width: $tabwidth) {
-            width: 60%;
+            width: 58%;
             .inside {
-                width: 79%;
+                width: 82%;
                 float: right;
                 padding-right: 80px;
                 margin: 0 0;
             }
             .flexwrap {
                 display: block;
+                background-color: transparent;
             }
         }
     }
@@ -1659,7 +1660,7 @@ h2.teamlist-header {
 .content3-info {
     @media screen and (min-width: $tabwidth) {
         .textdiv .textwrapper {
-            padding-right: 100px;
+            padding-right: 0;
         }
     }
 }
@@ -2440,5 +2441,11 @@ h2.teamlist-header {
                 color: $color-red;
             }
         }
+    }
+}
+
+.jack_jill .textwrapper {
+    @media screen and (min-width: $tabwidth) {
+        width: 80%;
     }
 }
