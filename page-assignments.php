@@ -30,12 +30,13 @@ get_header(); ?>
                 'post_type'        => 'position',
                 'post_status'      => 'publish',
                 'paged'			   => $paged,
-                'meta_query'       => array(
+                'tax_query'        => array( 
                         array(
-                            'key' => 'assignment_status',
-                            'value' => 'current'        
-                        )
-                    )
+                            'taxonomy' => 'status',
+                            'field'    => 'slug',
+                            'terms'    => 'active' 
+                        ),
+                    ) 
                 );
             $items = new WP_Query($args);
             if ( $items->have_posts() ) { ?>

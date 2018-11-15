@@ -186,14 +186,24 @@ function custom_post_column( $column, $post_id ) {
     if($post_type=='position') {
         switch ( $column ) {
             case 'status' :
-                $status = get_field('assignment_status',$post_id);
-                if($status) {
-                    echo ucwords($status);
+                $terms = get_the_terms($post_id,'status');
+//                $status = get_field('assignment_status',$post_id);
+//                if($status) {
+//                    echo ucwords($status);
+//                }
+//                else {
+//                    echo 'N/A';
+//                }
+                
+                $status_info = '';
+                if($terms) {
+                    $i=1; foreach($terms as $ss) {
+                        $comma = ($i>1) ? ', ':'';
+                        $status_info .= $comma . $ss->name;
+                        $i++;
+                    }
                 }
-                else {
-                    echo 'N/A';
-                }
-
+                echo ($status_info) ? $status_info : '--';
                 break;
         }
     }
