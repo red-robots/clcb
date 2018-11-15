@@ -1,7 +1,7 @@
 <?php
 /**
  * 
- * This template is only for NEWS page.	
+ * Template Name: Experience
  *
  * @package ACStarter
  */

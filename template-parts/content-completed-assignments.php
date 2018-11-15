@@ -4,19 +4,21 @@ $page_id = (isset($post->ID)) ? $post->ID : 0;
 $perpage = get_field('completed_assignments_num_items',$page_id);
 $page_title = get_field('completed_assignments_title',$page_id);
 $page_description = get_field('completed_assignments_content',$page_id);
+
 $pagenum = ($perpage) ? $perpage : 9;
 $args = array(
-    'posts_per_page'   => $pagenum,
-    'orderby'          => 'date',
-    'order'            => 'DESC',
-    'post_type'        => 'position',
-    'post_status'      => 'publish',
-    'meta_query'       => array(
+    'posts_per_page'    => $pagenum,
+    'orderby'           => 'date',
+    'order'             => 'DESC',
+    'post_type'         => 'position',
+    'post_status'       => 'publish',
+    'tax_query'         => array( 
             array(
-                'key' => 'assignment_status',
-                'value' => 'completed'        
-            )
-        )
+                'taxonomy' => 'status',
+                'field'    => 'slug',
+                'terms'    => 'completed' 
+            ),
+        ) 
     );
 $items = new WP_Query($args);
 if ( $items->have_posts() ) { ?>
