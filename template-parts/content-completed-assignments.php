@@ -25,7 +25,7 @@ $args = array(
 $items = new WP_Query($args);
 if ( $items->have_posts() ) { ?>
 <div class="textwrapper assignmentlist clear">
-    <div class="divspinner"><img src="<?php echo get_stylesheet_directory_uri()?>/images/ajax-loader" alt="" /></div>
+    <div class="divspinner"><img src="<?php echo get_stylesheet_directory_uri()?>/images/ajax-loader.gif" alt="" /></div>
     <div class="reloaddiv clear">
         <div id="js_reload" class="outer_content_wrap clear">
             <div id="data_assignments" class="midwrapper">
