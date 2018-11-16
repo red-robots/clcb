@@ -151,7 +151,12 @@ jQuery(document).ready(function ($) {
     	e.preventDefault();
     	var page_url = $(this).attr('href');
     	window.history.replaceState( null, null, page_url );
-    	$('.assignmentlist').load(page_url + " #js_reload");
+    	$('.divspinner').fadeIn();
+    	setTimeout(function(){
+    		$('.reloaddiv').load(page_url + " #js_reload",function(){
+    			$('.divspinner').fadeOut();
+    		});
+    	},800);
     });
     
 });// END #####################################    END
