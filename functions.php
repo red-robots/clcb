@@ -270,3 +270,9 @@ function ii_custom_css_styles() { ?>
         }
     </style>
 <?php }
+
+function add_query_vars_filter( $vars ) {
+  $vars[] = "pg";
+  return $vars;
+}
+add_filter( 'query_vars', 'add_query_vars_filter' );

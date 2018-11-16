@@ -145,5 +145,13 @@ jQuery(document).ready(function ($) {
         e.preventDefault();
         $('.gform_wrapper form').trigger("submit");
     });
+
+    /* Completed Assignment Pagination */
+    $(document).on("click",".assignment_pagination a",function(e){
+    	e.preventDefault();
+    	var page_url = $(this).attr('href');
+    	window.history.replaceState( null, null, page_url );
+    	$('.assignmentlist').load(page_url + " #js_reload");
+    });
     
 });// END #####################################    END
