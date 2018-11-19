@@ -1,7 +1,4 @@
 <?php 
-// global $post;
-// $post_id = ( isset($post->ID) && $post->ID ) ? $post->ID : 0;
-// $is_home_page = ( is_front_page() || is_home() ) ? true : false;
 if( is_front_page() ) {
 	$wp_query = new WP_Query(array('post_status'=>'private','pagename'=>'homepage'));
 		if ( have_posts() ) : the_post(); 
@@ -13,7 +10,9 @@ if( is_front_page() ) {
            
                
                <section class="flatbanner">
+               		<?php if($tagline) { ?>
                		<header><h2><?php echo $tagline; ?></h2></header>
+               		<?php } ?>
                		<img src="<?php echo $banner['url']; ?>" alt="<?php echo $banner['alt']; ?>">
                </section>
                            

@@ -1815,7 +1815,7 @@ a{text-decoration:none}
 .clear{clear:both}
 .red{color:#e71e25}
 .wrapper{width:100%;margin:0 auto;padding:0 20px}
-@media screen and (min-width:768px){.wrapper{width:100%;padding:0}
+@media screen and (min-width:768px){.wrapper{width:100%}
 }@media screen and (min-width:1200px){.wrapper{width:80%;padding:0}
 }.text-center{text-align:center}
 .text-left{text-align:left}
@@ -2016,8 +2016,9 @@ article.opening{width:80%;margin:0 auto}
 @media screen and (min-width:768px){.quotediv .quotetext{font-size:25px;width:75%;top:-18%}
 }@media screen and (min-width:980px){.quotediv .quotetext{font-size:30px;width:75%;top:-15%}
 }@media screen and (min-width:1200px){.quotediv .quotetext{width:60%;font-size:35px}
-}.home-opener{width:100%;padding:0;color:#383938;position:relative;padding:80px 0}
-.home-opener .innerpad{position:relative;z-index:3}
+}.home-opener{width:100%;padding:0;color:#383938;position:relative;padding:50px 0}
+@media screen and (min-width:768px){.home-opener{padding:80px 0}
+}.home-opener .innerpad{position:relative;z-index:3}
 .home-opener .quote-desc{width:85%;margin:0 auto;font-weight:300;font-size:16px;text-align:left;position:relative}
 @media screen and (min-width:768px){.home-opener .quote-desc{width:60%;font-size:20px;padding-top:0}
 }.home-opener .quoteTitle{margin:0 0 30px;font-weight:400;position:relative}
