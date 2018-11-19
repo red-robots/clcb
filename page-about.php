@@ -23,7 +23,7 @@ $post_id = get_the_ID(); ?>
     }
     
     if ($promise_text) { ?>
-    <div class="jack-jill clear wrap-image text-and-image">
+    <div class="clear wrap-image text-and-image">
             <div class="imagediv image_col image_right" <?php echo $promise_bg;?>>
                 <?php if($promise_image) { ?>
                 <img src="<?php echo $promise_image['url']?>" alt="<?php echo $promise_image['title']?>" />
