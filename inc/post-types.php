@@ -89,13 +89,6 @@ function ii_custom_taxonomies() {
         $posts = array(
             array(
                 'post_type' => 'position',
-                'menu_name' => 'Categories',
-                'plural'    => 'Assignment Categories',
-                'single'    => 'Category',
-                'taxonomy'  => 'position_categories'
-            ),
-            array(
-                'post_type' => 'position',
                 'menu_name' => 'Focus Areas',
                 'plural'    => 'Focus Areas',
                 'single'    => 'Focus Area',
@@ -106,7 +99,8 @@ function ii_custom_taxonomies() {
                 'menu_name' => 'Status',
                 'plural'    => 'Status',
                 'single'    => 'Status',
-                'taxonomy'  => 'status'
+                'taxonomy'  => 'status',
+                'show_admin_column'=>true
             ),
             array(
                 'post_type' => 'team',
@@ -124,7 +118,7 @@ function ii_custom_taxonomies() {
             $plural_name = ( isset($p['plural']) && $p['plural'] ) ? $p['plural'] : "Custom Post"; 
             $menu_name = ( isset($p['menu_name']) && $p['menu_name'] ) ? $p['menu_name'] : $p['plural'];
             $taxonomy = ( isset($p['taxonomy']) && $p['taxonomy'] ) ? $p['taxonomy'] : "";
-            
+            $show_admin_column = ( isset($p['show_admin_column']) && $p['show_admin_column'] ) ? true : false;
             
             if( $taxonomy && $p_type ) {
                 $labels = array(
@@ -141,12 +135,16 @@ function ii_custom_taxonomies() {
                     'new_item_name' => __( 'New ' . $single_name ),
                   );
 
-              register_taxonomy($taxonomy,array($p_type), array(
+              register_taxonomy($taxonomy,$p_type, array(
                 'hierarchical' => true,
                 'labels' => $labels,
+                'query_var'=>true,
                 'show_ui' => true,
                 'query_var' => true,
                 'rewrite' => array( 'slug' => $taxonomy ),
+                'show_admin_column'=>$show_admin_column,
+                'public' => true,
+                '_builtin' => true
               ));
             }
             
@@ -160,12 +158,6 @@ function set_custom_cpt_columns($columns) {
     global $wp_query;
     $query = isset($wp_query->query) ? $wp_query->query : '';
     $post_type = ( isset($query['post_type']) ) ? $query['post_type'] : '';
-    
-    if($post_type=='position') {
-        unset( $columns['date'] );
-        $columns['status'] = __( 'Assignment Status', 'acstarter' );
-        $columns['date'] = __( 'Date', 'acstarter' );
-    }
     
     if($post_type=='team') {
         unset( $columns['date'] );
@@ -183,30 +175,6 @@ function custom_post_column( $column, $post_id ) {
     $query = isset($wp_query->query) ? $wp_query->query : '';
     $post_type = ( isset($query['post_type']) ) ? $query['post_type'] : '';
     
-    if($post_type=='position') {
-        switch ( $column ) {
-            case 'status' :
-                $terms = get_the_terms($post_id,'status');
-//                $status = get_field('assignment_status',$post_id);
-//                if($status) {
-//                    echo ucwords($status);
-//                }
-//                else {
-//                    echo 'N/A';
-//                }
-                
-                $status_info = '';
-                if($terms) {
-                    $i=1; foreach($terms as $ss) {
-                        $comma = ($i>1) ? ', ':'';
-                        $status_info .= $comma . $ss->name;
-                        $i++;
-                    }
-                }
-                echo ($status_info) ? $status_info : '--';
-                break;
-        }
-    }
     
     if($post_type=='team') {
         switch ( $column ) {

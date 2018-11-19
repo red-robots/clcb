@@ -1943,9 +1943,9 @@ article.opening{width:80%;margin:0 auto}
 }.sub-page .content-area{width:100%;margin:0 auto;position:relative}
 .sub-page .content-area .entry-content{line-height:1.5}
 .sub-page .content-area .entry-content ul{text-align:left;margin-left:20px;padding-left:0}
-.sub-page .content-area .entry-content ul li{margin-bottom:.3em;position:relative;list-style:none;padding-left:16px}
+.sub-page .content-area .entry-content ul li{margin-bottom:.3em;position:relative;list-style:none;padding-left:20px}
 .sub-page .content-area .entry-content ul li:before{content:'';display:block;width:8px;height:8px;background:#e71e25;position:absolute;left:0;top:4px}
-@media screen and (min-width:768px){.sub-page .content-area .entry-content ul li{position:relative;list-style:none;padding-left:18px}
+@media screen and (min-width:768px){.sub-page .content-area .entry-content ul li{position:relative;list-style:none}
 .sub-page .content-area .entry-content ul li:before{top:8px}
 }@media screen and (min-width:768px){.sub-page .content-area .entry-content ul{margin-left:0;padding-left:80px}
 }.sub-page .content-area .entry-content a{color:#e71e25;position:relative;display:inline-block;text-decoration:none;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
@@ -2116,6 +2116,7 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 .sub-page .content-area .history-info .entry-content h2:first-child,.sub-page .content-area .history-info .entry-content h2{margin-bottom:15px;font-size:27px;font-weight:400}
 .single .content-area,.single .widget-area{float:left;position:relative}
 @media screen and (min-width:768px){.single .content-area{width:75%}
+.single .content-area.full{width:100%}
 }.single-display-wrap{background:#e5e5e5;position:relative;padding-top:50px;padding-bottom:50px}
 .single-display-wrap .innerwrap{width:75%;margin:0 auto;position:relative}
 .single-display-wrap .s_navi{display:block;cursor:pointer;position:absolute;top:0;z-index:3;width:15%;height:100%;text-align:center;font-size:50px;color:#383938;opacity:.2;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
@@ -2227,7 +2228,7 @@ h2.teamlist-header{width:100%;color:#e71e25;font-weight:300;border-bottom:1px so
 }.assignmentlist .boxed-item{width:50%;position:relative;padding:15px;text-align:center}
 @media screen and (min-width:768px){.assignmentlist .boxed-item{width:33.3333333%}
 }@media screen and (min-width:1200px){.assignmentlist .boxed-item{width:25%}
-}.assignmentlist .boxed-item .inner{padding:20px 20px;border:1px solid #bdbec1;height:100%;position:relative;min-height:150px}
+}.assignmentlist .boxed-item .inner{padding:20px 20px;border:1px solid #bdbec1;height:100%;position:relative;min-height:150px;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}
 @media screen and (min-width:768px){.assignmentlist .boxed-item .inner{padding:30px 20px;min-height:190px}
 }.assignmentlist .boxed-item .title{font-weight:400;font-size:4vw;line-height:1.2;margin-top:10px;margin-bottom:15px}
 @media screen and (min-width:768px){.assignmentlist .boxed-item .title{font-size:20px}
@@ -2262,7 +2263,7 @@ h2.teamlist-header{width:100%;color:#e71e25;font-weight:300;border-bottom:1px so
 @media screen and (min-width:768px){.news-archive .site-main{padding-right:20px}
 }@media screen and (min-width:980px){.news-archive .site-main{padding-right:20px}
 }@media screen and (min-width:768px){.news-archive .flex-container{width:103%;margin-left:-10px}
-}.single .content-area .entry-content ul,.single .content-area .entry-content ol{padding-left:20px;display:inline-block;width:auto;margin-left:0}
+}.single .content-area .entry-content ul,.single .content-area .entry-content ol{padding-left:25px;display:inline-block;width:auto;margin-left:0}
 @media screen and (min-width:768px){.single .content-area .entry-content ul,.single .content-area .entry-content ol{width:100%;float:left;clear:none}
 }.single .content-area .entry-content figure{margin-left:0;margin-top:2px;margin-bottom:2px}
 .single .wp-caption.alignleft,.single .wp-caption.alignright{max-width:100%;width:100%}
@@ -2450,7 +2451,14 @@ h2.teamlist-header{width:100%;color:#e71e25;font-weight:300;border-bottom:1px so
 .timeline-info .year{font-weight:600;font-size:25px}
 .timeline-info .info{padding-right:0;font-size:16px;font-weight:300}
 @media screen and (min-width:768px){.timeline-info .info{padding-right:40px}
-}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+}.assignment-details{margin-top:30px;padding-bottom:50px}
+.assignment-details .additional-info{margin-top:40px}
+.assignment-details .additional-info h3{margin-bottom:15px}
+.assignment-details .additional-info a{color:#e71e25;position:relative;display:inline-block;text-decoration:none;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
+.assignment-details .additional-info a:after{content:'';display:block;width:100%;height:1px;background:#e71e25;position:absolute;margin:-2px auto 0;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);visibility:hidden;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
+.assignment-details .additional-info a:hover:after{-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1);visibility:visible}
+.assignment-details .data{margin-bottom:15px}
+.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}

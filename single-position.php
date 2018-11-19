@@ -22,40 +22,44 @@ if($obj) {
 ?>
 <?php  
 get_template_part('inc/banner-single');  
-    // get_template_part('inc/banner'); 
 ?>
-<div class="single-outer-wrap wrapmid clear fullwidth has-breadcrumb">
-    <div id="primary" class="content-area">
-        <?php if($parent_title) { ?>
-        <div class="breadcrumb clear" style="display:none;">
-            <a href="<?php echo $parent_url?>"><?php echo $parent_title;?></a>
+<div id="primary" class="content-area full clear">
+    <div class="wrapper clear">
+        <div class="breadcrumb">
+            <a href="<?php echo get_permalink(106);?>">Current Assignments</a>
             <span class="sep">&raquo;</span>
-            <span class="current"><?php the_title(); ?></span>
+            <span class="current"><?php echo get_the_title();?></span>
         </div>
-        <?php } ?>
-        <main id="main" class="site-main clear" role="main">
-            <?php while ( have_posts() ) : the_post(); $postId = get_the_ID(); ?>
-                <article class="opening">
-                    <header class="entry-header ">
-                        <?php the_title( '<h1 class="entry-title title_line_bottom">', '</h1>' ); ?>
-                    </header><!-- .entry-header -->
-                    
-                    <?php if(has_post_thumbnail()) { ?>
-                    <div class="single-featured-image clear">
-                        <?php echo  get_the_post_thumbnail($postId);  ?>
-                    </div>
-                    <?php } ?>
 
-                    <div class="entry-content opening">
-                        <?php the_content(); ?>
-                    </div><!-- .entry-content -->
-                </article>
-            
+        <?php
+            $for_who = get_field('for_who');
+            $description = get_field('description');
+            $additional_contact_info = get_field('additional_contact_info');
+            $email = get_field('email');
+            $phone_numbers = get_field('phone_numbers');
+            $additional_info = array($additional_contact_info,$email,$phone_numbers);
+            $has_contact_info = ($additional_info && array_filter($additional_info)) ? true : false;
+        ?>
+        <main class="content clear assignment-details">
+            <?php if($description) { ?>
+            <div class="entry-content"><?php echo $description;?></div>
+            <?php } ?>
 
-               
-
-            <?php endwhile; ?>
-        </main><!-- #main -->
-    </div><!-- #primary --> 
-</div>
+            <?php if($has_contact_info) { ?>
+            <div class="additional-info">
+                <h3 class="title">CONTACT INFORMATION:</h3>
+                <?php if($additional_contact_info) { ?>
+                <div class="data"><?php echo $additional_contact_info;?></div>
+                <?php } ?>
+                <?php if($email) { ?>
+                <div class="data"><a href="mailto:<?php echo $email;?>"><?php echo $email;?></a></div>
+                <?php } ?>
+                <?php if($phone_numbers) { ?>
+                <div class="data"><?php echo $phone_numbers;?></div>
+                <?php } ?>
+            </div>
+            <?php } ?>
+        </main> 
+    </div>
+</div><!-- #primary --> 
 <?php get_footer();

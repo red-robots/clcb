@@ -37,7 +37,8 @@ if ( $items->have_posts() ) { ?>
                     <div class="flex-container clear">
                         <?php while ( $items->have_posts() ) : $items->the_post(); 
                             $post_id = get_the_ID();
-                            $description = get_field('assignment_institution_name', $post_id);
+                            //$description = get_field('assignment_institution_name', $post_id);
+                            $description = get_field('for_who',$post_id);
                         ?>
                         <div class="boxed-item">
                             <div class="inner clear">
