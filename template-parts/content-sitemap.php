@@ -10,7 +10,7 @@ if($links) { ?>
             $parent = get_the_title();
             $children  = ( isset($a['children']) ) ? $a['children'] : '';
             $categories  = ( isset($a['categories']) ) ? $a['categories'] : '';
-        ?>
+            if($parent_title!=='Sitemap') {  ?>
             <li>
                 <a class="parentlink"  href="<?php echo $parent_url; ?>"><?php echo $parent_title;?></a>
                 <?php if($children) { ?>
@@ -33,6 +33,7 @@ if($links) { ?>
                 </ul>
                 <?php } ?>
             </li>
+            <?php } ?>
         <?php } ?>
         </ul>    
     </div>
