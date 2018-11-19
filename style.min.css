@@ -2023,6 +2023,8 @@ article.opening{width:80%;margin:0 auto}
 }.home-opener .quoteTitle{margin:0 0 30px;font-weight:400;position:relative}
 @media screen and (min-width:768px){.home-opener .quoteTitle{margin:0 0 40px}
 }h2.h2-title{color:#383938;position:relative;margin-bottom:50px;font-weight:400}
+h2.h2-title.red{color:#e71e25}
+.textdiv h2.h2-title{margin-bottom:0}
 section.home-thirds{width:100%;position:relative;float:left}
 section.home-thirds .link{width:100%;float:left;overflow:hidden;position:relative;line-height:0;height:300px}
 @media screen and (min-width:768px){section.home-thirds .link{width:33.33333%;height:auto}
@@ -2084,10 +2086,34 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 }.imagediv{position:relative;height:300px;background-size:cover;background-repeat:no-repeat;background-position:center center;background-attachment:scroll}
 .imagediv img{width:100%;height:auto;float:left}
 @media screen and (min-width:768px){.imagediv{height:100%}
-}.content3-info{overflow:hidden}
-@media screen and (min-width:768px){.content3-info{height:400px}
-}@media screen and (min-width:980px){.content3-info{height:500px}
-}.single .content-area,.single .widget-area{float:left;position:relative}
+}.text-and-image,.content3-info{overflow:hidden}
+@media screen and (min-width:768px){.text-and-image,.content3-info{height:400px}
+}@media screen and (min-width:980px){.text-and-image,.content3-info{height:500px}
+}.jack-jill .button{margin-top:0}
+.jack-jill .copy{margin-bottom:0}
+.text-and-image{position:relative}
+.text_col{width:100%;position:relative;float:none;margin:0 auto}
+@media screen and (min-width:768px){.text_col{width:50%;height:100%;margin:0;float:left}
+}.text_col .textwrapper{width:100%;margin:0 auto;float:none;box-sizing:border-box;padding-left:20px;padding-right:20px}
+@media screen and (min-width:768px){.text_col .textwrapper{float:left;margin:0;padding-left:0;padding-right:0}
+}.text_col.text_left{float:none}
+@media screen and (min-width:768px){.text_col.text_left .textwrapper{float:right;width:80%}
+}.text_col.text_right{float:none}
+@media screen and (min-width:768px){.text_col.text_right{float:right}
+.text_col.text_right .copy{padding-right:0;padding-left:15%}
+.text_col.text_right .buttondiv{padding-left:15%}
+.text_col.text_right .textwrapper{float:left;width:80%}
+}.text_col h2.h2-title{margin-top:0;margin-bottom:15px}
+@media screen and (min-width:768px){.text_col .copy{padding-right:15%}
+}.image_col{position:relative;top:0;background-size:cover;background-repeat:no-repeat;width:100%;height:450px}
+@media screen and (min-width:768px){.image_col{width:50%;height:100%;position:absolute}
+.image_col.image_right{right:0}
+.image_col.image_left{left:0}
+}.image_col img{display:none;width:100%;height:auto}
+@media screen and (min-width:768px){.image_col img{display:none}
+}.sub-page .content-area .history-info{padding-top:10%;padding-bottom:10%}
+.sub-page .content-area .history-info .entry-content h2:first-child,.sub-page .content-area .history-info .entry-content h2{margin-bottom:15px;font-size:27px;font-weight:400}
+.single .content-area,.single .widget-area{float:left;position:relative}
 @media screen and (min-width:768px){.single .content-area{width:75%}
 }.single-display-wrap{background:#e5e5e5;position:relative;padding-top:50px;padding-bottom:50px}
 .single-display-wrap .innerwrap{width:75%;margin:0 auto;position:relative}
@@ -2402,7 +2428,27 @@ h2.teamlist-header{width:100%;color:#e71e25;font-weight:300;border-bottom:1px so
 .divspinner{display:none;width:100%;height:100%;position:absolute;top:0;left:0;z-index:800;text-align:center}
 .divspinner:after{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;background:#f4f4f4;opacity:.7}
 .divspinner img{position:relative;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);z-index:10}
-.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+.history-info{padding-right:20px;padding-left:20px}
+.history-info .button-right{width:100%;float:left;text-align:center;padding-right:0}
+@media screen and (min-width:768px){.history-info .button-right{text-align:right}
+.history-info .button-right a{margin-top:0}
+}.history-info .button-left{margin-top:50px;text-align:left}
+@media screen and (min-width:768px){.history-info .button-left{margin-top:100px}
+}.history-text{width:100%}
+@media screen and (min-width:768px){.history-text.half{width:60%;float:left}
+}.history-timelines{padding-top:40px;padding-left:20px;padding-right:20px}
+@media screen and (min-width:768px){.history-timelines{width:30%;float:right;padding-left:0;padding-right:0}
+}@media screen and (min-width:980px){.history-timelines{width:25%}
+}.timeline-info{position:relative;padding-left:35px;padding-bottom:50px}
+.timeline-info.last{padding-bottom:0}
+.timeline-info .circle{position:absolute;top:4px;left:0;height:100%}
+.timeline-info .circle:before{content:"";width:2px;height:100%;position:absolute;top:0;left:0;background-color:#727272}
+.timeline-info .circle:after{content:"";display:block;width:30px;height:30px;position:absolute;top:0;left:-15px;border-radius:100px;background-color:#FFF;border:2px solid #727272}
+.timeline-info .year,.timeline-info .info{position:relative;z-index:10}
+.timeline-info .year{font-weight:600;font-size:25px}
+.timeline-info .info{padding-right:0;font-size:16px;font-weight:300}
+@media screen and (min-width:768px){.timeline-info .info{padding-right:40px}
+}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}

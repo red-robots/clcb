@@ -34,11 +34,6 @@ $has_post_parent = ( isset($post->post_parent) && $post->post_parent ) ? $post->
 
     </main><!-- #main -->
 
-    <?php /* ABOUT PAGE */ ?>
-    <?php if( $is_about_page && !$has_post_parent ) { ?>
-        <?php get_template_part('template-parts/content', 'about'); ?>
-    <?php } ?>
-
     <?php /* SERVICES PAGE */ ?>
     <?php if( $is_services_page && !$has_post_parent ) { ?>
         <?php get_template_part('template-parts/content', 'services'); ?>

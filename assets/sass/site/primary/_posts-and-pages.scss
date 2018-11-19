@@ -545,6 +545,12 @@ h2.h2-title {
 	position:relative;
 	margin-bottom:50px;
     font-weight: 400;
+    &.red {
+        color: $color-red;
+    }
+}
+.textdiv h2.h2-title {
+    margin-bottom: 0;
 }
 section.home-thirds	{
 	width: 100%;
@@ -851,6 +857,7 @@ section.home-thirds	{
 		height:100%;
 	}
 }
+.text-and-image,
 .content3-info {
 	overflow:hidden;
 	@media screen and (min-width: $tabwidth) {
@@ -859,6 +866,115 @@ section.home-thirds	{
 	@media screen and (min-width: $midwidth) {
 		height:500px;
 	}
+}
+.jack-jill {
+    .button {
+        margin-top: 0;
+    }
+    .copy {
+        margin-bottom: 0;
+    }
+}
+.text-and-image {
+    position: relative;
+}
+.text_col {
+    width: 100%;
+    position: relative;
+    float: none;
+    margin: 0 auto;
+    @media screen and (min-width: $tabwidth) {
+        width: 50%;
+        height: 100%;
+        margin: 0 0;
+        float: left;
+    }
+    .textwrapper {
+        width: 100%;
+        margin: 0 auto; 
+        float: none;
+        box-sizing:border-box;
+        padding-left: 20px;
+        padding-right: 20px;
+        @media screen and (min-width: $tabwidth) {
+            float: left;
+            margin: 0 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    &.text_left {
+        float: none;
+        @media screen and (min-width: $tabwidth) {
+            .textwrapper {
+                float: right;
+                width: 80%;
+            }
+        }
+    }
+    &.text_right {
+        float: none;
+        @media screen and (min-width: $tabwidth) {
+            float: right;
+            .copy {
+                padding-right: 0;
+                padding-left: 15%;
+            }
+            .buttondiv {
+                padding-left: 15%;
+            }
+            .textwrapper {
+                float: left;
+                width: 80%;
+            }
+        }
+    }
+    h2.h2-title {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    .copy {
+        @media screen and (min-width: $tabwidth) {
+            padding-right: 15%;
+        }
+    }
+}
+.image_col {
+    position: relative;
+    top: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 450px;
+    @media screen and (min-width: $tabwidth) {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        &.image_right {
+            right: 0;
+        }
+        &.image_left {
+            left: 0;
+        }
+    }
+    img {
+        display: none;
+        width: 100%;
+        height: auto;
+        @media screen and (min-width: $tabwidth) {
+            display: none;
+        }
+    }
+}
+.sub-page .content-area .history-info {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    .entry-content h2:first-child,
+    .entry-content h2 {
+        margin-bottom: 15px;
+        font-size: 27px;
+        font-weight: 400;
+    }
 }
 .single {
 	.content-area, 
@@ -2485,5 +2601,102 @@ h2.teamlist-header {
         top: 50%;
         transform: translateY(-50%);
         z-index: 10;
+    }
+}
+.history-info {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.history-info .button-right {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-right: 0;
+    @media screen and (min-width: $tabwidth) {
+        text-align: right;
+        a {
+            margin-top: 0;
+        }
+    }
+}
+.history-info .button-left {
+    margin-top: 50px;
+    text-align: left;
+    @media screen and (min-width: $tabwidth) {
+        margin-top: 100px;
+    }
+}
+.history-text {
+    width: 100%;
+    @media screen and (min-width: $tabwidth) {
+        &.half {
+            width: 60%;
+            float: left;
+        }
+    }
+}
+.history-timelines {
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    @media screen and (min-width: $tabwidth) {
+        width: 30%;
+        float: right;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    @media screen and (min-width: $midwidth) {
+        width: 25%;
+    }
+}
+.timeline-info {
+    position: relative;
+    padding-left: 35px;
+    padding-bottom: 50px;
+    &.last {
+        padding-bottom: 0;
+    }
+    .circle {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        height: 100%;
+        &:before {
+            content:"";
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #727272;
+        }
+        &:after {
+            content:"";
+            display: block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 0;
+            left: -15px;
+            border-radius: 100px;
+            background-color: #FFF;
+            border:2px solid #727272;
+        }
+    }
+    .year,.info {
+        position: relative;
+        z-index: 10;
+    }
+    .year {
+        font-weight: 600;
+        font-size: 25px;
+    }
+    .info {
+        padding-right: 0;
+        font-size: 16px;
+        font-weight: 300;
+        @media screen and (min-width: $tabwidth) {
+            padding-right: 40px;
+        }
     }
 }
