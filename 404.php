@@ -8,7 +8,6 @@
  */
 
 get_header(); ?>
-    <div class="topShape"><span></span></div>
 	<div id="primary" class="content-area pagewrap404">
 		<main id="main" class="site-main" role="main">
 
