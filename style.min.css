@@ -2111,7 +2111,8 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 .image_col.image_left{left:0}
 }.image_col img{display:none;width:100%;height:auto}
 @media screen and (min-width:768px){.image_col img{display:none}
-}.sub-page .content-area .history-info{padding-top:10%;padding-bottom:10%}
+}.jack-jill .image_col{background-position:top center}
+.sub-page .content-area .history-info{padding-top:10%;padding-bottom:10%}
 .sub-page .content-area .history-info .entry-content h2:first-child,.sub-page .content-area .history-info .entry-content h2{margin-bottom:15px;font-size:27px;font-weight:400}
 .single .content-area,.single .widget-area{float:left;position:relative}
 @media screen and (min-width:768px){.single .content-area{width:75%}
@@ -2444,6 +2445,7 @@ h2.teamlist-header{width:100%;color:#e71e25;font-weight:300;border-bottom:1px so
 .timeline-info .circle{position:absolute;top:4px;left:0;height:100%}
 .timeline-info .circle:before{content:"";width:2px;height:100%;position:absolute;top:0;left:0;background-color:#727272}
 .timeline-info .circle:after{content:"";display:block;width:30px;height:30px;position:absolute;top:0;left:-15px;border-radius:100px;background-color:#FFF;border:2px solid #727272}
+.timeline-info.last .circle:before{visibility:hidden}
 .timeline-info .year,.timeline-info .info{position:relative;z-index:10}
 .timeline-info .year{font-weight:600;font-size:25px}
 .timeline-info .info{padding-right:0;font-size:16px;font-weight:300}
