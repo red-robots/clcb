@@ -26,6 +26,7 @@ $content_section_2_text=get_field('content_section_2_text');
 $content_section_2_image=get_field('content_section_2_image');
 $learn_more_link=get_field('learn_more_link');
 $learn_more_link_2=get_field('learn_more_link_2');
+$tagline=get_field('tagline');
 
 //$first_box_image=get_field('first_box_image');
 //$first_box_title=get_field('first_box_title');
@@ -51,6 +52,13 @@ $learn_more_link_3=get_field('learn_more_link_2');
 	<div id="primary" class="content-area-full">
 		<main id="main" class="site-main" role="main">
 			<div class="home-opener">
+
+				<?php if($tagline) { ?>
+					<div class="quote-desc">
+						<header class="home-tagline"><h2><?php echo $tagline;?></h2></header>
+					</div>
+				<?php } ?>
+
 				<div class="innerpad clear">
                 <?php if($quote_description || $quote_title) { ?>
                     

@@ -10,9 +10,6 @@ if( is_front_page() ) {
            
                
                <section class="flatbanner">
-               		<?php if($tagline) { ?>
-               		<header><h2><?php echo $tagline; ?></h2></header>
-               		<?php } ?>
                		<img src="<?php echo $banner['url']; ?>" alt="<?php echo $banner['alt']; ?>">
                </section>
                            

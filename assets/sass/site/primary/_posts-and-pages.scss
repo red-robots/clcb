@@ -509,9 +509,9 @@ article.opening {
 	padding: 0 0;
 	color: $color-grey;
     position: relative;
-    padding: 50px 0;
+    padding: 40px 0 50px;
     @media screen and (min-width: $tabwidth) {
-        padding: 80px 0;
+        padding: 70px 0 80px;
     }
     .innerpad {
         position: relative;
@@ -527,10 +527,13 @@ article.opening {
         // padding-top: 8%;
         // padding-bottom: 12%;
         @media screen and (min-width: $tabwidth) {
-            width: 60%;
+            width: 70%;
 			font-size: 20px;
             padding-top: 0;
             // padding-bottom:100px;
+        }
+        @media screen and (min-width: $midwidth) {
+            width: 60%;
         }
 	}
     .quoteTitle {
@@ -2751,5 +2754,20 @@ h2.teamlist-header {
     }
     .data {
         margin-bottom: 15px;
+    }
+}
+.home-tagline h2 {
+    margin: 0 0 45px;
+    font-size: 40px;
+    color: $color-red;
+    line-height: 1.2;
+    @media screen and (min-width: $tabwidth) {
+        font-size: 50px;
+    }
+    @media screen and (min-width: $midwidth) {
+        font-size: 60px;
+    }
+    @media screen and (min-width: $deskwidth) {
+        font-size: 68px;
     }
 }
