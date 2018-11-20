@@ -81,6 +81,15 @@ article.opening {
             // width: 60%;
         }
     }
+
+    &.page-template-page-about {
+        .site-main {
+            padding-top: 70px;
+            @media screen and (min-width: $tabwidth) {
+                padding-top:0;
+            }
+        }
+    }
 	.content-area {
 		width: 100%;
 		margin: 0 auto;
@@ -951,7 +960,6 @@ section.home-thirds	{
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 450px;
     @media screen and (min-width: $tabwidth) {
         width: 50%;
         height: 100%;

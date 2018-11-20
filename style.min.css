@@ -1940,6 +1940,8 @@ article.opening{width:80%;margin:0 auto}
 .sub-page .site-content{width:100%;position:relative;z-index:5}
 .sub-page .site-main{width:85%;margin:0 auto;position:relative;padding-top:80px;padding-bottom:80px}
 @media screen and (min-width:768px){.sub-page .site-main{width:75%}
+}.sub-page.page-template-page-about .site-main{padding-top:70px}
+@media screen and (min-width:768px){.sub-page.page-template-page-about .site-main{padding-top:0}
 }.sub-page .content-area{width:100%;margin:0 auto;position:relative}
 .sub-page .content-area .entry-content{line-height:1.5}
 .sub-page .content-area .entry-content ul{text-align:left;margin-left:20px;padding-top:10px;padding-left:0}
@@ -2107,7 +2109,7 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 .text_col.text_right .textwrapper{float:left;width:80%}
 }.text_col h2.h2-title{margin-top:0;margin-bottom:15px}
 @media screen and (min-width:768px){.text_col .copy{padding-right:15%}
-}.image_col{position:relative;top:0;background-size:cover;background-repeat:no-repeat;width:100%;height:450px}
+}.image_col{position:relative;top:0;background-size:cover;background-repeat:no-repeat;width:100%}
 @media screen and (min-width:768px){.image_col{width:50%;height:100%;position:absolute}
 .image_col.image_right{right:0}
 .image_col.image_left{left:0}
