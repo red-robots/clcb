@@ -328,26 +328,35 @@ section.flatbanner {
 		overflow: hidden;
 		font-size: 13px;
 		margin-top: 20px;
-		margin-right: 10px;
-		@media screen and (min-width: $midwidth) {
-			width: 16.66666%;
-            text-align:left;
-		}
+		padding-right: 0;
+		box-sizing: border-box;
+		margin-right: 0;
 		@media screen and (min-width: $tabwidth) {
 			width: 33.33333%;
 			float:left;
 			text-align:left;
 			margin-top: 0;
 		}
+		@media screen and (min-width: $midwidth) {
+			width: 16.66666%;
+            text-align:left;
+		}
 		&.left {
-			@media screen and (min-width: $midwidth) {
-				width: 18.66666%;
+			@media screen and (min-width: $tabwidth) {
+				width: 20%;
 				text-align: left;
 				float: left;
+				padding-right:10px;
+			}
+			@media screen and (min-width: $midwidth) {
+				width: 18.66666%;
 			}
 		}
 		&.right {
 			margin-right: 0;
+			@media screen and (min-width: $tabwidth) {
+				float: right;
+			}
 			@media screen and (min-width: $midwidth) {
 				text-align: right;
 				float: right;
