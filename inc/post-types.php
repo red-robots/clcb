@@ -140,7 +140,6 @@ function ii_custom_taxonomies() {
                 'labels' => $labels,
                 'query_var'=>true,
                 'show_ui' => true,
-                'query_var' => true,
                 'rewrite' => array( 'slug' => $taxonomy ),
                 'show_admin_column'=>$show_admin_column,
                 'public' => true,
