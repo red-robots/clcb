@@ -156,7 +156,7 @@ jQuery(document).ready(function ($) {
     		$('.reloaddiv').load(page_url + " #js_reload",function(){
     			$('.divspinner').fadeOut();
     		});
-    	},600);
+    	},400);
     });
     
 });// END #####################################    END
