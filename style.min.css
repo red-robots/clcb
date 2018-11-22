@@ -2146,7 +2146,7 @@ section.home-thirds .link:hover .inner{-webkit-transform:scale(1.1);-ms-transfor
 @media screen and (min-width:768px){.text-and-image.auto-height .image_col{width:40%;margin-bottom:0}
 .text-and-image.auto-height .image_col.image_right{padding:0 0 0 6%;float:right}
 }.text-and-image.auto-height .image_col img{display:block;width:100%;height:auto}
-@media screen and (min-width:768px){.text-and-image.auto-height.our-promise .copy{width:80%}
+@media screen and (min-width:768px){.text-and-image.auto-height.width80 .copy{width:80%}
 }.article-wrap{padding-top:50px}
 @media screen and (min-width:768px){.article-wrap{padding-top:80px}
 }.jack-jill .image_col{background-position:top center}

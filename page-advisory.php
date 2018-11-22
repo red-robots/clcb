@@ -13,7 +13,7 @@ $image = get_field('page__image');
     <main id="main" class="site-main clear nopadtop mtop" role="main">
 
         <?php if($content) { ?>
-        <div class="clear wrap-image text-and-image auto-height white-bg our-promise">
+        <div class="clear wrap-image text-and-image auto-height white-bg width80">
             <article class="opening clear">
                 <div class="imagediv image_col image_right">
                     <?php if($image) { ?>
