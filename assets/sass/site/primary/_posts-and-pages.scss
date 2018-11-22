@@ -74,11 +74,21 @@ article.opening {
         width: 85%;
         margin: 0 auto;
         position: relative;
-        padding-top:80px;
-        padding-bottom: 80px;
+        padding-top:60px;
+        padding-bottom: 60px;
         @media screen and (min-width: $tabwidth) {
             width: 75%;
-            // width: 60%;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        &.nopadtop {
+            padding-top: 0;
+        }
+        &.mtop {
+            margin-top: 40px;
+            @media screen and (min-width: $tabwidth) {
+                margin-top: 0;
+            }
         }
     }
 
@@ -876,9 +886,21 @@ section.home-thirds	{
 .text-and-image,
 .content3-info {
 	overflow:hidden;
-	@media screen and (min-width: $tabwidth) {
-		height:500px;
-	}
+    @media screen and (min-width: $tabwidth) {
+        height:500px;
+    }
+    &.auto-height {
+        height: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        @media screen and (min-width: $tabwidth) {
+            padding-top: 65px;
+            padding-bottom: 70px;
+        }
+    }
+}
+.white-bg {
+    background: #FFF;
 }
 .jack-jill {
     .button {
@@ -990,6 +1012,19 @@ section.home-thirds	{
         @media screen and (min-width: $tabwidth) {
             padding-right: 15%;
         }
+        h2 {
+            color: $color-grey;
+            position: relative;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        p:first-child {
+            margin-top: 0;
+        }
+        p {
+            margin-bottom: 0;
+            margin-top: 1.5em;
+        }
     }
 }
 .image_col {
@@ -1018,6 +1053,72 @@ section.home-thirds	{
         @media screen and (min-width: $tabwidth) {
             display: none;
         }
+    }
+}
+
+.text-and-image.auto-height {
+    .opening {
+        position: relative;
+        height: 100%;
+    }
+    .textdiv {
+        padding: 0 0;
+    }
+    .text_col {
+        &.text_left {
+            padding-left: 0;
+            padding-right: 0;
+            @media screen and (min-width: $tabwidth) {
+                width: 60%;
+                position: absolute;
+                left: 0;
+            }
+        }
+        .copy {
+            padding-right: 0;
+            margin-bottom: 0;
+        }
+    }
+    .textwrapper {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        @media screen and (min-width: $tabwidth) {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    .image_col {
+        box-sizing: border-box;
+        padding: 0 0;
+        position: relative;
+        margin-bottom: 20px;
+        @media screen and (min-width: $tabwidth) {
+            width: 40%;
+            margin-bottom: 0;
+            &.image_right {
+                padding: 0 0 0 6%;
+                float: right;
+            }
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &.our-promise .copy {
+        @media screen and (min-width: $tabwidth) {
+            width: 80%;
+        }
+    }
+}
+.article-wrap {
+    padding-top: 50px;
+    @media screen and (min-width: $tabwidth) {
+        padding-top: 80px;
     }
 }
 .jack-jill .image_col {
@@ -1405,8 +1506,18 @@ h2.teamlist-header {
     line-height: 1.3;
     .m_photo {
         width: 100%;
-        height: 200px;
+        height: auto;
         @include background-image-full(scroll,center center);
+        img {
+            width: 100%;
+            height: auto;
+        }
+        @media screen and (min-width: $tabwidth) {
+            height: 200px;
+            img {
+                display: none;
+            }
+        }
     }
     &.no-photo {
         .m_photo {
@@ -2587,17 +2698,26 @@ h2.teamlist-header {
     padding: 10px;
     color: $color-red;
     border-bottom: 2px solid $color-light-grey;
+    margin-top: 10px;
+    @media screen and (min-width: $tabwidth) {
+        margin-top: 0;
+    }
     .dropdown-btn {
         width: 100%;
+        top: 3px;
+        position: relative;
         .rotate {
             width: 25px;
             height: 25px;
             float: left;
+            position: relative;
             @include transition(all ease .05s);
             &.hover {
                 transform: rotate(0deg);
             }
             &.closed {
+                top: 3px;
+                left: -4px;
                 transform: rotate(45deg);
             }
         }
@@ -2819,3 +2939,4 @@ h2.teamlist-header {
         font-size: 68px;
     }
 }
+

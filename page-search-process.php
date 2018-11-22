@@ -8,7 +8,32 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area ourteam text-left-align clear">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main nopadtop mtop" role="main">
+
+            <?php
+            $content = get_field('page__content');
+            $image = get_field('page__image');
+            ?>
+
+            <?php if($content) { ?>
+            <div class="clear wrap-image text-and-image auto-height white-bg our-promise">
+                <article class="opening clear">
+                    <div class="imagediv image_col image_right">
+                        <?php if($image) { ?>
+                         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['title']; ?>" />
+                        <?php } ?>
+                    </div>
+                    <div class="textdiv text_col text_left">
+                        <div class="textwrapper clear">
+                            <div class="copy">
+                                <?php echo $content; ?>
+                            </div>
+                        </div>
+                    </div>
+                </article>   
+            </div>
+            <?php } ?>
+
 			<?php while ( have_posts() ) : the_post();
             if( get_the_content() ) {
                 get_template_part( 'template-parts/intro' );

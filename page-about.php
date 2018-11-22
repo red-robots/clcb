@@ -20,24 +20,28 @@ $post_id = get_the_ID(); ?>
             $promise_class = 'has-image';
             $promise_img_src = $promise_image['url'];
             $promise_bg = 'style="background-image:url('.$promise_img_src.')"';
-        }
-        
-        if ($promise_text) { ?>
-        <div class="clear wrap-image text-and-image">
-                <div class="imagediv image_col image_right" <?php echo $promise_bg;?>>
+        } ?>
+
+        <?php if ($promise_text) { ?>
+        <div class="clear wrap-image text-and-image auto-height white-bg our-promise">
+            <article class="opening clear">
+                <div class="imagediv image_col image_right">
                     <?php if($promise_image) { ?>
-                    <img src="<?php echo $promise_image['url']?>" alt="<?php echo $promise_image['title']?>" />
+                     <img src="<?php echo $promise_image['url']; ?>" alt="<?php echo $promise_image['title']; ?>" />
                     <?php } ?>
                 </div>
                 <div class="textdiv text_col text_left">
                     <div class="textwrapper clear">
                         <div class="copy">
+                            <?php if($promise_title) { ?>
                             <h2 class="h2-title"><?php echo $promise_title; ?></h2>
+                            <?php } ?>
                             <?php echo nl2br($promise_text); ?>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>   
+        </div>
         <?php } ?>
 
 

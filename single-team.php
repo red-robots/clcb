@@ -89,8 +89,10 @@ if($obj) {
             <div class="m_imagecol <?php echo $classPic;?>">
                 <div class="inner clear">
                     <div class="m_photo" <?php echo $atts?>>
-                        <?php if(!$img) { ?>
-                        <span class="nophotoIcon"><i class="fa fa-user"></i></span>
+                        <?php if($img) { ?>
+                            <img src="<?php echo $img_src?>" alt="<?php echo $img_alt?>" />
+                        <?php } else { ?>
+                            <span class="nophotoIcon"><i class="fa fa-user"></i></span>
                         <?php } ?>
                     </div>
                     <div class="m_info clear">

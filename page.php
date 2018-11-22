@@ -20,7 +20,7 @@ $has_post_parent = ( isset($post->post_parent) && $post->post_parent ) ? $post->
 ?>
 
 <div id="primary" class="content-area clear text-left-align">
-    <main id="main" class="site-main clear" role="main">
+    <main id="main" class="site-main clear mtop" role="main">
         <?php
         while ( have_posts() ) : the_post();
 

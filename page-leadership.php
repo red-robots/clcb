@@ -7,7 +7,7 @@
 get_header(); ?>
 
 <div id="primary" class="content-area clear text-left-align">
-    <main id="main" class="site-main clear" role="main">
+    <main id="main" class="site-main clear mtop" role="main">
         <?php
         while ( have_posts() ) : the_post();
             if( get_the_content() ) {
