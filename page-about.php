@@ -23,6 +23,7 @@ $post_id = get_the_ID(); ?>
         } ?>
 
         <?php if ($promise_text) { ?>
+        <a name="our_promise"></a>
         <div class="clear wrap-image text-and-image auto-height white-bg width80">
             <article class="opening clear">
                 <div class="imagediv image_col image_right">
@@ -50,6 +51,7 @@ $post_id = get_the_ID(); ?>
         $timelines = get_field('timelines'); 
         $meet_our_founder = get_field('meet_our_founder');
         ?>
+        <a name="our_story"></a>
         <div class="history-info clear">
             <div class="wrapper clear">
                 <div class="entry-content history-text <?php echo ($timelines) ? 'half':'full';?>">

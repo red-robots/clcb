@@ -1154,6 +1154,8 @@ section.home-thirds	{
     position: relative;
     padding-top:50px;
     padding-bottom: 50px;
+    min-height: 400px;
+    overflow: hidden;
     .innerwrap {
         width:75%;
         margin: 0 auto;
@@ -1205,6 +1207,8 @@ section.home-thirds	{
         }
     }
     .item-title {
+        display: block;
+        width: 100%;
         margin-top: 0; 
         color:$color-red;
     }

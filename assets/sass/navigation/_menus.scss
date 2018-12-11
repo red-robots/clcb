@@ -114,7 +114,9 @@
 		}
 	}
     .current_page_item > a,
-	a:hover {
+	a:hover,
+	a:active,
+	a:focus {
 		color:$color-red;
 	}
 
