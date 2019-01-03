@@ -42,7 +42,7 @@ get_header(); ?>
                 <div class="flexbox-contact">
                     <?php foreach($locations as $loc) { ?>
                     <div class="box box1">
-                        <div class="bg"><div></div></div>
+                        
                         <div class="pad clear">
                             <div class="pad2 clear">
                                 <h3><?php echo $loc['name']; ?></h3>

@@ -2475,7 +2475,7 @@ h2.teamlist-header {
     .box {
         @media screen and (min-width: $tabwidth) {
             width: 50%;
-            min-height: 510px;
+            height: 500px;
         }
     }
     .pad2 {
@@ -2497,9 +2497,10 @@ h2.teamlist-header {
         margin-bottom: 20px;
         margin-top:20px;
         @media screen and (min-width: $tabwidth) {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             position: absolute;
             bottom: 0;
+            left: 0;
         }
     }
     iframe {
