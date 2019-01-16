@@ -116,12 +116,12 @@ article.opening {
 					margin-bottom: .3em;
 					position:relative;
 					list-style:none;
-					padding-left: 20px;
+					padding-left: 18px;
 					&:before {
 						content:'';
 						display:block;
-						width:8px;
-						height:8px;
+						width: 7px;
+						height: 7px;
 						background:$color-red;
 						position: absolute;
 						left: 0;
@@ -131,7 +131,7 @@ article.opening {
                         position:relative;
 						list-style:none;
 						&:before {
-							top: 8px;
+							top: 10px;
 						}
                     }
 				}
@@ -2943,5 +2943,9 @@ h2.teamlist-header {
     @media screen and (min-width: $deskwidth) {
         font-size: 68px;
     }
+}
+
+.assignment-details {
+    font-weight: 300;
 }
 

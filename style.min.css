@@ -1910,7 +1910,7 @@ body{color:#595a5c;font-size:15px;line-height:1.4;background:#f4f4f4}
 }@media screen and (min-width:1200px){.flex-container .excerpt{width:33.333333%}
 }.flex-container .inner1{background:#f4f4f4;border:1px solid #bdbec1;padding:20px;height:100%}
 .boxed-items .post-title{font-weight:600;font-size:18px;line-height:1.2;margin:0 0 10px}
-.boxed-items .post-excerpt{font-size:16px}
+.boxed-items .post-excerpt{font-size:16px;font-weight:300}
 .boxed-items .post-link{margin-top:15px}
 .boxed-items .post-link a{display:inline-block;color:#e71e25;text-decoration:none;position:relative;font-size:13px;text-transform:uppercase;-webkit-transition:all ease-out .2s;transition:all ease-out .2s}
 .boxed-items .post-link a span{position:relative;top:2px;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
@@ -1951,10 +1951,10 @@ article.opening{width:80%;margin:0 auto}
 }.sub-page .content-area{width:100%;margin:0 auto;position:relative}
 .sub-page .content-area .entry-content{line-height:1.5}
 .sub-page .content-area .entry-content ul{text-align:left;margin-left:20px;padding-top:10px;padding-left:0}
-.sub-page .content-area .entry-content ul li{margin-bottom:.3em;position:relative;list-style:none;padding-left:20px}
-.sub-page .content-area .entry-content ul li:before{content:'';display:block;width:8px;height:8px;background:#e71e25;position:absolute;left:0;top:4px}
+.sub-page .content-area .entry-content ul li{margin-bottom:.3em;position:relative;list-style:none;padding-left:18px}
+.sub-page .content-area .entry-content ul li:before{content:'';display:block;width:7px;height:7px;background:#e71e25;position:absolute;left:0;top:4px}
 @media screen and (min-width:768px){.sub-page .content-area .entry-content ul li{position:relative;list-style:none}
-.sub-page .content-area .entry-content ul li:before{top:8px}
+.sub-page .content-area .entry-content ul li:before{top:10px}
 }@media screen and (min-width:768px){.sub-page .content-area .entry-content ul{margin-left:0;padding-left:80px}
 }.sub-page .content-area .entry-content a{color:#e71e25;position:relative;display:inline-block;text-decoration:none;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
 .sub-page .content-area .entry-content a:after{content:"";display:block;width:0;height:1px;background:transparent;margin:0 auto;-webkit-transition:all ease-out .3s;transition:all ease-out .3s}
@@ -2504,7 +2504,8 @@ h2.teamlist-header{width:100%;color:#e71e25;font-weight:300;border-bottom:1px so
 @media screen and (min-width:768px){.home-tagline h2{font-size:50px}
 }@media screen and (min-width:980px){.home-tagline h2{font-size:60px}
 }@media screen and (min-width:1200px){.home-tagline h2{font-size:68px}
-}.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
+}.assignment-details{font-weight:300}
+.blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
 .bypostauthor{display:block}
 .infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-footer{display:none}

@@ -25,8 +25,6 @@ get_header(); ?>
             $pagenum = 16;
             $args = array(
                 'posts_per_page'   => $pagenum,
-                'orderby'          => 'date',
-                'order'            => 'DESC',
                 'post_type'        => 'position',
                 'post_status'      => 'publish',
                 'paged'			   => $paged,
