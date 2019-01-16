@@ -333,13 +333,13 @@ section.flatbanner {
 		margin-right: 0;
 		@media screen and (min-width: $tabwidth) {
 			width: 33.33333%;
-			float:left;
-			text-align:left;
+			float: left;
+			text-align: left;
 			margin-top: 0;
 		}
 		@media screen and (min-width: $midwidth) {
 			width: 16.66666%;
-            text-align:left;
+            text-align: left;
 		}
 		&.left {
 			@media screen and (min-width: $tabwidth) {
@@ -358,6 +358,7 @@ section.flatbanner {
 				float: right;
 			}
 			@media screen and (min-width: $midwidth) {
+				width: 20%;
 				text-align: right;
 				float: right;
 			}

@@ -1880,7 +1880,7 @@ body{color:#595a5c;font-size:15px;line-height:1.4;background:#f4f4f4}
 }@media screen and (min-width:980px){.site-footer .site-info.left{width:18.66666%}
 }.site-footer .site-info.right{margin-right:0}
 @media screen and (min-width:768px){.site-footer .site-info.right{float:right}
-}@media screen and (min-width:980px){.site-footer .site-info.right{text-align:right;float:right}
+}@media screen and (min-width:980px){.site-footer .site-info.right{width:20%;text-align:right;float:right}
 }.site-footer .site-info .item{font-family:Arial,"Helvetica Neue",Helvetica,sans-serif;width:100%;float:left;color:#bdbec1}
 .site-footer .site-info h3{margin:0}
 .site-footer .site-info .social{font-size:30px;margin-left:-10px}
