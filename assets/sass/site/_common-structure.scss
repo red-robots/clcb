@@ -1,4 +1,5 @@
 a{text-decoration: none;}
+input:focus {outline:none;}
 .clear:before, .clear:after { content: " "; display: table; }
 .clear { *zoom: 1; }
 .clear {clear: both;}

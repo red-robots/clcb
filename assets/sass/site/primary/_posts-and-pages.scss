@@ -2272,6 +2272,7 @@ h2.teamlist-header {
     }
     .tabcontent {
         display: none;
+        outline: none;
         @media screen and (min-width: $tabwidth) {
             display: block;
         }
@@ -2280,10 +2281,17 @@ h2.teamlist-header {
             padding-top: 10px;
             padding-bottom: 8px;
             min-height: 290px;
+            outline: none;
+            &:focus {
+                outline: none;
+            }
             &.active {
                 display: block;
                 border-bottom: 6px solid $color-red;
             }
+        }
+        &:focus {
+            outline: none;
         }
     }
 }
