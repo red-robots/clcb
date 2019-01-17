@@ -193,5 +193,10 @@ jQuery(document).ready(function ($) {
     		});
     	},400);
     });
+
+    $("#searchTabs li .content").each(function(){
+      var br = $(this).find("br");
+      br.last().remove();
+    });
     
 });// END #####################################    END
