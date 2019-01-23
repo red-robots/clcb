@@ -1542,7 +1542,12 @@ h2.teamlist-header {
         .large_txt {
             font-size: 20px;
         }
+        display: none;
+        @media screen and (min-width: $tabwidth) {
+            display: block;
+        }
     }
+    
     .note {
         margin-top:10px;
         p {
@@ -1574,6 +1579,15 @@ h2.teamlist-header {
             width: 60px;
             height: 2px;
             background: $color-red;
+        }
+    }
+    .m_info.mobile {
+        margin-top:20px;
+        .large_txt {
+            font-size: 20px;
+        }
+        @media screen and (min-width: $tabwidth) {
+            display: none;
         }
     }
     ul{

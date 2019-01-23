@@ -119,6 +119,18 @@ if($obj) {
                         <?php acstarter_entry_footer(); ?>
                     </footer><!-- .entry-footer -->
                     <?php } ?>
+
+                    <div class="m_info clear mobile">
+                        <div class="smtxt red">
+                            <?php if($title=='Founder') { ?>
+                            <span class="large_txt"><strong><?php echo $title;?></strong></span>
+                            <?php } else { ?>
+                            <strong>But, wait! There's more.</strong>
+                            <?php } ?>
+                        </div>
+                        <div class="note"><?php echo $personal_note; ?></div>
+                    </div>
+
                 </div>
             </div>
 
