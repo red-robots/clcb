@@ -353,6 +353,34 @@ section.flatbanner {
 				width: 18.66666%;
 			}
 		}
+		&.middle {
+			display: inline-block;
+			text-align: center;
+			@media screen and (min-width: $tabwidth) {
+				width: 33%;
+				text-align: left;
+				float: left;
+				padding-right:10px;
+			}
+			@media screen and (min-width: $midwidth) {
+				width: 40.66666%;
+			}
+			.aesc {
+				display: inline-block;
+				width: 40%;
+				
+				margin: 2%;
+				img {
+					width: 100%;
+				}
+				@media screen and (min-width: $tabwidth) {
+					float: right;
+				}
+				&.second {
+					margin-top: 3%;
+				}
+			}
+		}
 		&.right {
 			margin-right: 0;
 			@media screen and (min-width: $tabwidth) {

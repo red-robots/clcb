@@ -54,6 +54,20 @@ $linkedin=get_field('linkedin_link', 'option');
 					<div class="item"><?php echo $nphone2; ?></div>
 				<?php } ?>
 			</div>
+			<div class="site-info middle">
+				<div class="aesc second">
+				<a target="_blank" href="https://www.aesc.org/">
+					<img src="<?php bloginfo('template_url'); ?>/images/aesclogo_white.png">
+				</a>
+					
+				</div>
+				<div class="aesc ">
+				<a target="_blank" href="https://www.aesc.org/">
+					<img src="<?php bloginfo('template_url'); ?>/images/blueStepsTransparent.png">
+				</a>
+					
+				</div>
+			</div>
 			<div class="site-info right">
 				<div class="social">
 					<?php if($facebook) { ?>
